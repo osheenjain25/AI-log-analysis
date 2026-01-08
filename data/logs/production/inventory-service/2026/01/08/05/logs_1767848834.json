@@ -1,2 +1,0 @@
-{"timestamp": 1767797104260686080, "severity": "INFO", "message": "User_20 logged in successfully", "logger": "inventory-service", "attributes": {"service_name": "inventory-service", "environment": "production"}}
-{"timestamp": 1767848834731219712, "severity": "INFO", "message": "User_3 added headphones to cart", "logger": "inventory-service", "attributes": {"service_name": "inventory-service", "environment": "production"}}
