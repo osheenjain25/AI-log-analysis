@@ -1,0 +1,17 @@
+{"timestamp": 1767793284456341760, "severity": "INFO", "message": "User_47 viewed product: monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793285526786048, "severity": "INFO", "message": "Processing checkout for user_73, total: $520", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793285526933504, "severity": "INFO", "message": "Order placed successfully for user_73", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793286408020224, "severity": "WARNING", "message": "Coupon SAVE26 has expired", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793287570843392, "severity": "DEBUG", "message": "Login attempt for user_73", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793287571027456, "severity": "INFO", "message": "User_73 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793288602423808, "severity": "INFO", "message": "User_51 viewed product: laptop", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793289824355328, "severity": "INFO", "message": "Processing checkout for user_59, total: $393", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793289824516352, "severity": "INFO", "message": "Order placed successfully for user_59", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793290399009280, "severity": "INFO", "message": "User_31 added mouse to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793291068317952, "severity": "INFO", "message": "Processing checkout for user_98, total: $1096", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793291068549888, "severity": "INFO", "message": "Order placed successfully for user_98", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793292522603776, "severity": "DEBUG", "message": "Login attempt for user_32", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793292522777856, "severity": "INFO", "message": "User_32 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793293753292800, "severity": "DEBUG", "message": "Login attempt for user_16", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793293753480448, "severity": "INFO", "message": "User_16 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793295033620736, "severity": "INFO", "message": "User_98 viewed product: monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

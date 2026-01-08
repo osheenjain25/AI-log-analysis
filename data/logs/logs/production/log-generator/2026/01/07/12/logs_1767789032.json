@@ -1,0 +1,18 @@
+{"timestamp": 1767789021828673536, "severity": "INFO", "message": "User_16 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789022583214592, "severity": "INFO", "message": "Processing checkout for user_82, total: $1187", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789022583335680, "severity": "ERROR", "message": "Inventory check failed: Item out of stock", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789022987633152, "severity": "ERROR", "message": "Network timeout while loading product details", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789024344429568, "severity": "DEBUG", "message": "Searching for product: monitor", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789024344661760, "severity": "INFO", "message": "Found 32 results for monitor", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789025554085888, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789025554239744, "severity": "WARNING", "message": "No results found for query: camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789027036321536, "severity": "INFO", "message": "Coupon SAVE23 applied: 22% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789027493385984, "severity": "INFO", "message": "User_62 viewed product: mouse", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789028980312320, "severity": "DEBUG", "message": "Searching for product: monitor", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789028980462080, "severity": "INFO", "message": "Found 48 results for monitor", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789029998416128, "severity": "DEBUG", "message": "Login attempt for user_22", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789029998510080, "severity": "INFO", "message": "User_22 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789030551428864, "severity": "INFO", "message": "Coupon SAVE20 applied: 21% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789031043840000, "severity": "INFO", "message": "User_98 viewed product: camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789031482074880, "severity": "WARNING", "message": "Coupon SAVE11 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789032956724480, "severity": "DEBUG", "message": "Login attempt for user_41", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

@@ -1,0 +1,21 @@
+{"timestamp": 1767785066158112000, "severity": "DEBUG", "message": "Searching for product: monitor", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785066158300928, "severity": "INFO", "message": "Found 30 results for monitor", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785066746436096, "severity": "INFO", "message": "User_3 added camera to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785067266789888, "severity": "INFO", "message": "User_92 added mouse to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785068424354048, "severity": "DEBUG", "message": "Login attempt for user_16", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785068424532480, "severity": "INFO", "message": "User_16 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785068738130432, "severity": "DEBUG", "message": "Login attempt for user_1", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785068738229504, "severity": "INFO", "message": "User_1 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785069666086656, "severity": "DEBUG", "message": "Searching for product: keyboard", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785069666199040, "severity": "INFO", "message": "Found 48 results for keyboard", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785070720301312, "severity": "INFO", "message": "Processing checkout for user_41, total: $1538", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785070720445184, "severity": "INFO", "message": "Order placed successfully for user_41", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785071127532544, "severity": "INFO", "message": "User_82 added phone to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785072498312960, "severity": "INFO", "message": "Coupon SAVE18 applied: 24% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785073609943808, "severity": "INFO", "message": "User_78 added tablet to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785073921501696, "severity": "INFO", "message": "Processing checkout for user_75, total: $1444", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785073921599744, "severity": "ERROR", "message": "Inventory check failed: Item out of stock", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785074824700160, "severity": "INFO", "message": "User_30 viewed product: camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785075191054080, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785075191149312, "severity": "WARNING", "message": "No results found for query: camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785076013873408, "severity": "DEBUG", "message": "Searching for product: mouse", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

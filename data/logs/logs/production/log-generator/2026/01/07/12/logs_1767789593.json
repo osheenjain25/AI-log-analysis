@@ -1,0 +1,17 @@
+{"timestamp": 1767789582899358720, "severity": "INFO", "message": "Found 20 results for phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789583630424064, "severity": "WARNING", "message": "Coupon SAVE36 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789584828299264, "severity": "INFO", "message": "User_50 added keyboard to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789585297169920, "severity": "DEBUG", "message": "Searching for product: laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789585297297920, "severity": "INFO", "message": "Found 29 results for laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789585926263040, "severity": "INFO", "message": "User_63 viewed product: laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789587176398080, "severity": "DEBUG", "message": "Searching for product: laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789587176504064, "severity": "INFO", "message": "Found 24 results for laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789588622546944, "severity": "INFO", "message": "User_55 viewed product: mouse", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789589468283904, "severity": "INFO", "message": "Processing checkout for user_50, total: $432", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789589468584704, "severity": "ERROR", "message": "Database connection lost during checkout", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789590514147328, "severity": "DEBUG", "message": "Login attempt for user_31", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789590514272768, "severity": "INFO", "message": "User_31 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789591065638912, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789591065736704, "severity": "CRITICAL", "message": "Search index corruption detected for query: camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789591987043584, "severity": "INFO", "message": "Coupon SAVE22 applied: 27% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789593067685376, "severity": "INFO", "message": "User_81 added mouse to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

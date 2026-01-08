@@ -1,0 +1,13 @@
+{"timestamp": 1767791571060646400, "severity": "ERROR", "message": "Search service timeout for query: keyboard", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767791572282583296, "severity": "INFO", "message": "Coupon SAVE45 applied: 15% discount", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767791572996325376, "severity": "DEBUG", "message": "Searching for product: phone", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767791572996525824, "severity": "INFO", "message": "Found 21 results for phone", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767791574255495424, "severity": "INFO", "message": "User_86 viewed product: camera", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767791575520361472, "severity": "INFO", "message": "Coupon SAVE31 applied: 24% discount", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767791576346517760, "severity": "DEBUG", "message": "Login attempt for user_57", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767791576346671872, "severity": "INFO", "message": "User_57 logged in successfully", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767791577784323072, "severity": "INFO", "message": "User_52 added phone to cart", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767791578312038912, "severity": "INFO", "message": "User_93 added laptop to cart", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767791579648319488, "severity": "DEBUG", "message": "Login attempt for user_76", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767791579648490240, "severity": "ERROR", "message": "Account locked for user_76 due to multiple failed attempts", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767791581125890560, "severity": "DEBUG", "message": "Login attempt for user_78", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}

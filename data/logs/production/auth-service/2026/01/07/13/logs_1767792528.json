@@ -1,0 +1,21 @@
+{"timestamp": 1767792518208468992, "severity": "INFO", "message": "Processing checkout for user_44, total: $935", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792518208690176, "severity": "INFO", "message": "Order placed successfully for user_44", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792518894463232, "severity": "DEBUG", "message": "Login attempt for user_95", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792518894641920, "severity": "INFO", "message": "User_95 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792519896357632, "severity": "INFO", "message": "User_2 viewed product: mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792520715427072, "severity": "INFO", "message": "Coupon SAVE43 applied: 19% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792522208330752, "severity": "DEBUG", "message": "Searching for product: monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792522208415488, "severity": "ERROR", "message": "Search service timeout for query: monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792522954361088, "severity": "DEBUG", "message": "Login attempt for user_43", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792522954563328, "severity": "CRITICAL", "message": "Authentication service unavailable for user_43", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792524048366336, "severity": "INFO", "message": "Processing checkout for user_64, total: $799", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792524048569088, "severity": "INFO", "message": "Order placed successfully for user_64", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792524887158784, "severity": "DEBUG", "message": "Login attempt for user_64", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792524887275264, "severity": "INFO", "message": "User_64 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792526005625344, "severity": "DEBUG", "message": "Login attempt for user_23", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792526005819136, "severity": "INFO", "message": "User_23 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792526952423680, "severity": "DEBUG", "message": "Searching for product: monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792526952619776, "severity": "INFO", "message": "Found 46 results for monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792527367761664, "severity": "INFO", "message": "Processing checkout for user_75, total: $77", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792527367950848, "severity": "INFO", "message": "Order placed successfully for user_75", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792528847714304, "severity": "INFO", "message": "Processing checkout for user_81, total: $311", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

@@ -1,0 +1,16 @@
+{"timestamp": 1767792696841776128, "severity": "INFO", "message": "Found 45 results for mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792697205622528, "severity": "INFO", "message": "User_88 viewed product: tablet", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792698299145728, "severity": "INFO", "message": "User_60 viewed product: mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792699062974208, "severity": "DEBUG", "message": "Login attempt for user_7", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792699063284480, "severity": "WARNING", "message": "Invalid password for user_7", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792700214227200, "severity": "ERROR", "message": "Network timeout while loading product details", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792700657654784, "severity": "DEBUG", "message": "Login attempt for user_64", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792700657760256, "severity": "INFO", "message": "User_64 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792701313320960, "severity": "DEBUG", "message": "Login attempt for user_26", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792701313516800, "severity": "INFO", "message": "User_26 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792702564334848, "severity": "INFO", "message": "User_99 viewed product: mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792703884371200, "severity": "INFO", "message": "User_69 viewed product: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792704447956736, "severity": "DEBUG", "message": "Searching for product: mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792704448134912, "severity": "INFO", "message": "Found 11 results for mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792705685576448, "severity": "INFO", "message": "Coupon SAVE27 applied: 6% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792707063728384, "severity": "INFO", "message": "Coupon SAVE43 applied: 13% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

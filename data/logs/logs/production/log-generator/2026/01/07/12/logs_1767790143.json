@@ -1,0 +1,16 @@
+{"timestamp": 1767790133125819392, "severity": "INFO", "message": "User_24 viewed product: laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790133643407360, "severity": "INFO", "message": "User_40 added camera to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790134892463616, "severity": "DEBUG", "message": "Login attempt for user_52", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790134892655872, "severity": "INFO", "message": "User_52 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790135500537344, "severity": "DEBUG", "message": "Login attempt for user_69", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790135500731648, "severity": "ERROR", "message": "Account locked for user_69 due to multiple failed attempts", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790136321294336, "severity": "INFO", "message": "Coupon SAVE29 applied: 24% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790137104093696, "severity": "INFO", "message": "User_40 viewed product: camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790137937397760, "severity": "INFO", "message": "User_3 added laptop to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790139388066304, "severity": "DEBUG", "message": "Searching for product: laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790139388188416, "severity": "INFO", "message": "Found 27 results for laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790140760391424, "severity": "INFO", "message": "User_24 viewed product: phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790141287384064, "severity": "DEBUG", "message": "Login attempt for user_35", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790141287470336, "severity": "INFO", "message": "User_35 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790141665596416, "severity": "ERROR", "message": "Cache service unavailable, cart update failed", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790143088671744, "severity": "INFO", "message": "User_86 added phone to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

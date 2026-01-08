@@ -1,0 +1,21 @@
+{"timestamp": 1767789911141292288, "severity": "DEBUG", "message": "Login attempt for user_71", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789911141431040, "severity": "INFO", "message": "User_71 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789912366886912, "severity": "INFO", "message": "User_65 added keyboard to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789912903027968, "severity": "INFO", "message": "User_42 viewed product: headphones", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789914206887936, "severity": "DEBUG", "message": "Searching for product: headphones", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789914207069952, "severity": "INFO", "message": "Found 34 results for headphones", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789915194599680, "severity": "DEBUG", "message": "Login attempt for user_76", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789915194784768, "severity": "INFO", "message": "User_76 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789916232325632, "severity": "DEBUG", "message": "Searching for product: tablet", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789916232425216, "severity": "INFO", "message": "Found 15 results for tablet", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789916983584512, "severity": "ERROR", "message": "Cache service unavailable, cart update failed", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789917900507136, "severity": "INFO", "message": "Processing checkout for user_40, total: $1644", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789917900696064, "severity": "INFO", "message": "Order placed successfully for user_40", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789918665202688, "severity": "WARNING", "message": "Coupon SAVE12 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789919025658368, "severity": "INFO", "message": "Coupon SAVE34 applied: 6% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789919453797376, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789919453984512, "severity": "INFO", "message": "Found 8 results for camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789920010418688, "severity": "DEBUG", "message": "Searching for product: tablet", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789920010601472, "severity": "INFO", "message": "Found 6 results for tablet", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789920388156160, "severity": "INFO", "message": "Coupon SAVE25 applied: 13% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789921567417344, "severity": "DEBUG", "message": "Searching for product: keyboard", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

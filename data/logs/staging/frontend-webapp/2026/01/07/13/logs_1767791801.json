@@ -1,0 +1,15 @@
+{"timestamp": 1767791791358765568, "severity": "INFO", "message": "Found 26 results for camera", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791791716826880, "severity": "WARNING", "message": "Coupon SAVE49 has expired", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791792083901696, "severity": "INFO", "message": "User_86 viewed product: tablet", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791793079280896, "severity": "INFO", "message": "User_98 viewed product: tablet", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791794366179584, "severity": "INFO", "message": "User_44 viewed product: monitor", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791795823556096, "severity": "INFO", "message": "Coupon SAVE18 applied: 12% discount", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791797172318720, "severity": "INFO", "message": "User_92 added laptop to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791798328338688, "severity": "INFO", "message": "User_23 viewed product: headphones", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791799168393472, "severity": "DEBUG", "message": "Searching for product: laptop", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791799168547072, "severity": "INFO", "message": "Found 14 results for laptop", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791800177945344, "severity": "DEBUG", "message": "Login attempt for user_44", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791800178141184, "severity": "WARNING", "message": "Invalid password for user_44", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791801035693312, "severity": "DEBUG", "message": "Login attempt for user_55", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791801035797760, "severity": "ERROR", "message": "Account locked for user_55 due to multiple failed attempts", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791801629371392, "severity": "INFO", "message": "Processing checkout for user_66, total: $1105", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}

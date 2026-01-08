@@ -1,0 +1,20 @@
+{"timestamp": 1767792236015382784, "severity": "INFO", "message": "User_64 added phone to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792237080371200, "severity": "INFO", "message": "Processing checkout for user_3, total: $756", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792237080623360, "severity": "INFO", "message": "Order placed successfully for user_3", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792237418837248, "severity": "DEBUG", "message": "Searching for product: phone", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792237419017728, "severity": "INFO", "message": "Found 32 results for phone", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792238863901440, "severity": "INFO", "message": "User_77 added monitor to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792240136142336, "severity": "DEBUG", "message": "Login attempt for user_21", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792240136429056, "severity": "INFO", "message": "User_21 logged in successfully", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792240524436224, "severity": "DEBUG", "message": "Searching for product: mouse", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792240524628736, "severity": "WARNING", "message": "No results found for query: mouse", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792241181728000, "severity": "ERROR", "message": "Cache service unavailable, cart update failed", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792241815745280, "severity": "INFO", "message": "User_84 added phone to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792242199847680, "severity": "INFO", "message": "Coupon SAVE21 applied: 20% discount", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792242675243008, "severity": "INFO", "message": "User_100 viewed product: keyboard", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792243667101952, "severity": "INFO", "message": "User_88 viewed product: mouse", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792244824314880, "severity": "DEBUG", "message": "Login attempt for user_36", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792244824417536, "severity": "INFO", "message": "User_36 logged in successfully", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792245299612416, "severity": "DEBUG", "message": "Searching for product: mouse", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792245299793408, "severity": "WARNING", "message": "No results found for query: mouse", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792245754743040, "severity": "INFO", "message": "User_26 added keyboard to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}

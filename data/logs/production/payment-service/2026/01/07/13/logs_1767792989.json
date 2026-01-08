@@ -1,0 +1,14 @@
+{"timestamp": 1767792980826630400, "severity": "INFO", "message": "User_46 added keyboard to cart", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792981631825664, "severity": "INFO", "message": "User_83 viewed product: tablet", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792983084311808, "severity": "DEBUG", "message": "Searching for product: laptop", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792983084438272, "severity": "CRITICAL", "message": "Search index corruption detected for query: laptop", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792984068474880, "severity": "DEBUG", "message": "Searching for product: monitor", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792984068624384, "severity": "INFO", "message": "Found 36 results for monitor", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792985035344640, "severity": "INFO", "message": "User_43 added monitor to cart", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792985481518592, "severity": "INFO", "message": "Coupon SAVE46 applied: 20% discount", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792986924324352, "severity": "INFO", "message": "Processing checkout for user_74, total: $1972", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792986924484096, "severity": "INFO", "message": "Order placed successfully for user_74", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792987720315136, "severity": "ERROR", "message": "Invalid coupon code: SAVE12", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792988505492480, "severity": "DEBUG", "message": "Login attempt for user_32", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792988505605888, "severity": "INFO", "message": "User_32 logged in successfully", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792989717584384, "severity": "DEBUG", "message": "Login attempt for user_47", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}

@@ -1,0 +1,16 @@
+{"timestamp": 1767786028798399488, "severity": "INFO", "message": "User_52 added headphones to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786029854043136, "severity": "DEBUG", "message": "Login attempt for user_71", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786029854166784, "severity": "INFO", "message": "User_71 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786030317003264, "severity": "DEBUG", "message": "Login attempt for user_95", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786030317207808, "severity": "ERROR", "message": "Account locked for user_95 due to multiple failed attempts", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786031350199552, "severity": "INFO", "message": "Processing checkout for user_97, total: $673", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786031350310912, "severity": "INFO", "message": "Order placed successfully for user_97", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786032676357888, "severity": "INFO", "message": "User_39 added monitor to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786033899715584, "severity": "INFO", "message": "User_57 added tablet to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786034818320640, "severity": "INFO", "message": "User_46 added headphones to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786035753814016, "severity": "DEBUG", "message": "Login attempt for user_28", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786035753917440, "severity": "INFO", "message": "User_28 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786036458400512, "severity": "ERROR", "message": "Network timeout while loading product details", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786036918481408, "severity": "INFO", "message": "Processing checkout for user_57, total: $351", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786036918587136, "severity": "ERROR", "message": "Payment validation failed: Invalid card details", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786037874805504, "severity": "INFO", "message": "User_92 added camera to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

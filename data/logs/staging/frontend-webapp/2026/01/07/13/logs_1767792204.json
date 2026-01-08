@@ -1,0 +1,20 @@
+{"timestamp": 1767792193856352768, "severity": "INFO", "message": "User_41 added laptop to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792194567383040, "severity": "ERROR", "message": "Invalid coupon code: SAVE18", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792195616366848, "severity": "INFO", "message": "Processing checkout for user_70, total: $354", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792195616580608, "severity": "INFO", "message": "Order placed successfully for user_70", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792197104502272, "severity": "DEBUG", "message": "Login attempt for user_100", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792197104702464, "severity": "INFO", "message": "User_100 logged in successfully", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792197827878144, "severity": "DEBUG", "message": "Login attempt for user_39", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792197828051200, "severity": "INFO", "message": "User_39 logged in successfully", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792198328894464, "severity": "INFO", "message": "Processing checkout for user_3, total: $182", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792198329125376, "severity": "INFO", "message": "Order placed successfully for user_3", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792199280360960, "severity": "INFO", "message": "User_2 viewed product: mouse", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792200110101248, "severity": "DEBUG", "message": "Login attempt for user_32", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792200110322176, "severity": "INFO", "message": "User_32 logged in successfully", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792201118180608, "severity": "INFO", "message": "Coupon SAVE23 applied: 22% discount", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792201591338240, "severity": "INFO", "message": "Processing checkout for user_25, total: $468", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792201591486976, "severity": "INFO", "message": "Order placed successfully for user_25", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792202382856192, "severity": "INFO", "message": "User_59 viewed product: mouse", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792203247868160, "severity": "DEBUG", "message": "Login attempt for user_77", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792203248007936, "severity": "INFO", "message": "User_77 logged in successfully", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792204256438784, "severity": "DEBUG", "message": "Login attempt for user_65", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}

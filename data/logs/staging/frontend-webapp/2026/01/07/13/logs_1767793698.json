@@ -1,0 +1,16 @@
+{"timestamp": 1767793688726996992, "severity": "ERROR", "message": "Inventory check failed: Item out of stock", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793689801698560, "severity": "INFO", "message": "Processing checkout for user_5, total: $1510", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793689801949184, "severity": "INFO", "message": "Order placed successfully for user_5", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793691118848768, "severity": "INFO", "message": "User_93 added phone to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793692234308352, "severity": "INFO", "message": "User_11 added keyboard to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793692639294208, "severity": "DEBUG", "message": "Login attempt for user_56", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793692639406336, "severity": "INFO", "message": "User_56 logged in successfully", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793693102025984, "severity": "INFO", "message": "Coupon SAVE48 applied: 8% discount", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793694048338944, "severity": "WARNING", "message": "Coupon SAVE27 has expired", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793695359937024, "severity": "WARNING", "message": "Coupon SAVE16 has expired", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793696183368704, "severity": "DEBUG", "message": "Searching for product: mouse", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793696183519232, "severity": "INFO", "message": "Found 28 results for mouse", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793696599366656, "severity": "WARNING", "message": "Coupon SAVE13 has expired", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793696983736576, "severity": "INFO", "message": "User_75 viewed product: mouse", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793698356039680, "severity": "INFO", "message": "User_100 added laptop to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793698976300800, "severity": "INFO", "message": "User_45 added mouse to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}

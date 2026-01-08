@@ -1,0 +1,15 @@
+{"timestamp": 1767788251765122560, "severity": "INFO", "message": "Order placed successfully for user_97", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788253172430336, "severity": "ERROR", "message": "Invalid coupon code: SAVE34", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788253615702016, "severity": "DEBUG", "message": "Login attempt for user_59", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788253615879936, "severity": "INFO", "message": "User_59 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788254923911936, "severity": "INFO", "message": "User_92 viewed product: monitor", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788256018102272, "severity": "INFO", "message": "User_24 added camera to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788256384520960, "severity": "INFO", "message": "Coupon SAVE15 applied: 13% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788256918806016, "severity": "INFO", "message": "Coupon SAVE29 applied: 29% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788257542935808, "severity": "DEBUG", "message": "Searching for product: keyboard", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788257543412224, "severity": "INFO", "message": "Found 4 results for keyboard", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788257985692416, "severity": "INFO", "message": "Coupon SAVE13 applied: 27% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788259190404608, "severity": "ERROR", "message": "Invalid coupon code: SAVE17", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788260088587520, "severity": "INFO", "message": "User_17 viewed product: camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788261363291904, "severity": "INFO", "message": "User_97 added headphones to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788262196293888, "severity": "INFO", "message": "Processing checkout for user_39, total: $1857", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

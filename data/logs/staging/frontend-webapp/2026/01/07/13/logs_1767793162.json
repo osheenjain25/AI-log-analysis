@@ -1,0 +1,19 @@
+{"timestamp": 1767793152992163328, "severity": "DEBUG", "message": "Searching for product: monitor", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793152992385792, "severity": "INFO", "message": "Found 13 results for monitor", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793153488312576, "severity": "ERROR", "message": "Invalid coupon code: SAVE42", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793154312022528, "severity": "INFO", "message": "User_34 viewed product: headphones", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793154865600000, "severity": "INFO", "message": "User_24 added headphones to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793155265779200, "severity": "DEBUG", "message": "Searching for product: phone", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793155266056960, "severity": "INFO", "message": "Found 45 results for phone", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793156479055616, "severity": "INFO", "message": "User_40 added laptop to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793156917950720, "severity": "INFO", "message": "Processing checkout for user_74, total: $65", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793156918130688, "severity": "INFO", "message": "Order placed successfully for user_74", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793158060307712, "severity": "DEBUG", "message": "Searching for product: keyboard", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793158060454912, "severity": "INFO", "message": "Found 4 results for keyboard", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793158744376064, "severity": "INFO", "message": "Processing checkout for user_39, total: $906", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793158744570624, "severity": "ERROR", "message": "Inventory check failed: Item out of stock", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793159468209152, "severity": "WARNING", "message": "Coupon SAVE17 has expired", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793159855064064, "severity": "INFO", "message": "User_8 added phone to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793160974735872, "severity": "DEBUG", "message": "Login attempt for user_77", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793160974825984, "severity": "INFO", "message": "User_77 logged in successfully", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793162197611776, "severity": "INFO", "message": "Processing checkout for user_96, total: $1474", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}

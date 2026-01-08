@@ -1,0 +1,19 @@
+{"timestamp": 1767793473105161984, "severity": "INFO", "message": "Found 6 results for headphones", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793473518416384, "severity": "INFO", "message": "Processing checkout for user_96, total: $618", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793473518572288, "severity": "CRITICAL", "message": "Payment gateway connection failed", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793474144324096, "severity": "INFO", "message": "User_73 added monitor to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793475512311552, "severity": "DEBUG", "message": "Login attempt for user_42", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793475512466688, "severity": "INFO", "message": "User_42 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793475880018944, "severity": "INFO", "message": "Processing checkout for user_14, total: $1959", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793475880124416, "severity": "INFO", "message": "Order placed successfully for user_14", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793477372249088, "severity": "DEBUG", "message": "Login attempt for user_75", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793477372417280, "severity": "WARNING", "message": "Invalid password for user_75", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793477759401472, "severity": "DEBUG", "message": "Login attempt for user_63", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793477759643136, "severity": "INFO", "message": "User_63 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793479170583040, "severity": "DEBUG", "message": "Login attempt for user_58", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793479171052544, "severity": "INFO", "message": "User_58 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793480592306944, "severity": "DEBUG", "message": "Login attempt for user_93", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793480592467200, "severity": "INFO", "message": "User_93 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793481858212864, "severity": "DEBUG", "message": "Searching for product: tablet", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793481858316800, "severity": "ERROR", "message": "Search service timeout for query: tablet", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793483259497472, "severity": "INFO", "message": "User_19 added monitor to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

@@ -1,0 +1,17 @@
+{"timestamp": 1767785664287982592, "severity": "INFO", "message": "User_29 viewed product: laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785665184309760, "severity": "INFO", "message": "User_11 viewed product: phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785666070099456, "severity": "DEBUG", "message": "Login attempt for user_70", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785666070340352, "severity": "INFO", "message": "User_70 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785666909806592, "severity": "WARNING", "message": "Coupon SAVE46 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785667543121920, "severity": "DEBUG", "message": "Login attempt for user_3", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785667543233536, "severity": "CRITICAL", "message": "Authentication service unavailable for user_3", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785667917274880, "severity": "DEBUG", "message": "Searching for product: phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785667917373184, "severity": "WARNING", "message": "No results found for query: phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785669020377600, "severity": "INFO", "message": "User_87 added laptop to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785670333358848, "severity": "INFO", "message": "Coupon SAVE50 applied: 5% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785670924002560, "severity": "ERROR", "message": "Cache service unavailable, cart update failed", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785672204375296, "severity": "INFO", "message": "User_23 viewed product: mouse", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785672542928128, "severity": "INFO", "message": "Processing checkout for user_89, total: $417", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785672543184384, "severity": "ERROR", "message": "Payment validation failed: Invalid card details", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785673179782400, "severity": "ERROR", "message": "Network timeout while loading product details", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785673661551872, "severity": "DEBUG", "message": "Login attempt for user_75", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

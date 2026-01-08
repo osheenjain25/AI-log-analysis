@@ -1,0 +1,14 @@
+{"timestamp": 1767786887840125440, "severity": "INFO", "message": "User_25 viewed product: phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786888359472640, "severity": "INFO", "message": "Processing checkout for user_75, total: $1456", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786888359701248, "severity": "ERROR", "message": "Payment validation failed: Invalid card details", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786889645721600, "severity": "DEBUG", "message": "Searching for product: monitor", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786889645853184, "severity": "INFO", "message": "Found 9 results for monitor", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786890986516736, "severity": "INFO", "message": "User_42 added tablet to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786892400087808, "severity": "INFO", "message": "Processing checkout for user_21, total: $1523", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786892400429568, "severity": "INFO", "message": "Order placed successfully for user_21", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786893756312576, "severity": "INFO", "message": "User_47 added monitor to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786894840378112, "severity": "DEBUG", "message": "Searching for product: monitor", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786894840569344, "severity": "CRITICAL", "message": "Search index corruption detected for query: monitor", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786895946575616, "severity": "DEBUG", "message": "Login attempt for user_21", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786895946719232, "severity": "INFO", "message": "User_21 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786897342208768, "severity": "INFO", "message": "Processing checkout for user_21, total: $1940", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

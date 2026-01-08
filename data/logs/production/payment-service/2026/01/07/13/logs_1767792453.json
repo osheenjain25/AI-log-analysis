@@ -1,0 +1,16 @@
+{"timestamp": 1767792443428335872, "severity": "INFO", "message": "User_15 added monitor to cart", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792444838044928, "severity": "DEBUG", "message": "Login attempt for user_2", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792444838236160, "severity": "INFO", "message": "User_2 logged in successfully", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792445886519808, "severity": "DEBUG", "message": "Searching for product: mouse", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792445886734592, "severity": "INFO", "message": "Found 7 results for mouse", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792446802961664, "severity": "DEBUG", "message": "Login attempt for user_89", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792446803056896, "severity": "INFO", "message": "User_89 logged in successfully", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792447944334080, "severity": "DEBUG", "message": "Login attempt for user_53", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792447944525568, "severity": "ERROR", "message": "Account locked for user_53 due to multiple failed attempts", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792448696359168, "severity": "INFO", "message": "User_11 viewed product: laptop", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792449396395264, "severity": "ERROR", "message": "Invalid coupon code: SAVE10", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792450146232832, "severity": "INFO", "message": "User_94 added camera to cart", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792451176610816, "severity": "DEBUG", "message": "Login attempt for user_88", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792451176835840, "severity": "INFO", "message": "User_88 logged in successfully", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792451786795264, "severity": "INFO", "message": "Coupon SAVE22 applied: 19% discount", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792453200872704, "severity": "DEBUG", "message": "Searching for product: keyboard", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}

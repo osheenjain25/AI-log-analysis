@@ -1,0 +1,15 @@
+{"timestamp": 1767791601915489280, "severity": "INFO", "message": "User_77 added laptop to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791602964300544, "severity": "DEBUG", "message": "Login attempt for user_63", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791602964426496, "severity": "WARNING", "message": "Invalid password for user_63", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791603926783488, "severity": "DEBUG", "message": "Login attempt for user_44", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791603926983936, "severity": "INFO", "message": "User_44 logged in successfully", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791604996157440, "severity": "INFO", "message": "User_6 viewed product: tablet", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791605770160640, "severity": "DEBUG", "message": "Login attempt for user_66", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791605770339584, "severity": "INFO", "message": "User_66 logged in successfully", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791606097273856, "severity": "DEBUG", "message": "Searching for product: mouse", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791606097437184, "severity": "INFO", "message": "Found 41 results for mouse", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791606649011200, "severity": "INFO", "message": "Coupon SAVE26 applied: 24% discount", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791607353416448, "severity": "INFO", "message": "User_4 added monitor to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791608586166528, "severity": "INFO", "message": "User_87 viewed product: tablet", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791609607081728, "severity": "INFO", "message": "User_39 viewed product: tablet", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791610994279168, "severity": "DEBUG", "message": "Login attempt for user_44", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}

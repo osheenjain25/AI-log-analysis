@@ -1,0 +1,15 @@
+{"timestamp": 1767793387185306112, "severity": "INFO", "message": "Coupon SAVE43 applied: 27% discount", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793388036318720, "severity": "DEBUG", "message": "Login attempt for user_65", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793388036450304, "severity": "WARNING", "message": "Invalid password for user_65", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793388676337920, "severity": "INFO", "message": "User_73 viewed product: mouse", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793389346139392, "severity": "DEBUG", "message": "Searching for product: keyboard", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793389346250752, "severity": "INFO", "message": "Found 18 results for keyboard", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793390297018368, "severity": "INFO", "message": "User_36 added monitor to cart", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793391422063872, "severity": "DEBUG", "message": "Login attempt for user_23", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793391422250496, "severity": "ERROR", "message": "Account locked for user_23 due to multiple failed attempts", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793392430724864, "severity": "INFO", "message": "User_93 viewed product: phone", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793392790014976, "severity": "DEBUG", "message": "Login attempt for user_38", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793392790263808, "severity": "INFO", "message": "User_38 logged in successfully", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793393945524224, "severity": "INFO", "message": "User_98 viewed product: tablet", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793394949441792, "severity": "INFO", "message": "User_4 added mouse to cart", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793396441839872, "severity": "ERROR", "message": "Network timeout while loading product details", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}

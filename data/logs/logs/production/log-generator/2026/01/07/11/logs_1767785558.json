@@ -1,0 +1,15 @@
+{"timestamp": 1767785547292792320, "severity": "INFO", "message": "Order placed successfully for user_5", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785548731210496, "severity": "DEBUG", "message": "Searching for product: tablet", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785548731553792, "severity": "INFO", "message": "Found 44 results for tablet", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785550168363520, "severity": "INFO", "message": "Processing checkout for user_67, total: $932", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785550168543232, "severity": "INFO", "message": "Order placed successfully for user_67", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785550866901504, "severity": "INFO", "message": "Processing checkout for user_77, total: $1178", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785550867044608, "severity": "INFO", "message": "Order placed successfully for user_77", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785551856205056, "severity": "ERROR", "message": "Network timeout while loading product details", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785553142248960, "severity": "INFO", "message": "User_61 added mouse to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785553945326592, "severity": "INFO", "message": "User_97 viewed product: laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785554409850368, "severity": "INFO", "message": "User_82 viewed product: tablet", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785555372482304, "severity": "INFO", "message": "Coupon SAVE20 applied: 21% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785556248342016, "severity": "INFO", "message": "User_91 added keyboard to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785557167319552, "severity": "INFO", "message": "User_49 added laptop to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785558307252480, "severity": "DEBUG", "message": "Searching for product: tablet", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

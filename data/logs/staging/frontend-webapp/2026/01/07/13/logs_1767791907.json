@@ -1,0 +1,19 @@
+{"timestamp": 1767791897288839424, "severity": "INFO", "message": "Found 43 results for camera", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791898429687808, "severity": "INFO", "message": "Coupon SAVE11 applied: 13% discount", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791898815724288, "severity": "DEBUG", "message": "Login attempt for user_37", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791898815859968, "severity": "INFO", "message": "User_37 logged in successfully", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791900062514176, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791900062667520, "severity": "INFO", "message": "Found 17 results for camera", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791901058132736, "severity": "DEBUG", "message": "Login attempt for user_51", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791901058265856, "severity": "INFO", "message": "User_51 logged in successfully", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791902277584896, "severity": "ERROR", "message": "Cache service unavailable, cart update failed", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791903777226752, "severity": "INFO", "message": "User_25 viewed product: monitor", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791904270115072, "severity": "INFO", "message": "Processing checkout for user_7, total: $1115", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791904270337536, "severity": "INFO", "message": "Order placed successfully for user_7", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791904589257216, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791904589401600, "severity": "INFO", "message": "Found 23 results for camera", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791905229153280, "severity": "INFO", "message": "Coupon SAVE46 applied: 13% discount", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791905678620416, "severity": "INFO", "message": "User_53 viewed product: mouse", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791906691711744, "severity": "DEBUG", "message": "Login attempt for user_81", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791906691804160, "severity": "INFO", "message": "User_81 logged in successfully", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791907751023360, "severity": "ERROR", "message": "Invalid coupon code: SAVE30", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}

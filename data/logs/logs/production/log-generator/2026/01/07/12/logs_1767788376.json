@@ -1,0 +1,15 @@
+{"timestamp": 1767788366558994176, "severity": "WARNING", "message": "No results found for query: monitor", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788367028174336, "severity": "INFO", "message": "User_71 viewed product: mouse", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788367622011136, "severity": "DEBUG", "message": "Login attempt for user_14", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788367622217216, "severity": "INFO", "message": "User_14 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788369063154432, "severity": "DEBUG", "message": "Searching for product: phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788369063260416, "severity": "INFO", "message": "Found 4 results for phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788370419605504, "severity": "DEBUG", "message": "Searching for product: tablet", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788370419808768, "severity": "INFO", "message": "Found 48 results for tablet", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788371804915712, "severity": "INFO", "message": "User_18 added mouse to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788372344093952, "severity": "INFO", "message": "User_45 added keyboard to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788373744344320, "severity": "DEBUG", "message": "Searching for product: mouse", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788373744540160, "severity": "WARNING", "message": "No results found for query: mouse", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788374722826240, "severity": "INFO", "message": "User_70 added laptop to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788375589666560, "severity": "INFO", "message": "User_16 viewed product: tablet", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788376867411200, "severity": "INFO", "message": "User_83 viewed product: mouse", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

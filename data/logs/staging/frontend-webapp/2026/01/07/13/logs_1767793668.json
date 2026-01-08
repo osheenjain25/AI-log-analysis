@@ -1,0 +1,19 @@
+{"timestamp": 1767793658213868288, "severity": "DEBUG", "message": "Login attempt for user_90", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793658214031360, "severity": "WARNING", "message": "Invalid password for user_90", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793658568178432, "severity": "INFO", "message": "User_43 added tablet to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793659840307712, "severity": "INFO", "message": "User_10 viewed product: camera", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793660263729408, "severity": "DEBUG", "message": "Login attempt for user_1", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793660263865088, "severity": "INFO", "message": "User_1 logged in successfully", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793660962496512, "severity": "DEBUG", "message": "Login attempt for user_67", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793660962655232, "severity": "INFO", "message": "User_67 logged in successfully", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793661952300288, "severity": "DEBUG", "message": "Login attempt for user_16", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793661952433152, "severity": "WARNING", "message": "Invalid password for user_16", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793662407381504, "severity": "INFO", "message": "Coupon SAVE18 applied: 13% discount", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793663648318208, "severity": "DEBUG", "message": "Searching for product: headphones", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793663648525056, "severity": "ERROR", "message": "Search service timeout for query: headphones", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793664748448000, "severity": "INFO", "message": "Coupon SAVE41 applied: 27% discount", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793665679956736, "severity": "INFO", "message": "Processing checkout for user_35, total: $1186", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793665680357632, "severity": "ERROR", "message": "Inventory check failed: Item out of stock", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793666451329280, "severity": "INFO", "message": "User_60 added phone to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793667003348224, "severity": "WARNING", "message": "Coupon SAVE21 has expired", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793668082456576, "severity": "INFO", "message": "Processing checkout for user_41, total: $1663", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}

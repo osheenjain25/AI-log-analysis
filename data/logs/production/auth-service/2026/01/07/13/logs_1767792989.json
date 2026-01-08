@@ -1,0 +1,16 @@
+{"timestamp": 1767792979481802752, "severity": "INFO", "message": "Processing checkout for user_87, total: $454", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792979481908992, "severity": "ERROR", "message": "Database connection lost during checkout", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792979954278144, "severity": "DEBUG", "message": "Login attempt for user_93", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792979954393088, "severity": "WARNING", "message": "Invalid password for user_93", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792981164408576, "severity": "DEBUG", "message": "Login attempt for user_2", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792981164514816, "severity": "INFO", "message": "User_2 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792982206889472, "severity": "INFO", "message": "Coupon SAVE19 applied: 8% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792983454228480, "severity": "INFO", "message": "Processing checkout for user_71, total: $805", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792983454490368, "severity": "INFO", "message": "Order placed successfully for user_71", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792984804350720, "severity": "INFO", "message": "User_3 viewed product: headphones", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792985204295680, "severity": "DEBUG", "message": "Searching for product: keyboard", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792985204397568, "severity": "WARNING", "message": "No results found for query: keyboard", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792986094133248, "severity": "INFO", "message": "User_10 added keyboard to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792987336309760, "severity": "INFO", "message": "User_81 viewed product: mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792988212496640, "severity": "INFO", "message": "User_87 viewed product: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792989050424576, "severity": "ERROR", "message": "Invalid coupon code: SAVE12", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

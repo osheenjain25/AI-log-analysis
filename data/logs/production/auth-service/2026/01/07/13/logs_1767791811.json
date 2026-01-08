@@ -1,0 +1,22 @@
+{"timestamp": 1767791800169892608, "severity": "INFO", "message": "Found 17 results for laptop", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791800641349888, "severity": "INFO", "message": "User_59 added phone to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791801370275840, "severity": "DEBUG", "message": "Searching for product: headphones", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791801370465280, "severity": "WARNING", "message": "No results found for query: headphones", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791802420437504, "severity": "WARNING", "message": "Coupon SAVE43 has expired", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791802739031296, "severity": "INFO", "message": "User_56 added keyboard to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791803161252096, "severity": "INFO", "message": "Processing checkout for user_88, total: $1485", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791803161445120, "severity": "INFO", "message": "Order placed successfully for user_88", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791803819761408, "severity": "DEBUG", "message": "Searching for product: phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791803820102912, "severity": "ERROR", "message": "Search service timeout for query: phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791804402400000, "severity": "INFO", "message": "User_90 viewed product: mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791805803716608, "severity": "INFO", "message": "Processing checkout for user_90, total: $1006", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791805803855872, "severity": "ERROR", "message": "Database connection lost during checkout", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791806601576448, "severity": "INFO", "message": "User_90 viewed product: laptop", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791807587437824, "severity": "DEBUG", "message": "Login attempt for user_43", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791807587592704, "severity": "INFO", "message": "User_43 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791808429232896, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791808429332480, "severity": "WARNING", "message": "No results found for query: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791809379325696, "severity": "INFO", "message": "Coupon SAVE23 applied: 13% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791809718950400, "severity": "DEBUG", "message": "Searching for product: keyboard", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791809719056128, "severity": "INFO", "message": "Found 43 results for keyboard", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791811137443584, "severity": "INFO", "message": "Processing checkout for user_89, total: $204", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

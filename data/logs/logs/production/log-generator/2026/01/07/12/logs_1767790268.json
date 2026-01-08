@@ -1,0 +1,15 @@
+{"timestamp": 1767790258714625792, "severity": "INFO", "message": "Found 40 results for phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790260143679232, "severity": "DEBUG", "message": "Login attempt for user_61", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790260143862784, "severity": "ERROR", "message": "Account locked for user_61 due to multiple failed attempts", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790261385268736, "severity": "DEBUG", "message": "Login attempt for user_45", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790261385369088, "severity": "INFO", "message": "User_45 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790262050500352, "severity": "INFO", "message": "User_39 viewed product: tablet", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790262684040192, "severity": "ERROR", "message": "Network timeout while loading product details", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790264048498432, "severity": "INFO", "message": "Coupon SAVE33 applied: 30% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790264599144192, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790264599368704, "severity": "CRITICAL", "message": "Search index corruption detected for query: camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790264908467712, "severity": "INFO", "message": "User_100 viewed product: keyboard", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790266332141568, "severity": "WARNING", "message": "Coupon SAVE31 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790267190443264, "severity": "WARNING", "message": "Coupon SAVE48 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790268177635584, "severity": "INFO", "message": "Coupon SAVE30 applied: 25% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790268754780416, "severity": "DEBUG", "message": "Searching for product: phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

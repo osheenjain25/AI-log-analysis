@@ -1,0 +1,17 @@
+{"timestamp": 1767787980586093056, "severity": "INFO", "message": "Order placed successfully for user_35", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787981265566464, "severity": "INFO", "message": "Processing checkout for user_73, total: $1300", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787981265709824, "severity": "ERROR", "message": "Database connection lost during checkout", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787981606020608, "severity": "DEBUG", "message": "Searching for product: phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787981606138368, "severity": "ERROR", "message": "Search service timeout for query: phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787982124343552, "severity": "DEBUG", "message": "Searching for product: tablet", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787982124939008, "severity": "INFO", "message": "Found 12 results for tablet", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787983619534592, "severity": "INFO", "message": "Coupon SAVE47 applied: 23% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787984772427264, "severity": "DEBUG", "message": "Login attempt for user_45", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787984772597248, "severity": "INFO", "message": "User_45 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787985985130240, "severity": "INFO", "message": "User_94 added tablet to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787987116024320, "severity": "INFO", "message": "User_21 added monitor to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787987472896256, "severity": "INFO", "message": "User_8 added tablet to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787988816391168, "severity": "INFO", "message": "User_3 added phone to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787989494966528, "severity": "INFO", "message": "Processing checkout for user_61, total: $557", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787989495116032, "severity": "ERROR", "message": "Inventory check failed: Item out of stock", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787990608333312, "severity": "INFO", "message": "Processing checkout for user_19, total: $196", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

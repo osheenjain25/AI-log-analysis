@@ -1,0 +1,14 @@
+{"timestamp": 1767791654821224704, "severity": "INFO", "message": "User_82 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791656102862848, "severity": "DEBUG", "message": "Login attempt for user_99", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791656102998272, "severity": "INFO", "message": "User_99 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791657384487680, "severity": "INFO", "message": "User_90 added keyboard to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791658724464896, "severity": "DEBUG", "message": "Searching for product: tablet", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791658724677376, "severity": "INFO", "message": "Found 10 results for tablet", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791659720451328, "severity": "INFO", "message": "Coupon SAVE18 applied: 21% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791660919978496, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791660920099328, "severity": "CRITICAL", "message": "Search index corruption detected for query: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791662415748864, "severity": "INFO", "message": "User_13 added headphones to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791663367192320, "severity": "INFO", "message": "Processing checkout for user_84, total: $1311", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791663367291136, "severity": "INFO", "message": "Order placed successfully for user_84", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791664518519808, "severity": "INFO", "message": "User_16 added mouse to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791665762210816, "severity": "DEBUG", "message": "Login attempt for user_96", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

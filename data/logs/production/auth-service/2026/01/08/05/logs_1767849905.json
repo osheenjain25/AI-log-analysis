@@ -1,0 +1,31 @@
+{"timestamp": 1767849895229849856, "severity": "INFO", "message": "Processing checkout for user_80, total: $277", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767849895229979136, "severity": "INFO", "message": "Order placed successfully for user_80", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767849895567793152, "severity": "ERROR", "message": "Invalid coupon code: SAVE39", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767849896347815936, "severity": "INFO", "message": "Order tracking info retrieved for user_19", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767849897076951296, "severity": "DEBUG", "message": "Searching for product: laptop", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767849897077040128, "severity": "INFO", "message": "Found 37 results for laptop", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767849897483914496, "severity": "WARNING", "message": "Coupon SAVE47 has expired", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767849897873399552, "severity": "INFO", "message": "User_23 updated profile successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767849898578590208, "severity": "INFO", "message": "User_34 added monitor to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767849898879767808, "severity": "INFO", "message": "User_67 updated profile successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767849899451922944, "severity": "DEBUG", "message": "Login attempt for user_22", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767849899452180480, "severity": "ERROR", "message": "MFA verification timeout for user_22", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767849899558050304, "severity": "INFO", "message": "User_23 viewed product: mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767849900118113280, "severity": "DEBUG", "message": "Login attempt for user_25", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767849900118273024, "severity": "INFO", "message": "User_25 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767849900689677824, "severity": "INFO", "message": "Processing checkout for user_83, total: $1531", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767849900689798400, "severity": "INFO", "message": "Order placed successfully for user_83", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767849901253991168, "severity": "INFO", "message": "User_8 viewed product: mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767849901439402240, "severity": "INFO", "message": "Order tracking info retrieved for user_15", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767849902042167296, "severity": "INFO", "message": "Coupon SAVE15 applied: 12% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767849902212697088, "severity": "INFO", "message": "User_40 updated profile successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767849902764403712, "severity": "DEBUG", "message": "Searching for product: laptop", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767849902764619264, "severity": "INFO", "message": "Found 2 results for laptop", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767849903528743424, "severity": "INFO", "message": "User_26 viewed product: phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767849904234723840, "severity": "DEBUG", "message": "Login attempt for user_1", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767849904235019520, "severity": "INFO", "message": "User_1 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767849904777764096, "severity": "DEBUG", "message": "Searching for product: monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767849904777920512, "severity": "INFO", "message": "Found 49 results for monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767849905042362880, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767849905042559744, "severity": "INFO", "message": "Found 40 results for camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767849905526081024, "severity": "DEBUG", "message": "Login attempt for user_96", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

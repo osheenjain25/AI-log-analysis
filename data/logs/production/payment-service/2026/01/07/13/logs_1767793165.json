@@ -1,0 +1,12 @@
+{"timestamp": 1767793156652180224, "severity": "INFO", "message": "Coupon SAVE33 applied: 16% discount", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793157991676672, "severity": "INFO", "message": "Coupon SAVE18 applied: 30% discount", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793158794761216, "severity": "INFO", "message": "User_78 viewed product: laptop", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793160200279552, "severity": "INFO", "message": "Processing checkout for user_36, total: $1915", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793160200461824, "severity": "ERROR", "message": "Database connection lost during checkout", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793161606955264, "severity": "DEBUG", "message": "Searching for product: keyboard", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793161607100160, "severity": "INFO", "message": "Found 21 results for keyboard", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793162484293632, "severity": "INFO", "message": "Coupon SAVE18 applied: 11% discount", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793163898109696, "severity": "DEBUG", "message": "Login attempt for user_99", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793163898320128, "severity": "INFO", "message": "User_99 logged in successfully", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793165358890752, "severity": "INFO", "message": "User_72 added laptop to cart", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793165897859584, "severity": "INFO", "message": "User_53 added phone to cart", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}

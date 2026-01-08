@@ -1,0 +1,13 @@
+{"timestamp": 1767783955631529728, "severity": "INFO", "message": "User_93 added keyboard to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767783956931510528, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767783956931664896, "severity": "INFO", "message": "Found 24 results for camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767783958176457472, "severity": "DEBUG", "message": "Searching for product: keyboard", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767783958176624896, "severity": "ERROR", "message": "Search service timeout for query: keyboard", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767783958911957504, "severity": "INFO", "message": "User_30 viewed product: phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767783960282743552, "severity": "DEBUG", "message": "Login attempt for user_50", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767783960282865152, "severity": "INFO", "message": "User_50 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767783961420381184, "severity": "DEBUG", "message": "Login attempt for user_53", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767783961420585472, "severity": "INFO", "message": "User_53 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767783962422649856, "severity": "INFO", "message": "Coupon SAVE21 applied: 19% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767783963499657984, "severity": "INFO", "message": "User_73 added monitor to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767783964850535936, "severity": "WARNING", "message": "Coupon SAVE47 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

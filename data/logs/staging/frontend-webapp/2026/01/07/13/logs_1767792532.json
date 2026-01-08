@@ -1,0 +1,16 @@
+{"timestamp": 1767792522440098304, "severity": "INFO", "message": "Order placed successfully for user_32", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792523197182720, "severity": "INFO", "message": "User_52 added laptop to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792524284384256, "severity": "DEBUG", "message": "Searching for product: keyboard", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792524284588032, "severity": "INFO", "message": "Found 25 results for keyboard", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792525216324864, "severity": "INFO", "message": "Processing checkout for user_43, total: $557", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792525216433664, "severity": "ERROR", "message": "Inventory check failed: Item out of stock", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792526089883648, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792526090077184, "severity": "INFO", "message": "Found 25 results for camera", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792526862438912, "severity": "INFO", "message": "User_27 viewed product: tablet", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792527499805952, "severity": "DEBUG", "message": "Login attempt for user_73", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792527500007936, "severity": "INFO", "message": "User_73 logged in successfully", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792528895999232, "severity": "INFO", "message": "User_38 added headphones to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792530356351744, "severity": "DEBUG", "message": "Login attempt for user_34", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792530356530944, "severity": "INFO", "message": "User_34 logged in successfully", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792531630697472, "severity": "ERROR", "message": "Cache service unavailable, cart update failed", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792532636491520, "severity": "INFO", "message": "Processing checkout for user_21, total: $364", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}

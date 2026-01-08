@@ -1,0 +1,19 @@
+{"timestamp": 1767793483840375808, "severity": "INFO", "message": "Coupon SAVE14 applied: 28% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793484570178560, "severity": "INFO", "message": "Processing checkout for user_88, total: $345", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793484570387200, "severity": "INFO", "message": "Order placed successfully for user_88", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793485532715008, "severity": "DEBUG", "message": "Searching for product: phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793485533075968, "severity": "ERROR", "message": "Search service timeout for query: phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793486231922176, "severity": "INFO", "message": "Processing checkout for user_81, total: $193", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793486232166912, "severity": "INFO", "message": "Order placed successfully for user_81", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793487183627776, "severity": "INFO", "message": "User_34 viewed product: laptop", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793487564100096, "severity": "DEBUG", "message": "Searching for product: headphones", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793487564284672, "severity": "INFO", "message": "Found 20 results for headphones", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793488303499008, "severity": "INFO", "message": "User_15 viewed product: laptop", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793489436372736, "severity": "INFO", "message": "User_98 viewed product: monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793490594105344, "severity": "DEBUG", "message": "Login attempt for user_11", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793490594250240, "severity": "WARNING", "message": "Invalid password for user_11", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793491280486400, "severity": "DEBUG", "message": "Searching for product: headphones", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793491280682240, "severity": "INFO", "message": "Found 48 results for headphones", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793492541845760, "severity": "DEBUG", "message": "Searching for product: monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793492542039808, "severity": "INFO", "message": "Found 15 results for monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793493976308224, "severity": "DEBUG", "message": "Login attempt for user_7", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

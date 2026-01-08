@@ -1,0 +1,17 @@
+{"timestamp": 1767787348255953152, "severity": "INFO", "message": "Processing checkout for user_23, total: $1040", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787348256376320, "severity": "INFO", "message": "Order placed successfully for user_23", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787348881504768, "severity": "DEBUG", "message": "Login attempt for user_24", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787348881614336, "severity": "INFO", "message": "User_24 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787350359330816, "severity": "DEBUG", "message": "Login attempt for user_70", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787350359557120, "severity": "INFO", "message": "User_70 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787351118105856, "severity": "DEBUG", "message": "Login attempt for user_66", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787351118292992, "severity": "INFO", "message": "User_66 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787352230244864, "severity": "INFO", "message": "User_76 added phone to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787353249457408, "severity": "INFO", "message": "Coupon SAVE14 applied: 30% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787353802746368, "severity": "WARNING", "message": "Coupon SAVE22 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787354976335872, "severity": "INFO", "message": "User_8 added phone to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787355425734912, "severity": "INFO", "message": "User_31 viewed product: phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787356507197952, "severity": "INFO", "message": "Coupon SAVE27 applied: 27% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787357488333312, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787357488474112, "severity": "CRITICAL", "message": "Search index corruption detected for query: camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787358430376704, "severity": "INFO", "message": "User_49 added laptop to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

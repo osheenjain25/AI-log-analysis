@@ -1,0 +1,15 @@
+{"timestamp": 1767788762745169920, "severity": "INFO", "message": "Found 32 results for monitor", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788764234570240, "severity": "DEBUG", "message": "Login attempt for user_57", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788764234756864, "severity": "INFO", "message": "User_57 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788764774295552, "severity": "INFO", "message": "User_18 added phone to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788765705588224, "severity": "WARNING", "message": "Coupon SAVE42 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788767180331776, "severity": "INFO", "message": "User_87 viewed product: monitor", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788768158283776, "severity": "INFO", "message": "User_100 added mouse to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788769042206720, "severity": "WARNING", "message": "Coupon SAVE50 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788770026891776, "severity": "INFO", "message": "Processing checkout for user_27, total: $1530", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788770026992128, "severity": "INFO", "message": "Order placed successfully for user_27", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788770820360448, "severity": "INFO", "message": "Processing checkout for user_36, total: $1508", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788770820633344, "severity": "ERROR", "message": "Payment validation failed: Invalid card details", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788771478844672, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788771478967552, "severity": "INFO", "message": "Found 27 results for camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788772766076416, "severity": "INFO", "message": "User_90 viewed product: phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

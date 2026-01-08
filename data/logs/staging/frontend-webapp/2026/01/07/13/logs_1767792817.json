@@ -1,0 +1,15 @@
+{"timestamp": 1767792806197203968, "severity": "ERROR", "message": "Search service timeout for query: phone", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792807505096960, "severity": "INFO", "message": "Coupon SAVE48 applied: 6% discount", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792807943771904, "severity": "INFO", "message": "User_1 viewed product: mouse", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792808384789248, "severity": "INFO", "message": "User_49 viewed product: keyboard", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792809323212032, "severity": "DEBUG", "message": "Searching for product: mouse", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792809323358464, "severity": "INFO", "message": "Found 19 results for mouse", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792810233988864, "severity": "INFO", "message": "User_81 viewed product: phone", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792811404409600, "severity": "INFO", "message": "User_22 viewed product: phone", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792812572849152, "severity": "INFO", "message": "User_87 viewed product: phone", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792813417820416, "severity": "DEBUG", "message": "Login attempt for user_52", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792813418095360, "severity": "WARNING", "message": "Invalid password for user_52", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792814468279552, "severity": "INFO", "message": "User_30 viewed product: mouse", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792815238490368, "severity": "INFO", "message": "User_53 viewed product: phone", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792815637199360, "severity": "INFO", "message": "User_30 viewed product: mouse", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792817134298368, "severity": "INFO", "message": "User_8 added laptop to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}

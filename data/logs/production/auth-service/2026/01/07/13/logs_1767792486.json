@@ -1,0 +1,15 @@
+{"timestamp": 1767792475614262784, "severity": "CRITICAL", "message": "Payment gateway connection failed", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792476549823232, "severity": "WARNING", "message": "Coupon SAVE18 has expired", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792478021511168, "severity": "INFO", "message": "Processing checkout for user_18, total: $1719", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792478021696768, "severity": "ERROR", "message": "Inventory check failed: Item out of stock", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792479431312896, "severity": "INFO", "message": "User_69 added camera to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792480580338176, "severity": "INFO", "message": "Processing checkout for user_73, total: $448", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792480580518144, "severity": "INFO", "message": "Order placed successfully for user_73", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792482010235392, "severity": "INFO", "message": "Coupon SAVE22 applied: 11% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792482314363136, "severity": "INFO", "message": "User_69 viewed product: monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792483607955200, "severity": "DEBUG", "message": "Login attempt for user_54", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792483608116480, "severity": "ERROR", "message": "Account locked for user_54 due to multiple failed attempts", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792484282484992, "severity": "DEBUG", "message": "Login attempt for user_30", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792484282971136, "severity": "INFO", "message": "User_30 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792485379694080, "severity": "INFO", "message": "User_80 added tablet to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792486074455808, "severity": "INFO", "message": "User_86 viewed product: keyboard", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

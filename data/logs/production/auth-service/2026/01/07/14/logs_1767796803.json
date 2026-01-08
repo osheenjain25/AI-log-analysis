@@ -1,0 +1,19 @@
+{"timestamp": 1767796793090293504, "severity": "CRITICAL", "message": "Authentication service unavailable for user_46", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796793468167936, "severity": "INFO", "message": "User_30 updated profile successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796793852033536, "severity": "ERROR", "message": "Database lock timeout while updating user_38 profile", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796794110564352, "severity": "INFO", "message": "Refund request submitted for user_67", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796794635228928, "severity": "INFO", "message": "User_56 added headphones to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796795014188288, "severity": "INFO", "message": "Coupon SAVE13 applied: 9% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796795538302208, "severity": "INFO", "message": "User_16 added tablet to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796796474904064, "severity": "CRITICAL", "message": "Third-party tracking API is down", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796796689553408, "severity": "INFO", "message": "User_36 added monitor to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796796863340800, "severity": "INFO", "message": "Coupon SAVE31 applied: 29% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796797435069952, "severity": "INFO", "message": "User_53 viewed product: laptop", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796798142449664, "severity": "INFO", "message": "Coupon SAVE15 applied: 11% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796798750592768, "severity": "INFO", "message": "User_61 added camera to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796799871348224, "severity": "INFO", "message": "Refund request submitted for user_24", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796800895994880, "severity": "INFO", "message": "Order tracking info retrieved for user_20", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796801664548608, "severity": "INFO", "message": "User_32 viewed product: mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796802310969088, "severity": "INFO", "message": "Refund request submitted for user_63", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796803067887360, "severity": "INFO", "message": "User_72 updated profile successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796803799200256, "severity": "INFO", "message": "Refund request submitted for user_89", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

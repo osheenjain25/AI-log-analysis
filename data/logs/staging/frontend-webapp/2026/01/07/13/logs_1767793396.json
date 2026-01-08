@@ -1,0 +1,17 @@
+{"timestamp": 1767793386354924288, "severity": "DEBUG", "message": "Searching for product: tablet", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793386355038976, "severity": "INFO", "message": "Found 16 results for tablet", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793387035870464, "severity": "DEBUG", "message": "Login attempt for user_18", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793387036053760, "severity": "INFO", "message": "User_18 logged in successfully", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793388515265536, "severity": "INFO", "message": "Processing checkout for user_24, total: $1389", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793388515454976, "severity": "INFO", "message": "Order placed successfully for user_24", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793389505683456, "severity": "INFO", "message": "Coupon SAVE14 applied: 19% discount", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793389963410688, "severity": "INFO", "message": "Coupon SAVE42 applied: 19% discount", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793391462191360, "severity": "DEBUG", "message": "Login attempt for user_55", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793391462385408, "severity": "CRITICAL", "message": "Authentication service unavailable for user_55", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793392854757376, "severity": "INFO", "message": "User_87 viewed product: phone", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793393437250048, "severity": "DEBUG", "message": "Login attempt for user_78", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793393437344000, "severity": "INFO", "message": "User_78 logged in successfully", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793394541538816, "severity": "INFO", "message": "Coupon SAVE31 applied: 11% discount", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793395184662784, "severity": "DEBUG", "message": "Searching for product: keyboard", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793395184811520, "severity": "INFO", "message": "Found 34 results for keyboard", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793396564313856, "severity": "ERROR", "message": "Cache service unavailable, cart update failed", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}

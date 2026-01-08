@@ -1,0 +1,15 @@
+{"timestamp": 1767790196388303104, "severity": "WARNING", "message": "Coupon SAVE41 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790197138572800, "severity": "DEBUG", "message": "Searching for product: laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790197138738944, "severity": "ERROR", "message": "Search service timeout for query: laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790197498311424, "severity": "DEBUG", "message": "Login attempt for user_87", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790197498409472, "severity": "WARNING", "message": "Invalid password for user_87", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790198792126464, "severity": "INFO", "message": "Coupon SAVE43 applied: 26% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790199960608000, "severity": "INFO", "message": "User_40 viewed product: mouse", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790201174107904, "severity": "ERROR", "message": "Cache service unavailable, cart update failed", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790202031685888, "severity": "DEBUG", "message": "Searching for product: laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790202031783936, "severity": "INFO", "message": "Found 4 results for laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790202665871616, "severity": "INFO", "message": "User_67 added monitor to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790203304293632, "severity": "INFO", "message": "Processing checkout for user_93, total: $732", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790203304395008, "severity": "ERROR", "message": "Inventory check failed: Item out of stock", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790204353713920, "severity": "INFO", "message": "User_54 viewed product: tablet", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790205285577984, "severity": "INFO", "message": "Coupon SAVE16 applied: 15% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

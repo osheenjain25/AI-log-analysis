@@ -1,0 +1,14 @@
+{"timestamp": 1767788481437483520, "severity": "INFO", "message": "Order placed successfully for user_63", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788482744331520, "severity": "DEBUG", "message": "Searching for product: tablet", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788482744435712, "severity": "INFO", "message": "Found 21 results for tablet", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788483591404544, "severity": "INFO", "message": "Coupon SAVE46 applied: 27% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788484379779584, "severity": "INFO", "message": "User_51 viewed product: laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788485696498176, "severity": "DEBUG", "message": "Login attempt for user_74", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788485696732672, "severity": "WARNING", "message": "Invalid password for user_74", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788486530939904, "severity": "INFO", "message": "Processing checkout for user_67, total: $441", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788486531129600, "severity": "INFO", "message": "Order placed successfully for user_67", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788487959610368, "severity": "DEBUG", "message": "Login attempt for user_3", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788487959752704, "severity": "CRITICAL", "message": "Authentication service unavailable for user_3", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788489168317184, "severity": "INFO", "message": "User_24 added camera to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788490510564096, "severity": "WARNING", "message": "Coupon SAVE42 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788491625670144, "severity": "ERROR", "message": "Network timeout while loading product details", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

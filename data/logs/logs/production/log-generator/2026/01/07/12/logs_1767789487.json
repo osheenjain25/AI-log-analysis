@@ -1,0 +1,14 @@
+{"timestamp": 1767789476470012672, "severity": "INFO", "message": "User_94 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789477177670400, "severity": "INFO", "message": "Processing checkout for user_28, total: $319", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789477177856768, "severity": "INFO", "message": "Order placed successfully for user_28", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789478077649920, "severity": "WARNING", "message": "Coupon SAVE33 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789479369998592, "severity": "INFO", "message": "Processing checkout for user_31, total: $245", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789479370186496, "severity": "INFO", "message": "Order placed successfully for user_31", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789480438205184, "severity": "DEBUG", "message": "Searching for product: phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789480438295552, "severity": "ERROR", "message": "Search service timeout for query: phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789481474456320, "severity": "INFO", "message": "User_37 viewed product: phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789482840350976, "severity": "INFO", "message": "Coupon SAVE44 applied: 15% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789484048415488, "severity": "INFO", "message": "User_21 viewed product: monitor", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789485546975488, "severity": "ERROR", "message": "Invalid coupon code: SAVE15", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789485933722368, "severity": "INFO", "message": "User_41 viewed product: laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789487378569728, "severity": "DEBUG", "message": "Searching for product: monitor", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

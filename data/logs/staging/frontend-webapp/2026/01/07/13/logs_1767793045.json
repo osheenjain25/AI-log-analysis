@@ -1,0 +1,15 @@
+{"timestamp": 1767793036027547904, "severity": "INFO", "message": "Coupon SAVE16 applied: 24% discount", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793036577052928, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793036577281280, "severity": "ERROR", "message": "Search service timeout for query: camera", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793037483690496, "severity": "INFO", "message": "User_61 viewed product: camera", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793038772355584, "severity": "INFO", "message": "User_85 viewed product: laptop", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793040197964544, "severity": "INFO", "message": "Coupon SAVE27 applied: 30% discount", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793040734715136, "severity": "DEBUG", "message": "Searching for product: keyboard", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793040734831872, "severity": "INFO", "message": "Found 41 results for keyboard", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793041733769472, "severity": "INFO", "message": "Processing checkout for user_33, total: $375", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793041733965568, "severity": "ERROR", "message": "Payment validation failed: Invalid card details", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793042663218944, "severity": "INFO", "message": "User_5 viewed product: phone", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793043006668800, "severity": "WARNING", "message": "Coupon SAVE19 has expired", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793044334192128, "severity": "INFO", "message": "User_42 viewed product: phone", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793045370333952, "severity": "ERROR", "message": "Invalid coupon code: SAVE44", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767793045817914368, "severity": "INFO", "message": "Processing checkout for user_63, total: $1631", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}

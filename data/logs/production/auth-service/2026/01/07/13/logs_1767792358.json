@@ -1,0 +1,18 @@
+{"timestamp": 1767792347974569216, "severity": "INFO", "message": "Found 1 results for laptop", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792349016252672, "severity": "INFO", "message": "Processing checkout for user_60, total: $583", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792349016463360, "severity": "INFO", "message": "Order placed successfully for user_60", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792349719322624, "severity": "INFO", "message": "Processing checkout for user_31, total: $967", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792349719515392, "severity": "ERROR", "message": "Inventory check failed: Item out of stock", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792350999448320, "severity": "DEBUG", "message": "Login attempt for user_22", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792350999666432, "severity": "INFO", "message": "User_22 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792352336402432, "severity": "INFO", "message": "User_6 viewed product: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792353712352512, "severity": "DEBUG", "message": "Searching for product: headphones", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792353712534272, "severity": "WARNING", "message": "No results found for query: headphones", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792354022631936, "severity": "INFO", "message": "User_39 viewed product: keyboard", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792354479036672, "severity": "INFO", "message": "User_90 added laptop to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792355112374272, "severity": "ERROR", "message": "Network timeout while loading product details", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792356434451200, "severity": "INFO", "message": "User_2 added camera to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792356792323072, "severity": "ERROR", "message": "Network timeout while loading product details", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792357110828544, "severity": "INFO", "message": "Processing checkout for user_46, total: $833", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792357111158272, "severity": "INFO", "message": "Order placed successfully for user_46", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792358176340992, "severity": "INFO", "message": "User_75 viewed product: monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

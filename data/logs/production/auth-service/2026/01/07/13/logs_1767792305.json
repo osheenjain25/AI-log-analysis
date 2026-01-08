@@ -1,0 +1,19 @@
+{"timestamp": 1767792295246692864, "severity": "ERROR", "message": "Account locked for user_6 due to multiple failed attempts", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792296292457472, "severity": "INFO", "message": "User_12 viewed product: monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792297492333568, "severity": "INFO", "message": "Processing checkout for user_35, total: $1539", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792297492567040, "severity": "INFO", "message": "Order placed successfully for user_35", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792298664421376, "severity": "DEBUG", "message": "Searching for product: tablet", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792298664985344, "severity": "WARNING", "message": "No results found for query: tablet", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792299399869440, "severity": "DEBUG", "message": "Searching for product: phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792299400070400, "severity": "INFO", "message": "Found 20 results for phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792300422243840, "severity": "INFO", "message": "Processing checkout for user_20, total: $1249", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792300422444544, "severity": "INFO", "message": "Order placed successfully for user_20", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792301374835712, "severity": "WARNING", "message": "Coupon SAVE27 has expired", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792302293398272, "severity": "DEBUG", "message": "Login attempt for user_63", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792302293611520, "severity": "INFO", "message": "User_63 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792303607939072, "severity": "INFO", "message": "Coupon SAVE16 applied: 13% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792304383400192, "severity": "INFO", "message": "User_17 viewed product: mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792304767371776, "severity": "INFO", "message": "User_12 viewed product: phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792305107157760, "severity": "DEBUG", "message": "Login attempt for user_22", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792305107357952, "severity": "INFO", "message": "User_22 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792305469752832, "severity": "INFO", "message": "Coupon SAVE43 applied: 13% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

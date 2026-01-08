@@ -1,0 +1,16 @@
+{"timestamp": 1767785976556345344, "severity": "INFO", "message": "User_31 added tablet to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785977777159680, "severity": "DEBUG", "message": "Searching for product: laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785977777293056, "severity": "INFO", "message": "Found 42 results for laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785979109512704, "severity": "INFO", "message": "Coupon SAVE27 applied: 23% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785979429659392, "severity": "ERROR", "message": "Invalid coupon code: SAVE37", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785980564458496, "severity": "INFO", "message": "Processing checkout for user_47, total: $1035", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785980564667392, "severity": "INFO", "message": "Order placed successfully for user_47", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785981856301312, "severity": "INFO", "message": "User_98 added monitor to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785982409799168, "severity": "DEBUG", "message": "Login attempt for user_16", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785982409974272, "severity": "INFO", "message": "User_16 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785983404192000, "severity": "DEBUG", "message": "Searching for product: phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785983404459520, "severity": "INFO", "message": "Found 44 results for phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785983708916480, "severity": "ERROR", "message": "Invalid coupon code: SAVE40", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785984664327168, "severity": "DEBUG", "message": "Login attempt for user_31", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785984664446464, "severity": "INFO", "message": "User_31 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785985999824896, "severity": "DEBUG", "message": "Searching for product: laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

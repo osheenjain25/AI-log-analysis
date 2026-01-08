@@ -1,0 +1,17 @@
+{"timestamp": 1767792921932093952, "severity": "DEBUG", "message": "Login attempt for user_14", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792921932325120, "severity": "INFO", "message": "User_14 logged in successfully", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792922255025408, "severity": "DEBUG", "message": "Login attempt for user_50", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792922255125248, "severity": "INFO", "message": "User_50 logged in successfully", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792923620362752, "severity": "DEBUG", "message": "Login attempt for user_5", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792923620591104, "severity": "WARNING", "message": "Invalid password for user_5", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792924612345856, "severity": "INFO", "message": "Processing checkout for user_40, total: $1239", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792924612504576, "severity": "CRITICAL", "message": "Payment gateway connection failed", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792925145198080, "severity": "DEBUG", "message": "Searching for product: laptop", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792925145317888, "severity": "INFO", "message": "Found 8 results for laptop", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792926451762688, "severity": "INFO", "message": "User_9 added headphones to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792927478211584, "severity": "INFO", "message": "Coupon SAVE24 applied: 26% discount", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792928265494272, "severity": "DEBUG", "message": "Login attempt for user_98", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792928265684480, "severity": "INFO", "message": "User_98 logged in successfully", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792929126709248, "severity": "INFO", "message": "User_26 added headphones to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792929773145344, "severity": "INFO", "message": "User_61 added headphones to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792931155625728, "severity": "ERROR", "message": "Network timeout while loading product details", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}

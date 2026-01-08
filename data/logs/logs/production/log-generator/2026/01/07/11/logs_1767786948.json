@@ -1,0 +1,15 @@
+{"timestamp": 1767786937719343616, "severity": "CRITICAL", "message": "Payment gateway connection failed", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786938692377600, "severity": "INFO", "message": "User_24 viewed product: laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786939820316160, "severity": "DEBUG", "message": "Login attempt for user_71", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786939820408832, "severity": "INFO", "message": "User_71 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786940317485568, "severity": "INFO", "message": "Processing checkout for user_45, total: $1366", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786940317670400, "severity": "INFO", "message": "Order placed successfully for user_45", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786941322047232, "severity": "INFO", "message": "Coupon SAVE22 applied: 17% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786942604342272, "severity": "INFO", "message": "User_49 viewed product: mouse", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786943636329728, "severity": "DEBUG", "message": "Login attempt for user_27", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786943636464128, "severity": "INFO", "message": "User_27 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786945106144512, "severity": "WARNING", "message": "Coupon SAVE49 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786945729427712, "severity": "WARNING", "message": "Coupon SAVE18 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786946844319232, "severity": "INFO", "message": "User_100 added tablet to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786947431549696, "severity": "ERROR", "message": "Invalid coupon code: SAVE10", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786948822096128, "severity": "DEBUG", "message": "Searching for product: mouse", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

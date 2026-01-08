@@ -1,0 +1,27 @@
+{"timestamp": 1767793769550270464, "severity": "ERROR", "message": "Failed to update profile for user_75: Invalid email format", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793769978540800, "severity": "INFO", "message": "User_9 updated profile successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793771066841088, "severity": "DEBUG", "message": "Searching for product: phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793771067115776, "severity": "WARNING", "message": "No results found for query: phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793771704340224, "severity": "INFO", "message": "Coupon SAVE33 applied: 21% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793772363292160, "severity": "INFO", "message": "User_22 viewed product: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793772920347392, "severity": "INFO", "message": "User_15 viewed product: keyboard", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793773480642560, "severity": "INFO", "message": "Coupon SAVE20 applied: 18% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793774239422464, "severity": "DEBUG", "message": "Searching for product: keyboard", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793774239949568, "severity": "INFO", "message": "Found 38 results for keyboard", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793774620143872, "severity": "INFO", "message": "Coupon SAVE19 applied: 23% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793774814508544, "severity": "INFO", "message": "User_29 viewed product: laptop", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793774982898944, "severity": "DEBUG", "message": "Searching for product: laptop", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793774983116032, "severity": "INFO", "message": "Found 46 results for laptop", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793775583478272, "severity": "DEBUG", "message": "Searching for product: laptop", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793775583630336, "severity": "WARNING", "message": "No results found for query: laptop", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793776536353792, "severity": "INFO", "message": "User_96 updated profile successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793776756704000, "severity": "INFO", "message": "User_26 added phone to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793777469506816, "severity": "DEBUG", "message": "Login attempt for user_65", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793777470011392, "severity": "INFO", "message": "User_65 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793777640112128, "severity": "INFO", "message": "Order tracking info retrieved for user_11", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793777985316352, "severity": "INFO", "message": "User_48 added tablet to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793778369807104, "severity": "DEBUG", "message": "Searching for product: keyboard", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793778370226432, "severity": "INFO", "message": "Found 33 results for keyboard", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793778995175424, "severity": "DEBUG", "message": "Searching for product: mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793778995440640, "severity": "WARNING", "message": "Slow query detected for: mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793779332183040, "severity": "INFO", "message": "User_49 added keyboard to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

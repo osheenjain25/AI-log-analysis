@@ -1,0 +1,17 @@
+{"timestamp": 1767792244219578112, "severity": "INFO", "message": "User_29 added keyboard to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792244907074304, "severity": "INFO", "message": "User_41 viewed product: mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792245757405696, "severity": "INFO", "message": "User_49 added camera to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792246872732672, "severity": "DEBUG", "message": "Login attempt for user_71", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792246872919808, "severity": "INFO", "message": "User_71 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792248164360192, "severity": "DEBUG", "message": "Searching for product: tablet", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792248164541952, "severity": "CRITICAL", "message": "Search index corruption detected for query: tablet", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792249008447744, "severity": "DEBUG", "message": "Login attempt for user_12", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792249008637440, "severity": "INFO", "message": "User_12 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792249797115392, "severity": "INFO", "message": "Processing checkout for user_81, total: $1844", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792249797259776, "severity": "INFO", "message": "Order placed successfully for user_81", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792250642238208, "severity": "INFO", "message": "Coupon SAVE14 applied: 18% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792251469263360, "severity": "DEBUG", "message": "Login attempt for user_82", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792251469473792, "severity": "INFO", "message": "User_82 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792252156360704, "severity": "DEBUG", "message": "Login attempt for user_13", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792252156556288, "severity": "CRITICAL", "message": "Authentication service unavailable for user_13", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792253309924352, "severity": "ERROR", "message": "Network timeout while loading product details", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

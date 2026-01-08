@@ -1,0 +1,15 @@
+{"timestamp": 1767792818050775040, "severity": "INFO", "message": "User_73 added monitor to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792819374357504, "severity": "INFO", "message": "User_50 added camera to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792820070415872, "severity": "INFO", "message": "User_57 added phone to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792820683039232, "severity": "INFO", "message": "User_75 added keyboard to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792821924177152, "severity": "INFO", "message": "Coupon SAVE49 applied: 30% discount", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792822423667200, "severity": "INFO", "message": "Processing checkout for user_82, total: $337", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792822423863296, "severity": "INFO", "message": "Order placed successfully for user_82", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792823119416576, "severity": "INFO", "message": "User_72 viewed product: mouse", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792823540346112, "severity": "ERROR", "message": "Cache service unavailable, cart update failed", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792824337387008, "severity": "DEBUG", "message": "Searching for product: laptop", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792824337692160, "severity": "ERROR", "message": "Search service timeout for query: laptop", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792824768187392, "severity": "WARNING", "message": "Coupon SAVE33 has expired", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792826092405760, "severity": "DEBUG", "message": "Login attempt for user_10", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792826092619776, "severity": "INFO", "message": "User_10 logged in successfully", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792827488311808, "severity": "INFO", "message": "User_95 viewed product: headphones", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}

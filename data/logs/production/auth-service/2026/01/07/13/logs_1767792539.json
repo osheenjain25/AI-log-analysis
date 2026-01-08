@@ -1,0 +1,15 @@
+{"timestamp": 1767792528848577536, "severity": "ERROR", "message": "Payment validation failed: Invalid card details", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792529734760704, "severity": "INFO", "message": "User_29 added laptop to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792530332380160, "severity": "INFO", "message": "Coupon SAVE18 applied: 23% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792530781136896, "severity": "DEBUG", "message": "Searching for product: phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792530781335808, "severity": "INFO", "message": "Found 18 results for phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792531463648000, "severity": "INFO", "message": "User_34 viewed product: mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792532546338304, "severity": "INFO", "message": "User_59 viewed product: keyboard", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792533526568192, "severity": "INFO", "message": "User_55 viewed product: tablet", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792534657483520, "severity": "INFO", "message": "Processing checkout for user_2, total: $1536", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792534657671424, "severity": "INFO", "message": "Order placed successfully for user_2", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792535948352256, "severity": "DEBUG", "message": "Login attempt for user_42", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792535948524032, "severity": "INFO", "message": "User_42 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792537370535168, "severity": "INFO", "message": "User_83 added tablet to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792538384446976, "severity": "ERROR", "message": "Network timeout while loading product details", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792539750283264, "severity": "DEBUG", "message": "Searching for product: keyboard", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

@@ -1,0 +1,15 @@
+{"timestamp": 1767788637142664704, "severity": "INFO", "message": "Order placed successfully for user_77", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788637712267776, "severity": "DEBUG", "message": "Searching for product: headphones", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788637712397568, "severity": "INFO", "message": "Found 35 results for headphones", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788638229976832, "severity": "INFO", "message": "Processing checkout for user_20, total: $1237", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788638230061312, "severity": "ERROR", "message": "Database connection lost during checkout", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788639715477504, "severity": "WARNING", "message": "Coupon SAVE19 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788640744695040, "severity": "DEBUG", "message": "Login attempt for user_56", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788640744869376, "severity": "INFO", "message": "User_56 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788642186169344, "severity": "INFO", "message": "Processing checkout for user_70, total: $395", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788642186375168, "severity": "ERROR", "message": "Inventory check failed: Item out of stock", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788642920507648, "severity": "INFO", "message": "User_55 viewed product: tablet", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788644135553280, "severity": "INFO", "message": "Coupon SAVE31 applied: 25% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788645602810624, "severity": "WARNING", "message": "Coupon SAVE18 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788646964282112, "severity": "INFO", "message": "User_66 viewed product: keyboard", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788647381089280, "severity": "INFO", "message": "Processing checkout for user_74, total: $1022", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

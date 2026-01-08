@@ -1,0 +1,17 @@
+{"timestamp": 1767788188573463040, "severity": "INFO", "message": "User_89 viewed product: monitor", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788189893687552, "severity": "DEBUG", "message": "Login attempt for user_18", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788189893806080, "severity": "CRITICAL", "message": "Authentication service unavailable for user_18", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788190576316928, "severity": "INFO", "message": "Processing checkout for user_55, total: $971", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788190576456704, "severity": "INFO", "message": "Order placed successfully for user_55", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788191332345856, "severity": "INFO", "message": "User_28 viewed product: monitor", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788192729921280, "severity": "INFO", "message": "User_46 viewed product: mouse", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788193099805952, "severity": "INFO", "message": "User_31 added laptop to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788194148892416, "severity": "INFO", "message": "Processing checkout for user_28, total: $533", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788194148996608, "severity": "INFO", "message": "Order placed successfully for user_28", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788194632323072, "severity": "DEBUG", "message": "Login attempt for user_3", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788194632412928, "severity": "INFO", "message": "User_3 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788195433594368, "severity": "DEBUG", "message": "Login attempt for user_12", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788195434053888, "severity": "INFO", "message": "User_12 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788196141409792, "severity": "INFO", "message": "User_7 viewed product: mouse", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788197276320512, "severity": "INFO", "message": "Coupon SAVE40 applied: 10% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788198700532224, "severity": "DEBUG", "message": "Searching for product: phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

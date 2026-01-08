@@ -1,0 +1,17 @@
+{"timestamp": 1767792264770251008, "severity": "DEBUG", "message": "Login attempt for user_83", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792264770444288, "severity": "INFO", "message": "User_83 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792265746397952, "severity": "INFO", "message": "User_18 added phone to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792266259413760, "severity": "DEBUG", "message": "Login attempt for user_56", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792266259612160, "severity": "INFO", "message": "User_56 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792266900387072, "severity": "DEBUG", "message": "Login attempt for user_46", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792266900572672, "severity": "INFO", "message": "User_46 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792267241298432, "severity": "INFO", "message": "User_86 viewed product: tablet", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792267974625024, "severity": "INFO", "message": "User_69 added headphones to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792269084350720, "severity": "INFO", "message": "User_43 added mouse to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792270585152512, "severity": "DEBUG", "message": "Searching for product: headphones", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792270585372928, "severity": "INFO", "message": "Found 27 results for headphones", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792271771102464, "severity": "DEBUG", "message": "Login attempt for user_59", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792271771300096, "severity": "INFO", "message": "User_59 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792273232336640, "severity": "DEBUG", "message": "Login attempt for user_40", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792273232518144, "severity": "ERROR", "message": "Account locked for user_40 due to multiple failed attempts", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792274674876416, "severity": "DEBUG", "message": "Searching for product: phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

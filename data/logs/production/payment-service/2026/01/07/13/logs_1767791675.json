@@ -1,0 +1,14 @@
+{"timestamp": 1767791666652276224, "severity": "DEBUG", "message": "Searching for product: phone", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767791666652423680, "severity": "INFO", "message": "Found 47 results for phone", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767791667031733760, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767791667032129792, "severity": "INFO", "message": "Found 22 results for camera", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767791668209537792, "severity": "ERROR", "message": "Cache service unavailable, cart update failed", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767791668678405632, "severity": "INFO", "message": "User_37 added headphones to cart", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767791669372175360, "severity": "DEBUG", "message": "Searching for product: laptop", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767791669372425216, "severity": "INFO", "message": "Found 35 results for laptop", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767791670336067584, "severity": "INFO", "message": "User_78 viewed product: phone", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767791671625603584, "severity": "WARNING", "message": "Coupon SAVE18 has expired", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767791672500425472, "severity": "WARNING", "message": "Coupon SAVE39 has expired", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767791673979367936, "severity": "DEBUG", "message": "Login attempt for user_83", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767791673979506688, "severity": "CRITICAL", "message": "Authentication service unavailable for user_83", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767791675299984896, "severity": "INFO", "message": "User_49 viewed product: mouse", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}

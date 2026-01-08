@@ -1,0 +1,18 @@
+{"timestamp": 1767786416468824832, "severity": "WARNING", "message": "No results found for query: monitor", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786417681558528, "severity": "INFO", "message": "User_86 viewed product: phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786418732306432, "severity": "DEBUG", "message": "Login attempt for user_53", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786418732448256, "severity": "INFO", "message": "User_53 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786419222198016, "severity": "DEBUG", "message": "Login attempt for user_97", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786419222333952, "severity": "INFO", "message": "User_97 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786419617220608, "severity": "INFO", "message": "Processing checkout for user_48, total: $1706", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786419617311232, "severity": "INFO", "message": "Order placed successfully for user_48", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786420320129024, "severity": "DEBUG", "message": "Login attempt for user_74", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786420320229888, "severity": "INFO", "message": "User_74 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786420755102464, "severity": "DEBUG", "message": "Searching for product: phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786420755279104, "severity": "WARNING", "message": "No results found for query: phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786422124128768, "severity": "INFO", "message": "User_27 viewed product: headphones", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786423222572032, "severity": "WARNING", "message": "Rate limit exceeded for user_47", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786424319766016, "severity": "INFO", "message": "User_57 viewed product: keyboard", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786425519496704, "severity": "INFO", "message": "User_66 viewed product: headphones", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786426017208064, "severity": "ERROR", "message": "Network timeout while loading product details", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786427343035904, "severity": "WARNING", "message": "Coupon SAVE36 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

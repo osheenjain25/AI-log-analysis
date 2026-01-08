@@ -1,0 +1,19 @@
+{"timestamp": 1767795277475822848, "severity": "CRITICAL", "message": "Authentication service unavailable for user_80", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795277862693120, "severity": "DEBUG", "message": "Login attempt for user_33", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795277862877440, "severity": "INFO", "message": "User_33 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795278362629888, "severity": "WARNING", "message": "Coupon SAVE48 has expired", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795278981682944, "severity": "DEBUG", "message": "Searching for product: mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795278981783040, "severity": "CRITICAL", "message": "Elasticsearch cluster status: RED. Nodes failing.", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795280575921152, "severity": "INFO", "message": "Coupon SAVE22 applied: 30% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795281326247168, "severity": "INFO", "message": "Refund request submitted for user_80", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795282080334848, "severity": "WARNING", "message": "Cart capacity reached for user_92", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795282755727872, "severity": "DEBUG", "message": "Searching for product: phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795282755944192, "severity": "INFO", "message": "Found 5 results for phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795283245086976, "severity": "INFO", "message": "User_71 viewed product: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795284439680256, "severity": "WARNING", "message": "Coupon SAVE43 has expired", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795284967828480, "severity": "INFO", "message": "Order tracking info retrieved for user_100", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795285302931456, "severity": "INFO", "message": "Order tracking info retrieved for user_95", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795285872307456, "severity": "INFO", "message": "User_8 viewed product: monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795286880210176, "severity": "INFO", "message": "Refund request submitted for user_95", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795287068202752, "severity": "INFO", "message": "Order tracking info retrieved for user_77", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795287703239936, "severity": "INFO", "message": "Order tracking info retrieved for user_99", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

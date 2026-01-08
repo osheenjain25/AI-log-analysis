@@ -1,0 +1,16 @@
+{"timestamp": 1767787960709703680, "severity": "DEBUG", "message": "Searching for product: monitor", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787960709898496, "severity": "WARNING", "message": "No results found for query: monitor", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787961790670848, "severity": "DEBUG", "message": "Login attempt for user_15", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787961790958080, "severity": "INFO", "message": "User_15 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787962492480256, "severity": "INFO", "message": "User_29 added camera to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787963658747648, "severity": "INFO", "message": "Coupon SAVE25 applied: 7% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787965022057216, "severity": "DEBUG", "message": "Login attempt for user_59", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787965022198016, "severity": "INFO", "message": "User_59 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787966165701888, "severity": "DEBUG", "message": "Searching for product: headphones", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787966165885184, "severity": "INFO", "message": "Found 7 results for headphones", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787966892380672, "severity": "INFO", "message": "User_5 viewed product: mouse", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787967986810368, "severity": "INFO", "message": "User_84 viewed product: tablet", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787968550975232, "severity": "INFO", "message": "Processing checkout for user_6, total: $990", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787968551160320, "severity": "ERROR", "message": "Inventory check failed: Item out of stock", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787969388316416, "severity": "INFO", "message": "User_9 viewed product: keyboard", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787970420204288, "severity": "DEBUG", "message": "Login attempt for user_28", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

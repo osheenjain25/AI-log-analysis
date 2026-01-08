@@ -1,0 +1,17 @@
+{"timestamp": 1767788960336039936, "severity": "DEBUG", "message": "Searching for product: monitor", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788960336291584, "severity": "INFO", "message": "Found 31 results for monitor", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788960825414656, "severity": "INFO", "message": "User_85 added laptop to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788961969403392, "severity": "INFO", "message": "Coupon SAVE26 applied: 28% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788962989870848, "severity": "INFO", "message": "Processing checkout for user_2, total: $1763", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788962989979904, "severity": "CRITICAL", "message": "Payment gateway connection failed", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788963477553920, "severity": "INFO", "message": "Coupon SAVE40 applied: 5% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788964600307712, "severity": "DEBUG", "message": "Searching for product: mouse", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788964600417280, "severity": "INFO", "message": "Found 30 results for mouse", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788965976306944, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788965976404992, "severity": "INFO", "message": "Found 25 results for camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788966921172992, "severity": "INFO", "message": "Processing checkout for user_96, total: $785", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788966921281536, "severity": "ERROR", "message": "Inventory check failed: Item out of stock", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788967248396800, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788967248499200, "severity": "INFO", "message": "Found 15 results for camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788968634392320, "severity": "INFO", "message": "User_23 added keyboard to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788969750222592, "severity": "INFO", "message": "Coupon SAVE18 applied: 8% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

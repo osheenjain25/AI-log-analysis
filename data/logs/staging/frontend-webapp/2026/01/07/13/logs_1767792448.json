@@ -1,0 +1,17 @@
+{"timestamp": 1767792438576354560, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792438576545024, "severity": "WARNING", "message": "No results found for query: camera", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792438925164288, "severity": "INFO", "message": "User_85 viewed product: tablet", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792440026575616, "severity": "INFO", "message": "Coupon SAVE17 applied: 16% discount", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792440916385024, "severity": "INFO", "message": "User_67 added mouse to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792441887833088, "severity": "DEBUG", "message": "Searching for product: tablet", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792441888167680, "severity": "INFO", "message": "Found 49 results for tablet", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792442266594304, "severity": "INFO", "message": "Coupon SAVE33 applied: 21% discount", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792442855922432, "severity": "INFO", "message": "Processing checkout for user_28, total: $1300", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792442856105472, "severity": "INFO", "message": "Order placed successfully for user_28", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792444161607168, "severity": "INFO", "message": "User_98 viewed product: laptop", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792445211496192, "severity": "INFO", "message": "User_79 added mouse to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792445593092864, "severity": "INFO", "message": "Processing checkout for user_5, total: $320", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792445593357312, "severity": "INFO", "message": "Order placed successfully for user_5", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792446305152256, "severity": "INFO", "message": "User_15 viewed product: monitor", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792447059571200, "severity": "WARNING", "message": "Coupon SAVE42 has expired", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792448256405760, "severity": "INFO", "message": "Processing checkout for user_36, total: $564", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}

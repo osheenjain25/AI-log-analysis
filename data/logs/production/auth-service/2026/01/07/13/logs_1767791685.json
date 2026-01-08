@@ -1,0 +1,21 @@
+{"timestamp": 1767791675908164352, "severity": "INFO", "message": "User_91 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791676295196416, "severity": "INFO", "message": "User_99 added tablet to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791677483986688, "severity": "DEBUG", "message": "Searching for product: laptop", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791677484182016, "severity": "INFO", "message": "Found 16 results for laptop", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791678673840384, "severity": "INFO", "message": "Processing checkout for user_100, total: $300", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791678673953024, "severity": "ERROR", "message": "Inventory check failed: Item out of stock", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791679060002048, "severity": "DEBUG", "message": "Searching for product: headphones", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791679060458240, "severity": "INFO", "message": "Found 44 results for headphones", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791679521480192, "severity": "INFO", "message": "Coupon SAVE45 applied: 5% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791680424397056, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791680424504064, "severity": "CRITICAL", "message": "Search index corruption detected for query: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791681438558976, "severity": "DEBUG", "message": "Login attempt for user_61", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791681438678528, "severity": "INFO", "message": "User_61 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791682433649152, "severity": "INFO", "message": "User_24 viewed product: keyboard", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791683226537984, "severity": "DEBUG", "message": "Login attempt for user_28", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791683226658560, "severity": "WARNING", "message": "Invalid password for user_28", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791684463138816, "severity": "INFO", "message": "User_5 added monitor to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791684855672064, "severity": "DEBUG", "message": "Login attempt for user_77", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791684855775232, "severity": "INFO", "message": "User_77 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791685277675008, "severity": "INFO", "message": "User_21 viewed product: phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791685945047552, "severity": "DEBUG", "message": "Searching for product: laptop", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

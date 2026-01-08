@@ -1,0 +1,12 @@
+{"timestamp": 1767792895842019584, "severity": "INFO", "message": "Processing checkout for user_27, total: $629", "logger": "inventory-service", "attributes": {"service_name": "inventory-service", "environment": "production"}}
+{"timestamp": 1767792895842505728, "severity": "INFO", "message": "Order placed successfully for user_27", "logger": "inventory-service", "attributes": {"service_name": "inventory-service", "environment": "production"}}
+{"timestamp": 1767792897150663936, "severity": "INFO", "message": "User_43 viewed product: keyboard", "logger": "inventory-service", "attributes": {"service_name": "inventory-service", "environment": "production"}}
+{"timestamp": 1767792898132581632, "severity": "ERROR", "message": "Invalid coupon code: SAVE16", "logger": "inventory-service", "attributes": {"service_name": "inventory-service", "environment": "production"}}
+{"timestamp": 1767792899155102976, "severity": "DEBUG", "message": "Login attempt for user_97", "logger": "inventory-service", "attributes": {"service_name": "inventory-service", "environment": "production"}}
+{"timestamp": 1767792899155306240, "severity": "WARNING", "message": "Invalid password for user_97", "logger": "inventory-service", "attributes": {"service_name": "inventory-service", "environment": "production"}}
+{"timestamp": 1767792900465730560, "severity": "DEBUG", "message": "Searching for product: mouse", "logger": "inventory-service", "attributes": {"service_name": "inventory-service", "environment": "production"}}
+{"timestamp": 1767792900465883648, "severity": "INFO", "message": "Found 4 results for mouse", "logger": "inventory-service", "attributes": {"service_name": "inventory-service", "environment": "production"}}
+{"timestamp": 1767792901887204352, "severity": "INFO", "message": "User_72 added tablet to cart", "logger": "inventory-service", "attributes": {"service_name": "inventory-service", "environment": "production"}}
+{"timestamp": 1767792902667768064, "severity": "INFO", "message": "User_59 added tablet to cart", "logger": "inventory-service", "attributes": {"service_name": "inventory-service", "environment": "production"}}
+{"timestamp": 1767792903484269824, "severity": "INFO", "message": "User_69 viewed product: camera", "logger": "inventory-service", "attributes": {"service_name": "inventory-service", "environment": "production"}}
+{"timestamp": 1767792904930281984, "severity": "INFO", "message": "User_27 viewed product: tablet", "logger": "inventory-service", "attributes": {"service_name": "inventory-service", "environment": "production"}}

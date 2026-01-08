@@ -1,0 +1,13 @@
+{"timestamp": 1767785055457917440, "severity": "INFO", "message": "Order placed successfully for user_80", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785056703546368, "severity": "INFO", "message": "User_83 added laptop to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785058198417664, "severity": "DEBUG", "message": "Login attempt for user_37", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785058198601984, "severity": "INFO", "message": "User_37 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785059196309504, "severity": "INFO", "message": "User_72 viewed product: tablet", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785059682852096, "severity": "ERROR", "message": "Network timeout while loading product details", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785061004285184, "severity": "INFO", "message": "User_93 viewed product: laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785061371217152, "severity": "INFO", "message": "Coupon SAVE29 applied: 28% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785062379783680, "severity": "INFO", "message": "Processing checkout for user_38, total: $1959", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785062379977728, "severity": "INFO", "message": "Order placed successfully for user_38", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785063324304640, "severity": "INFO", "message": "User_40 viewed product: headphones", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785064350747136, "severity": "INFO", "message": "User_50 viewed product: tablet", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785065481655040, "severity": "WARNING", "message": "Rate limit exceeded for user_94", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

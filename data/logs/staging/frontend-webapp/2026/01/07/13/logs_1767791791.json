@@ -1,0 +1,15 @@
+{"timestamp": 1767791780686045696, "severity": "INFO", "message": "User_39 viewed product: monitor", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791781286459648, "severity": "DEBUG", "message": "Login attempt for user_50", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791781286563840, "severity": "INFO", "message": "User_50 logged in successfully", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791781754051584, "severity": "INFO", "message": "User_67 added phone to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791782454590720, "severity": "ERROR", "message": "Network timeout while loading product details", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791783803403520, "severity": "INFO", "message": "Processing checkout for user_12, total: $1122", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791783803697408, "severity": "INFO", "message": "Order placed successfully for user_12", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791784200438016, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791784200615680, "severity": "INFO", "message": "Found 28 results for camera", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791785275108864, "severity": "ERROR", "message": "Network timeout while loading product details", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791786145806848, "severity": "INFO", "message": "Coupon SAVE12 applied: 13% discount", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791787422043904, "severity": "INFO", "message": "User_68 added headphones to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791788790669568, "severity": "ERROR", "message": "Invalid coupon code: SAVE49", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791789946638336, "severity": "INFO", "message": "User_43 added camera to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791791358435584, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}

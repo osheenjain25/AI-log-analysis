@@ -1,0 +1,19 @@
+{"timestamp": 1767790405974315008, "severity": "INFO", "message": "Found 35 results for headphones", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790407174482176, "severity": "WARNING", "message": "Coupon SAVE35 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790407490764288, "severity": "INFO", "message": "Processing checkout for user_46, total: $164", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790407490909696, "severity": "INFO", "message": "Order placed successfully for user_46", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790408569740544, "severity": "INFO", "message": "Processing checkout for user_35, total: $173", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790408569846016, "severity": "INFO", "message": "Order placed successfully for user_35", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790408960007424, "severity": "DEBUG", "message": "Searching for product: headphones", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790408960106752, "severity": "INFO", "message": "Found 48 results for headphones", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790409298487296, "severity": "INFO", "message": "User_41 added phone to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790410424018176, "severity": "INFO", "message": "User_13 viewed product: tablet", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790411124380416, "severity": "DEBUG", "message": "Searching for product: phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790411124491264, "severity": "INFO", "message": "Found 25 results for phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790412239272960, "severity": "DEBUG", "message": "Login attempt for user_40", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790412239475456, "severity": "INFO", "message": "User_40 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790413400302848, "severity": "INFO", "message": "User_93 viewed product: camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790414308391936, "severity": "INFO", "message": "Coupon SAVE19 applied: 18% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790415788385024, "severity": "DEBUG", "message": "Searching for product: keyboard", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790415788490496, "severity": "INFO", "message": "Found 14 results for keyboard", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790416418183680, "severity": "INFO", "message": "User_37 viewed product: camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

@@ -1,0 +1,21 @@
+{"timestamp": 1767792148157788928, "severity": "INFO", "message": "Processing checkout for user_30, total: $1464", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792148158056704, "severity": "INFO", "message": "Order placed successfully for user_30", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792148839149824, "severity": "INFO", "message": "User_11 added keyboard to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792149636125952, "severity": "DEBUG", "message": "Login attempt for user_19", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792149636306944, "severity": "INFO", "message": "User_19 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792150858088448, "severity": "DEBUG", "message": "Login attempt for user_6", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792150858287616, "severity": "INFO", "message": "User_6 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792151309406208, "severity": "INFO", "message": "User_89 added keyboard to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792151973818368, "severity": "INFO", "message": "Processing checkout for user_55, total: $1058", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792151973905920, "severity": "CRITICAL", "message": "Payment gateway connection failed", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792152793418496, "severity": "INFO", "message": "User_84 viewed product: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792153432268800, "severity": "INFO", "message": "Coupon SAVE23 applied: 12% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792154036149248, "severity": "INFO", "message": "Processing checkout for user_48, total: $1577", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792154036356352, "severity": "ERROR", "message": "Inventory check failed: Item out of stock", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792155229901056, "severity": "INFO", "message": "User_46 viewed product: phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792155938629632, "severity": "DEBUG", "message": "Searching for product: laptop", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792155938871808, "severity": "WARNING", "message": "No results found for query: laptop", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792156295187456, "severity": "INFO", "message": "User_15 viewed product: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792157639252224, "severity": "DEBUG", "message": "Searching for product: laptop", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792157639432960, "severity": "INFO", "message": "Found 28 results for laptop", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792158468100864, "severity": "INFO", "message": "Coupon SAVE26 applied: 5% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

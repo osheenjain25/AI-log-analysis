@@ -1,0 +1,15 @@
+{"timestamp": 1767792770635491328, "severity": "INFO", "message": "Found 36 results for camera", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792771691818752, "severity": "WARNING", "message": "Coupon SAVE13 has expired", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792772439102208, "severity": "INFO", "message": "Coupon SAVE18 applied: 21% discount", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792773525696768, "severity": "INFO", "message": "User_77 added tablet to cart", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792774627713024, "severity": "INFO", "message": "Coupon SAVE34 applied: 30% discount", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792776046590464, "severity": "DEBUG", "message": "Searching for product: phone", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792776046866944, "severity": "INFO", "message": "Found 26 results for phone", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792777155570944, "severity": "INFO", "message": "Coupon SAVE32 applied: 16% discount", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792777617157120, "severity": "DEBUG", "message": "Searching for product: mouse", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792777617317120, "severity": "INFO", "message": "Found 39 results for mouse", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792778187711232, "severity": "INFO", "message": "User_40 added monitor to cart", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792779400315648, "severity": "INFO", "message": "Processing checkout for user_2, total: $1405", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792779400414208, "severity": "ERROR", "message": "Payment validation failed: Invalid card details", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792779940370688, "severity": "INFO", "message": "Coupon SAVE18 applied: 21% discount", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792781229837312, "severity": "DEBUG", "message": "Searching for product: phone", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}

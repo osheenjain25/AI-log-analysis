@@ -1,0 +1,13 @@
+{"timestamp": 1767791570551608320, "severity": "WARNING", "message": "No results found for query: phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791571994440960, "severity": "INFO", "message": "User_75 viewed product: monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791573307352832, "severity": "DEBUG", "message": "Login attempt for user_34", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791573307489536, "severity": "INFO", "message": "User_34 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791574202749440, "severity": "INFO", "message": "User_85 viewed product: phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791575628330752, "severity": "INFO", "message": "Processing checkout for user_7, total: $1294", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791575628517376, "severity": "INFO", "message": "Order placed successfully for user_7", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791576791419904, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791576791528704, "severity": "INFO", "message": "Found 18 results for camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791578060705792, "severity": "ERROR", "message": "Invalid coupon code: SAVE47", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791578958973184, "severity": "WARNING", "message": "Coupon SAVE19 has expired", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791580319305728, "severity": "ERROR", "message": "Cache service unavailable, cart update failed", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791580730835456, "severity": "WARNING", "message": "Rate limit exceeded for user_90", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

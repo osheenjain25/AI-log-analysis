@@ -1,0 +1,15 @@
+{"timestamp": 1767791707948311808, "severity": "ERROR", "message": "Network timeout while loading product details", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791708688311040, "severity": "INFO", "message": "User_28 added mouse to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791710073797120, "severity": "ERROR", "message": "Invalid coupon code: SAVE34", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791710382698752, "severity": "DEBUG", "message": "Searching for product: monitor", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791710382802432, "severity": "INFO", "message": "Found 4 results for monitor", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791711508406784, "severity": "INFO", "message": "User_73 viewed product: keyboard", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791712575512576, "severity": "DEBUG", "message": "Login attempt for user_84", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791712575691520, "severity": "WARNING", "message": "Invalid password for user_84", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791713090908160, "severity": "DEBUG", "message": "Login attempt for user_19", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791713091101952, "severity": "INFO", "message": "User_19 logged in successfully", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791714510511360, "severity": "INFO", "message": "User_72 added mouse to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791715611594496, "severity": "INFO", "message": "User_67 added camera to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791716478159872, "severity": "INFO", "message": "Processing checkout for user_39, total: $938", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791716478342144, "severity": "ERROR", "message": "Database connection lost during checkout", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791716917199616, "severity": "INFO", "message": "Processing checkout for user_100, total: $1900", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}

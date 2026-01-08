@@ -1,0 +1,14 @@
+{"timestamp": 1767792863156285696, "severity": "INFO", "message": "Coupon SAVE42 applied: 8% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792864468331776, "severity": "INFO", "message": "User_61 added camera to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792865629040640, "severity": "INFO", "message": "User_57 viewed product: mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792866052350208, "severity": "INFO", "message": "User_63 added headphones to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792866509518592, "severity": "ERROR", "message": "Cache service unavailable, cart update failed", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792867553586432, "severity": "INFO", "message": "User_61 added monitor to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792868315708672, "severity": "WARNING", "message": "Coupon SAVE12 has expired", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792868819835904, "severity": "WARNING", "message": "Coupon SAVE33 has expired", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792870272278528, "severity": "DEBUG", "message": "Searching for product: mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792870272403712, "severity": "INFO", "message": "Found 13 results for mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792870578163200, "severity": "INFO", "message": "User_28 viewed product: keyboard", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792871463264768, "severity": "DEBUG", "message": "Searching for product: phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792871463450624, "severity": "WARNING", "message": "No results found for query: phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792872386648832, "severity": "INFO", "message": "Coupon SAVE37 applied: 25% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

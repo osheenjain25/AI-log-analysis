@@ -1,0 +1,15 @@
+{"timestamp": 1767793356126171648, "severity": "INFO", "message": "User_4 viewed product: keyboard", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793356715082496, "severity": "INFO", "message": "Coupon SAVE28 applied: 21% discount", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793357144980224, "severity": "DEBUG", "message": "Login attempt for user_48", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793357145163008, "severity": "INFO", "message": "User_48 logged in successfully", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793357688317696, "severity": "INFO", "message": "User_73 added keyboard to cart", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793358865898496, "severity": "INFO", "message": "User_75 viewed product: phone", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793359917371648, "severity": "DEBUG", "message": "Login attempt for user_65", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793359917546240, "severity": "INFO", "message": "User_65 logged in successfully", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793360354015488, "severity": "INFO", "message": "User_56 viewed product: camera", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793361715178240, "severity": "INFO", "message": "User_75 added keyboard to cart", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793362250794752, "severity": "DEBUG", "message": "Login attempt for user_67", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793362250921984, "severity": "INFO", "message": "User_67 logged in successfully", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793363111572480, "severity": "INFO", "message": "User_60 viewed product: keyboard", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793364119625216, "severity": "INFO", "message": "User_60 viewed product: monitor", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793365566916864, "severity": "INFO", "message": "User_49 viewed product: tablet", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}

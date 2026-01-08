@@ -1,0 +1,21 @@
+{"timestamp": 1767785997126218752, "severity": "DEBUG", "message": "Login attempt for user_50", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785997126405632, "severity": "INFO", "message": "User_50 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785998093581568, "severity": "DEBUG", "message": "Login attempt for user_93", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785998093713408, "severity": "CRITICAL", "message": "Authentication service unavailable for user_93", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785998429299456, "severity": "INFO", "message": "Coupon SAVE40 applied: 19% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785998830038784, "severity": "INFO", "message": "Processing checkout for user_16, total: $1577", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785998830267136, "severity": "INFO", "message": "Order placed successfully for user_16", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786000154429440, "severity": "INFO", "message": "Processing checkout for user_34, total: $1631", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786000154680320, "severity": "INFO", "message": "Order placed successfully for user_34", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786000525461504, "severity": "DEBUG", "message": "Login attempt for user_26", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786000525660672, "severity": "INFO", "message": "User_26 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786001246375424, "severity": "INFO", "message": "User_86 added monitor to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786002033231360, "severity": "DEBUG", "message": "Login attempt for user_71", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786002033323008, "severity": "INFO", "message": "User_71 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786003303935744, "severity": "INFO", "message": "User_35 viewed product: headphones", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786004525176320, "severity": "INFO", "message": "User_4 added headphones to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786005146472960, "severity": "DEBUG", "message": "Login attempt for user_62", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786005146592256, "severity": "INFO", "message": "User_62 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786005587809536, "severity": "DEBUG", "message": "Login attempt for user_48", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786005587912192, "severity": "INFO", "message": "User_48 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786006640000512, "severity": "INFO", "message": "User_69 added camera to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

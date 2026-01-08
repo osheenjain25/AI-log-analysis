@@ -1,0 +1,18 @@
+{"timestamp": 1767785222399136512, "severity": "DEBUG", "message": "Searching for product: keyboard", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785222399336192, "severity": "INFO", "message": "Found 24 results for keyboard", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785223195868928, "severity": "INFO", "message": "User_19 added keyboard to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785224601848576, "severity": "DEBUG", "message": "Login attempt for user_63", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785224601968384, "severity": "INFO", "message": "User_63 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785225162062592, "severity": "INFO", "message": "User_23 added tablet to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785225791130880, "severity": "INFO", "message": "User_3 added keyboard to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785226745723392, "severity": "DEBUG", "message": "Searching for product: headphones", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785226745846528, "severity": "INFO", "message": "Found 16 results for headphones", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785227544377344, "severity": "WARNING", "message": "Coupon SAVE26 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785228368330752, "severity": "INFO", "message": "Processing checkout for user_85, total: $1571", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785228368515584, "severity": "INFO", "message": "Order placed successfully for user_85", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785228806926592, "severity": "INFO", "message": "User_52 added laptop to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785229701722112, "severity": "INFO", "message": "Processing checkout for user_77, total: $1208", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785229701846784, "severity": "CRITICAL", "message": "Payment gateway connection failed", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785230275017984, "severity": "INFO", "message": "User_94 viewed product: tablet", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785231090094080, "severity": "INFO", "message": "Coupon SAVE49 applied: 13% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785232527759872, "severity": "INFO", "message": "Coupon SAVE11 applied: 11% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

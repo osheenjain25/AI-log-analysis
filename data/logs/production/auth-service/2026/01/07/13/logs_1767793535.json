@@ -1,0 +1,12 @@
+{"timestamp": 1767793526722633216, "severity": "INFO", "message": "Coupon SAVE44 applied: 29% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793527889860096, "severity": "INFO", "message": "Processing checkout for user_41, total: $551", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793527889987840, "severity": "INFO", "message": "Order placed successfully for user_41", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793528731275008, "severity": "INFO", "message": "Coupon SAVE29 applied: 26% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793529697487872, "severity": "WARNING", "message": "Coupon SAVE12 has expired", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793530758747904, "severity": "INFO", "message": "User_51 viewed product: keyboard", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793532112289792, "severity": "INFO", "message": "User_36 added camera to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793533284369152, "severity": "INFO", "message": "Coupon SAVE27 applied: 5% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793534337432576, "severity": "INFO", "message": "User_26 viewed product: monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793535173821184, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793535173914880, "severity": "INFO", "message": "Found 32 results for camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793535706286592, "severity": "INFO", "message": "Coupon SAVE25 applied: 20% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

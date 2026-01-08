@@ -1,0 +1,15 @@
+{"timestamp": 1767785117463570944, "severity": "INFO", "message": "Order placed successfully for user_11", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785118250450688, "severity": "INFO", "message": "Coupon SAVE42 applied: 17% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785119679313408, "severity": "DEBUG", "message": "Login attempt for user_55", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785119679413504, "severity": "INFO", "message": "User_55 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785121040323072, "severity": "DEBUG", "message": "Searching for product: keyboard", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785121040459264, "severity": "WARNING", "message": "No results found for query: keyboard", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785121909826816, "severity": "INFO", "message": "Coupon SAVE10 applied: 16% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785122635713024, "severity": "INFO", "message": "User_14 viewed product: camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785123742151168, "severity": "DEBUG", "message": "Login attempt for user_75", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785123742255104, "severity": "INFO", "message": "User_75 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785125007500032, "severity": "INFO", "message": "User_54 added keyboard to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785126004341504, "severity": "INFO", "message": "User_38 added tablet to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785126388810752, "severity": "DEBUG", "message": "Searching for product: keyboard", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785126389041408, "severity": "INFO", "message": "Found 17 results for keyboard", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785127840349696, "severity": "DEBUG", "message": "Login attempt for user_7", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

@@ -1,0 +1,16 @@
+{"timestamp": 1767791875951632640, "severity": "INFO", "message": "Processing checkout for user_90, total: $1176", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791875951775488, "severity": "INFO", "message": "Order placed successfully for user_90", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791877236377600, "severity": "INFO", "message": "User_71 added keyboard to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791878643272448, "severity": "DEBUG", "message": "Login attempt for user_83", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791878643584768, "severity": "INFO", "message": "User_83 logged in successfully", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791878951204864, "severity": "WARNING", "message": "Rate limit exceeded for user_41", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791879679683584, "severity": "DEBUG", "message": "Searching for product: tablet", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791879679785472, "severity": "WARNING", "message": "No results found for query: tablet", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791880239314432, "severity": "INFO", "message": "Coupon SAVE32 applied: 24% discount", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791881541800960, "severity": "INFO", "message": "Coupon SAVE10 applied: 20% discount", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791882289916160, "severity": "ERROR", "message": "Invalid coupon code: SAVE23", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791883249688320, "severity": "INFO", "message": "User_77 added phone to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791884012785152, "severity": "DEBUG", "message": "Login attempt for user_89", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791884012912384, "severity": "INFO", "message": "User_89 logged in successfully", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791885267666944, "severity": "INFO", "message": "User_1 viewed product: monitor", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791886423638016, "severity": "INFO", "message": "Processing checkout for user_26, total: $1546", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}

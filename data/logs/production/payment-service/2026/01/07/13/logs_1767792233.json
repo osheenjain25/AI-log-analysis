@@ -1,0 +1,18 @@
+{"timestamp": 1767792222641189632, "severity": "INFO", "message": "Order placed successfully for user_14", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792223593847040, "severity": "INFO", "message": "User_100 added laptop to cart", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792224935694336, "severity": "INFO", "message": "User_61 added monitor to cart", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792225250739200, "severity": "DEBUG", "message": "Searching for product: tablet", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792225250940160, "severity": "INFO", "message": "Found 45 results for tablet", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792226151174912, "severity": "DEBUG", "message": "Login attempt for user_2", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792226151372544, "severity": "INFO", "message": "User_2 logged in successfully", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792227460447488, "severity": "DEBUG", "message": "Login attempt for user_20", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792227460716288, "severity": "INFO", "message": "User_20 logged in successfully", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792228646244608, "severity": "DEBUG", "message": "Login attempt for user_58", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792228646361600, "severity": "INFO", "message": "User_58 logged in successfully", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792229732356608, "severity": "INFO", "message": "User_29 added monitor to cart", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792230163634944, "severity": "WARNING", "message": "Coupon SAVE38 has expired", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792231498936832, "severity": "INFO", "message": "User_84 added mouse to cart", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792232129013760, "severity": "WARNING", "message": "Coupon SAVE43 has expired", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792232549772032, "severity": "DEBUG", "message": "Searching for product: phone", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792232549983488, "severity": "ERROR", "message": "Search service timeout for query: phone", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792233334285824, "severity": "INFO", "message": "User_8 viewed product: keyboard", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}

@@ -1,0 +1,19 @@
+{"timestamp": 1767792873042903296, "severity": "WARNING", "message": "Coupon SAVE23 has expired", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792873878022912, "severity": "DEBUG", "message": "Searching for product: monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792873878139904, "severity": "INFO", "message": "Found 29 results for monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792874468138752, "severity": "INFO", "message": "Processing checkout for user_5, total: $162", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792874468292864, "severity": "ERROR", "message": "Payment validation failed: Invalid card details", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792875667959040, "severity": "WARNING", "message": "Coupon SAVE16 has expired", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792876763306240, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792876763432960, "severity": "INFO", "message": "Found 13 results for camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792877780026112, "severity": "INFO", "message": "Processing checkout for user_99, total: $1486", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792877780246272, "severity": "INFO", "message": "Order placed successfully for user_99", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792878281763072, "severity": "ERROR", "message": "Network timeout while loading product details", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792879001140224, "severity": "INFO", "message": "User_36 viewed product: phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792879512200192, "severity": "INFO", "message": "User_17 added laptop to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792880771252736, "severity": "DEBUG", "message": "Login attempt for user_53", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792880771524608, "severity": "WARNING", "message": "Invalid password for user_53", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792881144295936, "severity": "INFO", "message": "User_55 added laptop to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792881995211264, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792881995323136, "severity": "WARNING", "message": "No results found for query: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792882962384128, "severity": "INFO", "message": "User_73 added monitor to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

@@ -1,0 +1,20 @@
+{"timestamp": 1767791623565389312, "severity": "WARNING", "message": "Coupon SAVE16 has expired", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791624052280320, "severity": "INFO", "message": "Processing checkout for user_31, total: $1313", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791624052394496, "severity": "INFO", "message": "Order placed successfully for user_31", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791625096279552, "severity": "DEBUG", "message": "Login attempt for user_36", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791625096482304, "severity": "INFO", "message": "User_36 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791625667310592, "severity": "INFO", "message": "User_53 viewed product: tablet", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791626750037248, "severity": "INFO", "message": "User_6 added phone to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791627163868160, "severity": "INFO", "message": "User_31 viewed product: keyboard", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791627579738368, "severity": "DEBUG", "message": "Searching for product: keyboard", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791627579835904, "severity": "INFO", "message": "Found 14 results for keyboard", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791627896868096, "severity": "DEBUG", "message": "Login attempt for user_51", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791627897107968, "severity": "INFO", "message": "User_51 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791628292742144, "severity": "INFO", "message": "Processing checkout for user_95, total: $68", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791628292872192, "severity": "ERROR", "message": "Inventory check failed: Item out of stock", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791629532301824, "severity": "INFO", "message": "Coupon SAVE48 applied: 6% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791630860816896, "severity": "INFO", "message": "Processing checkout for user_1, total: $1153", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791630861040128, "severity": "INFO", "message": "Order placed successfully for user_1", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791632066712064, "severity": "INFO", "message": "Processing checkout for user_31, total: $154", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791632066839296, "severity": "ERROR", "message": "Inventory check failed: Item out of stock", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791633468316672, "severity": "DEBUG", "message": "Login attempt for user_45", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

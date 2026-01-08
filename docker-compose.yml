@@ -1,0 +1,69 @@
+version: "3"
+services:
+  loki:
+    image: grafana/loki:2.9.2
+    ports:
+      - "3100:3100"
+    command: -config.file=/etc/loki/local-config.yaml
+    volumes:
+      - ./config/loki-config.yaml:/etc/loki/local-config.yaml
+
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:0.88.0
+    command: [ "--config=/etc/otel-collector-config.yaml" ]
+    volumes:
+      - ./config/otel-collector-config.yaml:/etc/otel-collector-config.yaml
+    ports:
+      - "4317:4317" # OTLP gRPC
+      - "4318:4318" # OTLP HTTP
+      - "8889:8889" # Prometheus exporter metrics
+
+  log-generator:
+    build: ./log-generator
+    env_file: .env
+    environment:
+      - SERVICE_NAME=unified-service
+      - ENVIRONMENT=production
+      - AWS_S3_LOGS_BUCKET=${AWS_S3_LOGS_BUCKET}
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+    depends_on:
+      - otel-collector
+    volumes:
+      - ./data:/app/logs
+      - ./log-generator:/app
+
+  ai-analyzer:
+    build: ./ai-analyzer
+    env_file: .env
+    environment:
+      - LOKI_URL=${LOKI_URL}
+      - OTEL_EXPORTER_OTLP_ENDPOINT=${OTEL_EXPORTER_OTLP_ENDPOINT}
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+      - ALLOWED_LOKI_JOBS=${ALLOWED_LOKI_JOBS}
+      - ALLOWED_S3_BUCKETS=${ALLOWED_S3_BUCKETS}
+      - AWS_S3_LOGS_BUCKET=${AWS_S3_LOGS_BUCKET}
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - GCHAT_WEBHOOK_URL=${GCHAT_WEBHOOK_URL}
+    ports:
+      - "5000:5000"
+    depends_on:
+      - loki
+    volumes:
+      - ./data:/app/data
+      - ./ai-analyzer:/app
+
+  ai-dashboard:
+    build: ./ai-dashboard
+    ports:
+      - "8080:8080"
+    env_file: .env
+    environment:
+      - LOKI_URL=${LOKI_URL}
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+      - ANALYZER_URL=${ANALYZER_URL}
+    depends_on:
+      - loki
+    volumes:
+      - ./data:/app/data

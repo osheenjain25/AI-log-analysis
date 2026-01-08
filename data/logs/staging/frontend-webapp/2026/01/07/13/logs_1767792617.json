@@ -1,0 +1,14 @@
+{"timestamp": 1767792607674771200, "severity": "INFO", "message": "User_83 added phone to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792608079207936, "severity": "INFO", "message": "Processing checkout for user_98, total: $849", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792608079463680, "severity": "CRITICAL", "message": "Payment gateway connection failed", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792608523362560, "severity": "INFO", "message": "User_85 viewed product: tablet", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792609956203008, "severity": "INFO", "message": "Coupon SAVE47 applied: 16% discount", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792611095024384, "severity": "INFO", "message": "Processing checkout for user_8, total: $1092", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792611095234304, "severity": "INFO", "message": "Order placed successfully for user_8", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792612508077824, "severity": "INFO", "message": "User_90 viewed product: mouse", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792612832764928, "severity": "INFO", "message": "User_65 added laptop to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792614144360704, "severity": "INFO", "message": "Coupon SAVE31 applied: 14% discount", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792614754503424, "severity": "INFO", "message": "User_88 viewed product: headphones", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792615129828864, "severity": "INFO", "message": "User_19 viewed product: keyboard", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792616256337664, "severity": "INFO", "message": "User_51 added camera to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792617688372736, "severity": "INFO", "message": "User_6 viewed product: headphones", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}

@@ -1,0 +1,18 @@
+{"timestamp": 1767792760205451520, "severity": "DEBUG", "message": "Searching for product: tablet", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792760205637120, "severity": "INFO", "message": "Found 49 results for tablet", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792760599184640, "severity": "ERROR", "message": "Invalid coupon code: SAVE40", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792761613132288, "severity": "DEBUG", "message": "Login attempt for user_90", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792761613423872, "severity": "INFO", "message": "User_90 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792762422017280, "severity": "DEBUG", "message": "Login attempt for user_62", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792762422197760, "severity": "INFO", "message": "User_62 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792762937659648, "severity": "INFO", "message": "Processing checkout for user_33, total: $168", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792762937851392, "severity": "INFO", "message": "Order placed successfully for user_33", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792764218053888, "severity": "DEBUG", "message": "Login attempt for user_73", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792764218146304, "severity": "INFO", "message": "User_73 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792765003767296, "severity": "INFO", "message": "User_91 viewed product: keyboard", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792765402454528, "severity": "DEBUG", "message": "Searching for product: monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792765402550784, "severity": "WARNING", "message": "No results found for query: monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792765780380160, "severity": "INFO", "message": "Coupon SAVE26 applied: 14% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792766815084544, "severity": "INFO", "message": "Coupon SAVE39 applied: 16% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792768096963072, "severity": "INFO", "message": "User_64 added laptop to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792769419054080, "severity": "INFO", "message": "User_92 viewed product: tablet", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

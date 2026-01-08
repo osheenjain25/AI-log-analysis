@@ -1,0 +1,18 @@
+{"timestamp": 1767786123565156096, "severity": "INFO", "message": "Order placed successfully for user_21", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786124438426112, "severity": "DEBUG", "message": "Searching for product: mouse", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786124438639360, "severity": "INFO", "message": "Found 29 results for mouse", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786125044952832, "severity": "INFO", "message": "Coupon SAVE23 applied: 8% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786126292330496, "severity": "DEBUG", "message": "Login attempt for user_93", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786126292460032, "severity": "WARNING", "message": "Invalid password for user_93", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786127207276544, "severity": "DEBUG", "message": "Searching for product: laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786127207629568, "severity": "INFO", "message": "Found 50 results for laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786127822401792, "severity": "DEBUG", "message": "Searching for product: mouse", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786127822500352, "severity": "CRITICAL", "message": "Search index corruption detected for query: mouse", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786129018980352, "severity": "INFO", "message": "User_92 viewed product: laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786129988322048, "severity": "INFO", "message": "Coupon SAVE40 applied: 25% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786131303421696, "severity": "INFO", "message": "Coupon SAVE24 applied: 17% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786131851022336, "severity": "DEBUG", "message": "Login attempt for user_33", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786131851121408, "severity": "INFO", "message": "User_33 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786132778229504, "severity": "WARNING", "message": "Coupon SAVE44 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786133428007168, "severity": "WARNING", "message": "Rate limit exceeded for user_65", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786134050169088, "severity": "INFO", "message": "Coupon SAVE37 applied: 6% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

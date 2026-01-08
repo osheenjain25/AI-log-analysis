@@ -1,0 +1,15 @@
+{"timestamp": 1767788022506613760, "severity": "DEBUG", "message": "Searching for product: laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788022506835968, "severity": "INFO", "message": "Found 45 results for laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788023111208448, "severity": "INFO", "message": "User_69 viewed product: keyboard", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788023419164928, "severity": "INFO", "message": "User_95 viewed product: laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788024764276224, "severity": "INFO", "message": "User_20 added monitor to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788026082599424, "severity": "INFO", "message": "Coupon SAVE13 applied: 17% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788026488711936, "severity": "INFO", "message": "User_23 added keyboard to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788027822616832, "severity": "DEBUG", "message": "Login attempt for user_9", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788027822942464, "severity": "INFO", "message": "User_9 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788029135493376, "severity": "INFO", "message": "User_53 added monitor to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788029729700608, "severity": "INFO", "message": "User_10 added mouse to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788030760450304, "severity": "DEBUG", "message": "Searching for product: monitor", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788030760841984, "severity": "INFO", "message": "Found 27 results for monitor", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788031148281856, "severity": "INFO", "message": "Coupon SAVE39 applied: 25% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788032625655296, "severity": "DEBUG", "message": "Login attempt for user_66", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

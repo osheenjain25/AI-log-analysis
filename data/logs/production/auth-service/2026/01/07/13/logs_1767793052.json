@@ -1,0 +1,22 @@
+{"timestamp": 1767793041753134080, "severity": "ERROR", "message": "Database connection lost during checkout", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793042545382656, "severity": "INFO", "message": "User_56 added camera to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793043526460928, "severity": "INFO", "message": "User_58 added camera to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793044947100928, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793044947423232, "severity": "INFO", "message": "Found 6 results for camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793045275950848, "severity": "INFO", "message": "Processing checkout for user_98, total: $851", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793045276458496, "severity": "ERROR", "message": "Inventory check failed: Item out of stock", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793045785496576, "severity": "WARNING", "message": "Coupon SAVE32 has expired", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793046251090944, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793046251299584, "severity": "INFO", "message": "Found 17 results for camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793046685519616, "severity": "INFO", "message": "Coupon SAVE28 applied: 25% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793046997913344, "severity": "DEBUG", "message": "Searching for product: laptop", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793046998061568, "severity": "INFO", "message": "Found 44 results for laptop", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793048256174592, "severity": "INFO", "message": "User_60 viewed product: headphones", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793048609114880, "severity": "INFO", "message": "User_77 added camera to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793049218140160, "severity": "DEBUG", "message": "Searching for product: laptop", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793049218444288, "severity": "INFO", "message": "Found 1 results for laptop", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793050101476864, "severity": "INFO", "message": "Processing checkout for user_22, total: $1018", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793050101657088, "severity": "CRITICAL", "message": "Payment gateway connection failed", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793051387103488, "severity": "INFO", "message": "Processing checkout for user_24, total: $888", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793051387291392, "severity": "CRITICAL", "message": "Payment gateway connection failed", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793052875020288, "severity": "INFO", "message": "User_88 viewed product: mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

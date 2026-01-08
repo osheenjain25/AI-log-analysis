@@ -1,0 +1,14 @@
+{"timestamp": 1767793588058369024, "severity": "INFO", "message": "Coupon SAVE16 applied: 10% discount", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793589148329984, "severity": "WARNING", "message": "Coupon SAVE21 has expired", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793590096370432, "severity": "INFO", "message": "User_6 added mouse to cart", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793591201930496, "severity": "WARNING", "message": "Coupon SAVE38 has expired", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793592371754496, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793592371880448, "severity": "INFO", "message": "Found 18 results for camera", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793593851457024, "severity": "WARNING", "message": "Coupon SAVE24 has expired", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793594466097408, "severity": "INFO", "message": "Coupon SAVE12 applied: 25% discount", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793595645628672, "severity": "DEBUG", "message": "Searching for product: phone", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793595645725440, "severity": "INFO", "message": "Found 10 results for phone", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793595996688384, "severity": "DEBUG", "message": "Login attempt for user_31", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793595996855296, "severity": "ERROR", "message": "Account locked for user_31 due to multiple failed attempts", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793596304390912, "severity": "INFO", "message": "User_28 viewed product: headphones", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767793596896035072, "severity": "INFO", "message": "Processing checkout for user_20, total: $1441", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}

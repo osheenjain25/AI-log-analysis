@@ -1,0 +1,14 @@
+{"timestamp": 1767792708892442112, "severity": "INFO", "message": "User_59 added mouse to cart", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792710330699264, "severity": "DEBUG", "message": "Login attempt for user_6", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792710330810624, "severity": "INFO", "message": "User_6 logged in successfully", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792711624733696, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792711624836352, "severity": "INFO", "message": "Found 10 results for camera", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792712635092992, "severity": "INFO", "message": "Coupon SAVE13 applied: 14% discount", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792714003244288, "severity": "INFO", "message": "User_45 added camera to cart", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792715112425728, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792715112570368, "severity": "INFO", "message": "Found 32 results for camera", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792716080780288, "severity": "INFO", "message": "Processing checkout for user_38, total: $744", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792716081244416, "severity": "ERROR", "message": "Inventory check failed: Item out of stock", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792717084134912, "severity": "INFO", "message": "Processing checkout for user_85, total: $1888", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792717084369408, "severity": "INFO", "message": "Order placed successfully for user_85", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792718577864960, "severity": "DEBUG", "message": "Login attempt for user_41", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}

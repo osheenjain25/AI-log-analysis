@@ -1,0 +1,14 @@
+{"timestamp": 1767791738077618432, "severity": "INFO", "message": "Coupon SAVE45 applied: 26% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791738768038144, "severity": "INFO", "message": "User_60 viewed product: mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791739116131840, "severity": "DEBUG", "message": "Searching for product: mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791739116378624, "severity": "INFO", "message": "Found 47 results for mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791740264427776, "severity": "INFO", "message": "User_49 viewed product: laptop", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791740927705088, "severity": "INFO", "message": "Coupon SAVE15 applied: 18% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791742082759168, "severity": "INFO", "message": "User_92 added monitor to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791742831077376, "severity": "INFO", "message": "Processing checkout for user_76, total: $1531", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791742831344384, "severity": "INFO", "message": "Order placed successfully for user_76", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791743231742976, "severity": "INFO", "message": "Coupon SAVE16 applied: 17% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791744560380160, "severity": "INFO", "message": "User_67 viewed product: mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791745537084928, "severity": "DEBUG", "message": "Searching for product: tablet", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791745537301248, "severity": "WARNING", "message": "No results found for query: tablet", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791746950361344, "severity": "INFO", "message": "Processing checkout for user_29, total: $1406", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

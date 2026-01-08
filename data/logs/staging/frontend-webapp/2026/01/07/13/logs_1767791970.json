@@ -1,0 +1,19 @@
+{"timestamp": 1767791960024807680, "severity": "CRITICAL", "message": "Payment gateway connection failed", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791960738792960, "severity": "DEBUG", "message": "Searching for product: mouse", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791960738935808, "severity": "INFO", "message": "Found 4 results for mouse", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791961681659136, "severity": "INFO", "message": "Coupon SAVE39 applied: 17% discount", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791962222084096, "severity": "INFO", "message": "Processing checkout for user_94, total: $229", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791962222193920, "severity": "INFO", "message": "Order placed successfully for user_94", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791962602180608, "severity": "DEBUG", "message": "Login attempt for user_21", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791962602301440, "severity": "INFO", "message": "User_21 logged in successfully", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791964044428544, "severity": "INFO", "message": "Coupon SAVE27 applied: 23% discount", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791965483107072, "severity": "INFO", "message": "User_46 viewed product: mouse", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791966157912320, "severity": "DEBUG", "message": "Login attempt for user_26", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791966158094592, "severity": "INFO", "message": "User_26 logged in successfully", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791967584362496, "severity": "DEBUG", "message": "Login attempt for user_53", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791967584566272, "severity": "INFO", "message": "User_53 logged in successfully", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791968647011072, "severity": "DEBUG", "message": "Searching for product: phone", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791968647131904, "severity": "INFO", "message": "Found 23 results for phone", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791969531736064, "severity": "INFO", "message": "Processing checkout for user_68, total: $379", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791969531834368, "severity": "INFO", "message": "Order placed successfully for user_68", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767791970093459712, "severity": "INFO", "message": "User_10 viewed product: mouse", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}

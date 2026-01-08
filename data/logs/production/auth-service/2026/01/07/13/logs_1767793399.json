@@ -1,0 +1,16 @@
+{"timestamp": 1767793389425807872, "severity": "INFO", "message": "Coupon SAVE29 applied: 21% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793390270332160, "severity": "INFO", "message": "User_94 viewed product: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793390682222848, "severity": "INFO", "message": "Coupon SAVE14 applied: 17% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793391551823616, "severity": "INFO", "message": "User_60 added mouse to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793391976888064, "severity": "INFO", "message": "User_15 viewed product: phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793393348427520, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793393348563200, "severity": "ERROR", "message": "Search service timeout for query: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793393649960704, "severity": "ERROR", "message": "Invalid coupon code: SAVE47", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793394751948288, "severity": "DEBUG", "message": "Login attempt for user_24", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793394752116736, "severity": "WARNING", "message": "Invalid password for user_24", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793396004351488, "severity": "DEBUG", "message": "Login attempt for user_19", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793396004523520, "severity": "INFO", "message": "User_19 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793396627247360, "severity": "DEBUG", "message": "Searching for product: laptop", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793396627525632, "severity": "WARNING", "message": "No results found for query: laptop", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793397871887872, "severity": "INFO", "message": "User_92 added headphones to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793399131715840, "severity": "INFO", "message": "User_25 viewed product: monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

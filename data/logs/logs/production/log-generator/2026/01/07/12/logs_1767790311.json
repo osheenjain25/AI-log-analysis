@@ -1,0 +1,14 @@
+{"timestamp": 1767790302522191872, "severity": "INFO", "message": "Coupon SAVE39 applied: 25% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790303638391296, "severity": "INFO", "message": "User_30 viewed product: camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790304512483328, "severity": "INFO", "message": "Coupon SAVE44 applied: 24% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790305256451072, "severity": "INFO", "message": "Processing checkout for user_83, total: $1516", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790305256651520, "severity": "ERROR", "message": "Inventory check failed: Item out of stock", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790305843246848, "severity": "INFO", "message": "Processing checkout for user_68, total: $690", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790305843457280, "severity": "INFO", "message": "Order placed successfully for user_68", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790306390330368, "severity": "WARNING", "message": "Coupon SAVE42 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790307288302592, "severity": "DEBUG", "message": "Login attempt for user_17", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790307288392704, "severity": "INFO", "message": "User_17 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790308648333824, "severity": "WARNING", "message": "Coupon SAVE11 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790309246501120, "severity": "INFO", "message": "User_63 viewed product: headphones", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790310201415680, "severity": "INFO", "message": "User_74 viewed product: phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790311209946112, "severity": "ERROR", "message": "Cache service unavailable, cart update failed", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

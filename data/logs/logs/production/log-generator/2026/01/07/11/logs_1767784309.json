@@ -1,0 +1,16 @@
+{"timestamp": 1767784299451470080, "severity": "INFO", "message": "User_86 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784299919789056, "severity": "ERROR", "message": "Invalid coupon code: SAVE14", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784300653184768, "severity": "DEBUG", "message": "Login attempt for user_42", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784300653354752, "severity": "INFO", "message": "User_42 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784301951394816, "severity": "INFO", "message": "User_90 added monitor to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784302831236608, "severity": "DEBUG", "message": "Login attempt for user_25", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784302831369472, "severity": "WARNING", "message": "Invalid password for user_25", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784303512305408, "severity": "ERROR", "message": "Invalid coupon code: SAVE16", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784304494944256, "severity": "INFO", "message": "User_96 added mouse to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784305437091328, "severity": "DEBUG", "message": "Login attempt for user_80", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784305437338368, "severity": "INFO", "message": "User_80 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784306298745088, "severity": "INFO", "message": "Coupon SAVE13 applied: 14% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784307484347136, "severity": "WARNING", "message": "Coupon SAVE49 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784308431704576, "severity": "INFO", "message": "Processing checkout for user_56, total: $119", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784308431963392, "severity": "ERROR", "message": "Payment validation failed: Invalid card details", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784309841087744, "severity": "WARNING", "message": "Coupon SAVE22 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

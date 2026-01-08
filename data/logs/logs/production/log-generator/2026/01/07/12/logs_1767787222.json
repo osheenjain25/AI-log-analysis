@@ -1,0 +1,20 @@
+{"timestamp": 1767787212883141120, "severity": "INFO", "message": "User_34 added mouse to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787213990635008, "severity": "DEBUG", "message": "Searching for product: keyboard", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787213990797312, "severity": "INFO", "message": "Found 29 results for keyboard", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787214468626688, "severity": "DEBUG", "message": "Login attempt for user_30", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787214469124096, "severity": "WARNING", "message": "Invalid password for user_30", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787215131637504, "severity": "INFO", "message": "User_76 viewed product: camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787215719587072, "severity": "DEBUG", "message": "Login attempt for user_77", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787215719720448, "severity": "WARNING", "message": "Invalid password for user_77", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787217133033216, "severity": "DEBUG", "message": "Login attempt for user_54", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787217133151488, "severity": "INFO", "message": "User_54 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787217465705216, "severity": "WARNING", "message": "Rate limit exceeded for user_22", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787217950049536, "severity": "INFO", "message": "User_42 viewed product: tablet", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787219340370432, "severity": "DEBUG", "message": "Login attempt for user_35", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787219340615424, "severity": "INFO", "message": "User_35 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787220485554176, "severity": "WARNING", "message": "Coupon SAVE28 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787221048514304, "severity": "INFO", "message": "Processing checkout for user_47, total: $102", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787221048759040, "severity": "INFO", "message": "Order placed successfully for user_47", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787221687809536, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787221688299776, "severity": "INFO", "message": "Found 15 results for camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787222616324096, "severity": "INFO", "message": "User_24 added camera to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

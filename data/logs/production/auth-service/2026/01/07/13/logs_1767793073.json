@@ -1,0 +1,14 @@
+{"timestamp": 1767793064614633728, "severity": "DEBUG", "message": "Login attempt for user_96", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793064614811392, "severity": "INFO", "message": "User_96 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793065728001536, "severity": "DEBUG", "message": "Searching for product: headphones", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793065728195328, "severity": "WARNING", "message": "No results found for query: headphones", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793067216282368, "severity": "DEBUG", "message": "Login attempt for user_95", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793067216379648, "severity": "INFO", "message": "User_95 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793068045832192, "severity": "INFO", "message": "Coupon SAVE32 applied: 29% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793068932413696, "severity": "INFO", "message": "User_54 added phone to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793070007799296, "severity": "INFO", "message": "Coupon SAVE44 applied: 25% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793071134386944, "severity": "INFO", "message": "User_82 viewed product: tablet", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793072123383040, "severity": "ERROR", "message": "Invalid coupon code: SAVE35", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793072585635328, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793072585815808, "severity": "WARNING", "message": "No results found for query: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793073728174080, "severity": "WARNING", "message": "Coupon SAVE26 has expired", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

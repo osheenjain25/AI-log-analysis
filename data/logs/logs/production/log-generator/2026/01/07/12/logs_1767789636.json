@@ -1,0 +1,19 @@
+{"timestamp": 1767789625567883264, "severity": "INFO", "message": "Found 29 results for phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789626115006464, "severity": "INFO", "message": "User_54 added phone to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789626481619968, "severity": "DEBUG", "message": "Searching for product: keyboard", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789626481825792, "severity": "INFO", "message": "Found 22 results for keyboard", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789626814315264, "severity": "DEBUG", "message": "Searching for product: tablet", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789626814529792, "severity": "CRITICAL", "message": "Search index corruption detected for query: tablet", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789627692308224, "severity": "DEBUG", "message": "Login attempt for user_25", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789627692434944, "severity": "ERROR", "message": "Account locked for user_25 due to multiple failed attempts", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789628431487232, "severity": "INFO", "message": "Coupon SAVE42 applied: 19% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789629366171392, "severity": "INFO", "message": "User_78 added mouse to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789630594692608, "severity": "INFO", "message": "User_12 viewed product: monitor", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789631724410112, "severity": "INFO", "message": "Coupon SAVE26 applied: 23% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789632552131584, "severity": "DEBUG", "message": "Searching for product: monitor", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789632552280064, "severity": "INFO", "message": "Found 48 results for monitor", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789633872393216, "severity": "DEBUG", "message": "Login attempt for user_89", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789633872526592, "severity": "WARNING", "message": "Invalid password for user_89", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789634689682176, "severity": "DEBUG", "message": "Login attempt for user_81", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789634689797120, "severity": "INFO", "message": "User_81 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789636170048768, "severity": "INFO", "message": "Processing checkout for user_41, total: $763", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

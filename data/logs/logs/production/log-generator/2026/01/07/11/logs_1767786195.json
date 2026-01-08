@@ -1,0 +1,14 @@
+{"timestamp": 1767786185784136448, "severity": "WARNING", "message": "Rate limit exceeded for user_37", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786187197484032, "severity": "ERROR", "message": "Invalid coupon code: SAVE48", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786188339870720, "severity": "INFO", "message": "User_51 viewed product: keyboard", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786189456317952, "severity": "DEBUG", "message": "Login attempt for user_78", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786189456449024, "severity": "WARNING", "message": "Invalid password for user_78", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786190601261056, "severity": "INFO", "message": "Processing checkout for user_93, total: $375", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786190601385472, "severity": "ERROR", "message": "Inventory check failed: Item out of stock", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786191636406784, "severity": "WARNING", "message": "Coupon SAVE19 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786193096359168, "severity": "DEBUG", "message": "Login attempt for user_78", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786193096486912, "severity": "INFO", "message": "User_78 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786193866460416, "severity": "INFO", "message": "Processing checkout for user_98, total: $75", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786193866584576, "severity": "INFO", "message": "Order placed successfully for user_98", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786194649342720, "severity": "INFO", "message": "Coupon SAVE32 applied: 13% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786195645827328, "severity": "INFO", "message": "Processing checkout for user_51, total: $1611", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

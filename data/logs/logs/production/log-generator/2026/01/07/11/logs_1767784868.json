@@ -1,0 +1,16 @@
+{"timestamp": 1767784858187939072, "severity": "INFO", "message": "Found 34 results for laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784858795469312, "severity": "INFO", "message": "Coupon SAVE38 applied: 18% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784860253957120, "severity": "DEBUG", "message": "Searching for product: monitor", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784860254142720, "severity": "INFO", "message": "Found 14 results for monitor", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784861605548800, "severity": "DEBUG", "message": "Login attempt for user_45", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784861605661952, "severity": "WARNING", "message": "Invalid password for user_45", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784862020319232, "severity": "ERROR", "message": "Network timeout while loading product details", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784862608449536, "severity": "INFO", "message": "User_98 viewed product: camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784863574964736, "severity": "ERROR", "message": "Network timeout while loading product details", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784863929129984, "severity": "ERROR", "message": "Network timeout while loading product details", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784864586505472, "severity": "WARNING", "message": "Coupon SAVE12 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784865986683648, "severity": "WARNING", "message": "Coupon SAVE10 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784866812959488, "severity": "DEBUG", "message": "Login attempt for user_22", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784866813176320, "severity": "INFO", "message": "User_22 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784867704414208, "severity": "INFO", "message": "User_78 added keyboard to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784868722880512, "severity": "ERROR", "message": "Invalid coupon code: SAVE23", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

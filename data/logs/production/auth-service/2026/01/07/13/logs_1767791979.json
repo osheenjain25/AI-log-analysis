@@ -1,0 +1,16 @@
+{"timestamp": 1767791969084905984, "severity": "INFO", "message": "Order placed successfully for user_30", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791970059859200, "severity": "ERROR", "message": "Invalid coupon code: SAVE27", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791971346081024, "severity": "INFO", "message": "Processing checkout for user_37, total: $1702", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791971346270464, "severity": "ERROR", "message": "Payment validation failed: Invalid card details", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791972768454144, "severity": "INFO", "message": "User_58 viewed product: laptop", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791973531579136, "severity": "WARNING", "message": "Coupon SAVE30 has expired", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791974287779584, "severity": "INFO", "message": "User_23 viewed product: tablet", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791974999574016, "severity": "INFO", "message": "Processing checkout for user_86, total: $1796", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791974999777536, "severity": "CRITICAL", "message": "Payment gateway connection failed", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791975778980352, "severity": "ERROR", "message": "Network timeout while loading product details", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791976980402176, "severity": "INFO", "message": "User_17 viewed product: mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791978002362112, "severity": "DEBUG", "message": "Login attempt for user_56", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791978002560512, "severity": "INFO", "message": "User_56 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791978475108864, "severity": "DEBUG", "message": "Login attempt for user_64", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791978475324672, "severity": "INFO", "message": "User_64 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791979676822272, "severity": "INFO", "message": "Coupon SAVE28 applied: 9% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

@@ -1,0 +1,18 @@
+{"timestamp": 1767792644711966720, "severity": "INFO", "message": "Processing checkout for user_20, total: $1065", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792644712237824, "severity": "CRITICAL", "message": "Payment gateway connection failed", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792645552473344, "severity": "WARNING", "message": "Coupon SAVE37 has expired", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792646516366848, "severity": "WARNING", "message": "Coupon SAVE23 has expired", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792647368333056, "severity": "DEBUG", "message": "Login attempt for user_36", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792647368522496, "severity": "INFO", "message": "User_36 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792648292300800, "severity": "DEBUG", "message": "Login attempt for user_49", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792648292496384, "severity": "ERROR", "message": "Account locked for user_49 due to multiple failed attempts", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792649672453376, "severity": "DEBUG", "message": "Searching for product: mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792649672650240, "severity": "INFO", "message": "Found 10 results for mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792650772468992, "severity": "DEBUG", "message": "Login attempt for user_15", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792650772658176, "severity": "INFO", "message": "User_15 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792651886040832, "severity": "DEBUG", "message": "Searching for product: headphones", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792651886226944, "severity": "ERROR", "message": "Search service timeout for query: headphones", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792653266086144, "severity": "INFO", "message": "User_37 viewed product: phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792653681958912, "severity": "INFO", "message": "Processing checkout for user_98, total: $288", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792653682227456, "severity": "INFO", "message": "Order placed successfully for user_98", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792655062489088, "severity": "INFO", "message": "User_64 added headphones to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

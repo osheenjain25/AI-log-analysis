@@ -1,0 +1,13 @@
+{"timestamp": 1767790015911708416, "severity": "INFO", "message": "User_20 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790016233020416, "severity": "INFO", "message": "User_61 viewed product: tablet", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790016770944512, "severity": "INFO", "message": "User_89 added laptop to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790017640380672, "severity": "INFO", "message": "User_57 added camera to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790018514760448, "severity": "WARNING", "message": "Coupon SAVE17 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790019379082496, "severity": "ERROR", "message": "Invalid coupon code: SAVE15", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790020213453312, "severity": "INFO", "message": "User_51 viewed product: monitor", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790021619625216, "severity": "WARNING", "message": "Coupon SAVE18 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790022665478144, "severity": "INFO", "message": "User_32 viewed product: keyboard", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790023784325376, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790023784494848, "severity": "INFO", "message": "Found 41 results for camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790024892285952, "severity": "INFO", "message": "Coupon SAVE37 applied: 28% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790026184170240, "severity": "DEBUG", "message": "Login attempt for user_36", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

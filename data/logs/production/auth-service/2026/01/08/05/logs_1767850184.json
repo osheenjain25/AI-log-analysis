@@ -1,0 +1,23 @@
+{"timestamp": 1767850174017949952, "severity": "ERROR", "message": "Network timeout while loading product details", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767850174643827456, "severity": "INFO", "message": "User_29 viewed product: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767850175551118080, "severity": "INFO", "message": "User_23 viewed product: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767850176047842304, "severity": "DEBUG", "message": "Searching for product: keyboard", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767850176048003584, "severity": "INFO", "message": "Found 7 results for keyboard", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767850176933142784, "severity": "INFO", "message": "Processing checkout for user_59, total: $559", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767850176933283840, "severity": "ERROR", "message": "Tax calculation service unavailable", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767850177206592768, "severity": "INFO", "message": "User_9 updated profile successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767850177791577344, "severity": "DEBUG", "message": "Login attempt for user_75", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767850177791927808, "severity": "INFO", "message": "User_75 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767850178000150272, "severity": "INFO", "message": "Refund request submitted for user_75", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767850178213842176, "severity": "INFO", "message": "User_37 added camera to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767850178811859968, "severity": "INFO", "message": "User_26 updated profile successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767850179679831808, "severity": "WARNING", "message": "Coupon SAVE45 has expired", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767850180347836928, "severity": "INFO", "message": "User_37 updated profile successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767850181049824768, "severity": "INFO", "message": "Order tracking info retrieved for user_19", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767850181682013440, "severity": "WARNING", "message": "Coupon SAVE41 has expired", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767850182474096640, "severity": "INFO", "message": "User_10 viewed product: phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767850182970268928, "severity": "INFO", "message": "User_5 viewed product: phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767850183115394048, "severity": "INFO", "message": "User_31 added laptop to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767850183503223040, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767850183503405824, "severity": "CRITICAL", "message": "Elasticsearch cluster status: RED. Nodes failing.", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767850184171655680, "severity": "INFO", "message": "User_26 updated profile successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

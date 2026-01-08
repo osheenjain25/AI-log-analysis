@@ -1,0 +1,17 @@
+{"timestamp": 1767792337534834688, "severity": "INFO", "message": "Found 22 results for tablet", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792338101199104, "severity": "DEBUG", "message": "Login attempt for user_60", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792338101378816, "severity": "INFO", "message": "User_60 logged in successfully", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792338964354304, "severity": "DEBUG", "message": "Login attempt for user_29", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792338964616448, "severity": "INFO", "message": "User_29 logged in successfully", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792340018039552, "severity": "INFO", "message": "User_20 viewed product: keyboard", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792341004204800, "severity": "DEBUG", "message": "Searching for product: keyboard", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792341004415744, "severity": "WARNING", "message": "No results found for query: keyboard", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792341949664256, "severity": "DEBUG", "message": "Searching for product: headphones", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792341949862656, "severity": "INFO", "message": "Found 26 results for headphones", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792342866433536, "severity": "DEBUG", "message": "Searching for product: tablet", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792342866637824, "severity": "INFO", "message": "Found 37 results for tablet", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792343259182336, "severity": "INFO", "message": "Coupon SAVE16 applied: 8% discount", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792344563416064, "severity": "INFO", "message": "User_40 added monitor to cart", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792345871124736, "severity": "INFO", "message": "User_26 added phone to cart", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792346726331648, "severity": "INFO", "message": "User_76 added headphones to cart", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792348169004800, "severity": "INFO", "message": "User_65 viewed product: headphones", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}

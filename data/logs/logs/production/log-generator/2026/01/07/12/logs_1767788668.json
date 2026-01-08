@@ -1,0 +1,14 @@
+{"timestamp": 1767788659432305152, "severity": "INFO", "message": "Processing checkout for user_97, total: $1650", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788659432398080, "severity": "INFO", "message": "Order placed successfully for user_97", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788660450215168, "severity": "DEBUG", "message": "Login attempt for user_75", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788660450410240, "severity": "INFO", "message": "User_75 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788661713840128, "severity": "DEBUG", "message": "Searching for product: laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788661714118656, "severity": "CRITICAL", "message": "Search index corruption detected for query: laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788662898454272, "severity": "DEBUG", "message": "Login attempt for user_50", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788662898651392, "severity": "INFO", "message": "User_50 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788663463131904, "severity": "INFO", "message": "User_3 viewed product: camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788664910369792, "severity": "INFO", "message": "Processing checkout for user_95, total: $1590", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788664910472448, "severity": "INFO", "message": "Order placed successfully for user_95", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788666211000064, "severity": "INFO", "message": "User_62 viewed product: phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788667644419584, "severity": "INFO", "message": "User_80 viewed product: phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788668918592512, "severity": "DEBUG", "message": "Login attempt for user_98", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

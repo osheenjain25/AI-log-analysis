@@ -1,0 +1,16 @@
+{"timestamp": 1767785903843399680, "severity": "INFO", "message": "User_95 added laptop to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785904385797888, "severity": "INFO", "message": "User_56 added monitor to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785905572013056, "severity": "INFO", "message": "Processing checkout for user_97, total: $1787", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785905572112640, "severity": "INFO", "message": "Order placed successfully for user_97", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785906297493504, "severity": "INFO", "message": "User_82 viewed product: headphones", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785907754324224, "severity": "INFO", "message": "Processing checkout for user_36, total: $1883", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785907754447104, "severity": "INFO", "message": "Order placed successfully for user_36", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785908727774464, "severity": "DEBUG", "message": "Login attempt for user_83", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785908727912960, "severity": "INFO", "message": "User_83 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785909561624832, "severity": "DEBUG", "message": "Searching for product: headphones", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785909561745664, "severity": "INFO", "message": "Found 38 results for headphones", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785910135472640, "severity": "INFO", "message": "User_64 added monitor to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785911123789568, "severity": "INFO", "message": "User_99 viewed product: monitor", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785912424370688, "severity": "INFO", "message": "Processing checkout for user_59, total: $150", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785912424644352, "severity": "INFO", "message": "Order placed successfully for user_59", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785913323200000, "severity": "INFO", "message": "Processing checkout for user_86, total: $438", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

@@ -1,0 +1,19 @@
+{"timestamp": 1767788970498766080, "severity": "INFO", "message": "User_20 viewed product: mouse", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788971620296192, "severity": "DEBUG", "message": "Login attempt for user_45", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788971620385024, "severity": "INFO", "message": "User_45 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788972255793920, "severity": "INFO", "message": "User_24 viewed product: tablet", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788972585022976, "severity": "DEBUG", "message": "Login attempt for user_27", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788972585314304, "severity": "WARNING", "message": "Invalid password for user_27", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788973295396864, "severity": "INFO", "message": "User_47 viewed product: tablet", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788974418745088, "severity": "INFO", "message": "Coupon SAVE31 applied: 20% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788975764317952, "severity": "DEBUG", "message": "Login attempt for user_51", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788975764424192, "severity": "INFO", "message": "User_51 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788976801092608, "severity": "DEBUG", "message": "Login attempt for user_79", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788976801224448, "severity": "INFO", "message": "User_79 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788977724367104, "severity": "INFO", "message": "User_81 viewed product: keyboard", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788978090385920, "severity": "DEBUG", "message": "Searching for product: phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788978090534656, "severity": "WARNING", "message": "No results found for query: phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788978635338752, "severity": "DEBUG", "message": "Login attempt for user_14", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788978635623680, "severity": "WARNING", "message": "Invalid password for user_14", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788979590535424, "severity": "INFO", "message": "User_75 viewed product: tablet", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788980866937088, "severity": "INFO", "message": "User_12 viewed product: keyboard", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

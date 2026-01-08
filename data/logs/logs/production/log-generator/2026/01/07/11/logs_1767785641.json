@@ -1,0 +1,20 @@
+{"timestamp": 1767785631366754560, "severity": "INFO", "message": "Found 18 results for headphones", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785632572415232, "severity": "DEBUG", "message": "Login attempt for user_8", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785632572768512, "severity": "INFO", "message": "User_8 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785632930473728, "severity": "WARNING", "message": "Coupon SAVE49 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785634247041792, "severity": "INFO", "message": "Processing checkout for user_95, total: $1635", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785634247247616, "severity": "INFO", "message": "Order placed successfully for user_95", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785635576375296, "severity": "INFO", "message": "User_11 added headphones to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785636256300544, "severity": "DEBUG", "message": "Searching for product: monitor", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785636256411392, "severity": "INFO", "message": "Found 28 results for monitor", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785636849461504, "severity": "INFO", "message": "User_1 viewed product: monitor", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785637763580416, "severity": "DEBUG", "message": "Login attempt for user_13", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785637763685632, "severity": "WARNING", "message": "Invalid password for user_13", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785638352350208, "severity": "INFO", "message": "User_10 viewed product: keyboard", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785639076433408, "severity": "DEBUG", "message": "Login attempt for user_3", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785639076659456, "severity": "INFO", "message": "User_3 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785639700154368, "severity": "INFO", "message": "User_36 added tablet to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785640592437504, "severity": "INFO", "message": "User_51 added tablet to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785641288046080, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785641288310528, "severity": "INFO", "message": "Found 4 results for camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785641591471872, "severity": "INFO", "message": "Processing checkout for user_21, total: $260", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

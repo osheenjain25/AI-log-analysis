@@ -1,0 +1,15 @@
+{"timestamp": 1767787202555819776, "severity": "DEBUG", "message": "Login attempt for user_23", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787202555947520, "severity": "WARNING", "message": "Invalid password for user_23", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787203413820672, "severity": "WARNING", "message": "Coupon SAVE50 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787204690953216, "severity": "INFO", "message": "User_46 viewed product: headphones", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787205625507328, "severity": "INFO", "message": "User_40 added monitor to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787206918789632, "severity": "WARNING", "message": "Rate limit exceeded for user_80", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787207912301568, "severity": "INFO", "message": "User_54 viewed product: headphones", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787208364309504, "severity": "INFO", "message": "Processing checkout for user_5, total: $1939", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787208364401408, "severity": "ERROR", "message": "Inventory check failed: Item out of stock", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787209534692352, "severity": "DEBUG", "message": "Searching for product: laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787209535130112, "severity": "INFO", "message": "Found 13 results for laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787210816334592, "severity": "ERROR", "message": "Invalid coupon code: SAVE11", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787211284325632, "severity": "INFO", "message": "Processing checkout for user_8, total: $755", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787211284474112, "severity": "ERROR", "message": "Inventory check failed: Item out of stock", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787212261758720, "severity": "WARNING", "message": "Coupon SAVE44 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

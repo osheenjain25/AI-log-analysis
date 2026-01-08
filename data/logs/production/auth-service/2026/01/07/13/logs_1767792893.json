@@ -1,0 +1,16 @@
+{"timestamp": 1767792884106106880, "severity": "DEBUG", "message": "Login attempt for user_87", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792884106252544, "severity": "INFO", "message": "User_87 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792885366039296, "severity": "INFO", "message": "Processing checkout for user_11, total: $949", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792885366212096, "severity": "INFO", "message": "Order placed successfully for user_11", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792886416340992, "severity": "INFO", "message": "Processing checkout for user_8, total: $1270", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792886416439552, "severity": "ERROR", "message": "Inventory check failed: Item out of stock", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792887387564800, "severity": "INFO", "message": "User_7 viewed product: monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792888636364032, "severity": "WARNING", "message": "Coupon SAVE10 has expired", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792889956046336, "severity": "DEBUG", "message": "Searching for product: tablet", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792889956146944, "severity": "INFO", "message": "Found 14 results for tablet", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792890389274368, "severity": "ERROR", "message": "Invalid coupon code: SAVE47", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792891296349696, "severity": "INFO", "message": "User_3 viewed product: phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792891882922240, "severity": "INFO", "message": "Processing checkout for user_72, total: $1087", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792891883102464, "severity": "CRITICAL", "message": "Payment gateway connection failed", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792892571028224, "severity": "INFO", "message": "User_62 added tablet to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792893868326656, "severity": "DEBUG", "message": "Login attempt for user_11", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

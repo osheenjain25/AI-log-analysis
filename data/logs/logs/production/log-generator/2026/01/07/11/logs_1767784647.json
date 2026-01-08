@@ -1,0 +1,13 @@
+{"timestamp": 1767784637629073408, "severity": "INFO", "message": "Order placed successfully for user_73", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784637983387904, "severity": "ERROR", "message": "Invalid coupon code: SAVE17", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784638621169664, "severity": "ERROR", "message": "Invalid coupon code: SAVE19", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784639142797568, "severity": "DEBUG", "message": "Login attempt for user_30", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784639143014400, "severity": "INFO", "message": "User_30 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784640428362496, "severity": "ERROR", "message": "Invalid coupon code: SAVE39", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784641883714048, "severity": "INFO", "message": "User_7 viewed product: phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784642843452416, "severity": "INFO", "message": "Processing checkout for user_10, total: $1369", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784642843617792, "severity": "ERROR", "message": "Inventory check failed: Item out of stock", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784644307948032, "severity": "INFO", "message": "User_53 viewed product: keyboard", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784645782337024, "severity": "INFO", "message": "Coupon SAVE30 applied: 25% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784647248360960, "severity": "INFO", "message": "User_47 viewed product: headphones", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784647947184384, "severity": "DEBUG", "message": "Searching for product: mouse", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

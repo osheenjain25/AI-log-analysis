@@ -1,0 +1,15 @@
+{"timestamp": 1767784342022669056, "severity": "INFO", "message": "Order placed successfully for user_74", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784343424334080, "severity": "INFO", "message": "Coupon SAVE31 applied: 17% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784344578201088, "severity": "INFO", "message": "User_28 added camera to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784345871811072, "severity": "INFO", "message": "User_87 viewed product: camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784347326066432, "severity": "INFO", "message": "Processing checkout for user_89, total: $1899", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784347326213120, "severity": "INFO", "message": "Order placed successfully for user_89", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784348660467200, "severity": "WARNING", "message": "Coupon SAVE47 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784349047175424, "severity": "INFO", "message": "User_5 viewed product: tablet", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784350172618240, "severity": "DEBUG", "message": "Searching for product: laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784350173057792, "severity": "INFO", "message": "Found 27 results for laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784351276315904, "severity": "INFO", "message": "Processing checkout for user_3, total: $1300", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784351276415744, "severity": "INFO", "message": "Order placed successfully for user_3", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784351860361472, "severity": "INFO", "message": "Processing checkout for user_82, total: $1046", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784351860491264, "severity": "INFO", "message": "Order placed successfully for user_82", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784352992641536, "severity": "DEBUG", "message": "Login attempt for user_82", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

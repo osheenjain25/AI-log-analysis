@@ -1,0 +1,17 @@
+{"timestamp": 1767792602494064128, "severity": "INFO", "message": "User_74 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792603082375168, "severity": "INFO", "message": "User_10 added phone to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792603492355072, "severity": "INFO", "message": "User_48 viewed product: monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792604205638400, "severity": "DEBUG", "message": "Login attempt for user_49", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792604205829376, "severity": "INFO", "message": "User_49 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792605396345344, "severity": "INFO", "message": "User_72 added headphones to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792606200349440, "severity": "INFO", "message": "Coupon SAVE27 applied: 10% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792607487408128, "severity": "DEBUG", "message": "Searching for product: headphones", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792607487630848, "severity": "INFO", "message": "Found 43 results for headphones", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792608539210240, "severity": "INFO", "message": "Coupon SAVE35 applied: 28% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792609270055680, "severity": "INFO", "message": "Processing checkout for user_45, total: $1843", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792609270250752, "severity": "INFO", "message": "Order placed successfully for user_45", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792610543027456, "severity": "DEBUG", "message": "Searching for product: monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792610543293440, "severity": "WARNING", "message": "No results found for query: monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792611900367104, "severity": "INFO", "message": "User_76 added keyboard to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792612286500096, "severity": "INFO", "message": "Coupon SAVE35 applied: 10% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792613213432320, "severity": "INFO", "message": "User_57 viewed product: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

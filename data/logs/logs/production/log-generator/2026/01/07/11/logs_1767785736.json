@@ -1,0 +1,16 @@
+{"timestamp": 1767785727796323072, "severity": "INFO", "message": "Coupon SAVE34 applied: 16% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785728999050240, "severity": "DEBUG", "message": "Login attempt for user_4", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785728999142144, "severity": "WARNING", "message": "Invalid password for user_4", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785729438577664, "severity": "INFO", "message": "User_53 viewed product: laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785730648431360, "severity": "DEBUG", "message": "Searching for product: mouse", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785730648646656, "severity": "INFO", "message": "Found 43 results for mouse", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785731245655040, "severity": "DEBUG", "message": "Login attempt for user_50", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785731245790720, "severity": "INFO", "message": "User_50 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785732672094976, "severity": "INFO", "message": "User_40 added monitor to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785733560324352, "severity": "INFO", "message": "Processing checkout for user_35, total: $599", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785733560448768, "severity": "INFO", "message": "Order placed successfully for user_35", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785734446043904, "severity": "DEBUG", "message": "Login attempt for user_43", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785734446179072, "severity": "ERROR", "message": "Account locked for user_43 due to multiple failed attempts", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785735069319680, "severity": "INFO", "message": "User_40 added laptop to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785735896090880, "severity": "INFO", "message": "User_15 viewed product: laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767785736969533696, "severity": "INFO", "message": "User_62 viewed product: keyboard", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

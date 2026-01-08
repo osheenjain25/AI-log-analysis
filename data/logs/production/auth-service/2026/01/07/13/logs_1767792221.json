@@ -1,0 +1,16 @@
+{"timestamp": 1767792210439215616, "severity": "DEBUG", "message": "Searching for product: mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792210439347712, "severity": "INFO", "message": "Found 14 results for mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792211336051456, "severity": "INFO", "message": "User_10 viewed product: monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792212702795520, "severity": "DEBUG", "message": "Searching for product: keyboard", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792212702991104, "severity": "INFO", "message": "Found 3 results for keyboard", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792213620019712, "severity": "INFO", "message": "Coupon SAVE18 applied: 28% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792214252307456, "severity": "INFO", "message": "User_8 added laptop to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792214916338944, "severity": "WARNING", "message": "Coupon SAVE16 has expired", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792215562317568, "severity": "INFO", "message": "Processing checkout for user_1, total: $539", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792215562524928, "severity": "INFO", "message": "Order placed successfully for user_1", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792216351053312, "severity": "INFO", "message": "Coupon SAVE40 applied: 6% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792217250590208, "severity": "INFO", "message": "User_50 viewed product: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792218628492288, "severity": "DEBUG", "message": "Login attempt for user_44", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792218628697600, "severity": "INFO", "message": "User_44 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792219935143936, "severity": "INFO", "message": "User_88 viewed product: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792221432352512, "severity": "DEBUG", "message": "Login attempt for user_100", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

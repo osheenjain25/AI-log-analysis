@@ -1,0 +1,21 @@
+{"timestamp": 1767792464971767296, "severity": "INFO", "message": "User_37 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792466041349632, "severity": "DEBUG", "message": "Login attempt for user_78", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792466041432064, "severity": "INFO", "message": "User_78 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792466604432896, "severity": "DEBUG", "message": "Searching for product: headphones", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792466604635392, "severity": "INFO", "message": "Found 38 results for headphones", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792467556407296, "severity": "ERROR", "message": "Invalid coupon code: SAVE30", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792468668409856, "severity": "DEBUG", "message": "Login attempt for user_55", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792468668597504, "severity": "WARNING", "message": "Invalid password for user_55", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792469112365568, "severity": "INFO", "message": "User_29 viewed product: keyboard", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792469462163456, "severity": "INFO", "message": "Coupon SAVE48 applied: 5% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792470436325632, "severity": "DEBUG", "message": "Searching for product: tablet", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792470436583936, "severity": "INFO", "message": "Found 11 results for tablet", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792470756040192, "severity": "INFO", "message": "Processing checkout for user_13, total: $1233", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792470756277504, "severity": "INFO", "message": "Order placed successfully for user_13", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792471523880192, "severity": "DEBUG", "message": "Login attempt for user_57", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792471524060928, "severity": "WARNING", "message": "Invalid password for user_57", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792472920441344, "severity": "DEBUG", "message": "Searching for product: mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792472920649984, "severity": "INFO", "message": "Found 1 results for mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792473573985280, "severity": "INFO", "message": "Coupon SAVE31 applied: 17% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792474654712832, "severity": "WARNING", "message": "Coupon SAVE44 has expired", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792475613302528, "severity": "INFO", "message": "Processing checkout for user_73, total: $1681", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

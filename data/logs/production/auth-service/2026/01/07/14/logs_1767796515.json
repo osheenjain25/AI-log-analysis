@@ -1,0 +1,17 @@
+{"timestamp": 1767796505987664896, "severity": "INFO", "message": "Order tracking info retrieved for user_57", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796506514967296, "severity": "INFO", "message": "User_47 updated profile successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796507687858176, "severity": "DEBUG", "message": "Login attempt for user_51", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796507688288000, "severity": "WARNING", "message": "Invalid password for user_51", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796507972502528, "severity": "INFO", "message": "Coupon SAVE31 applied: 8% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796508077524992, "severity": "INFO", "message": "Coupon SAVE30 applied: 6% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796508285418240, "severity": "INFO", "message": "User_3 added phone to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796508622688000, "severity": "INFO", "message": "User_21 updated profile successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796509724802560, "severity": "INFO", "message": "Order tracking info retrieved for user_18", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796510041004800, "severity": "INFO", "message": "User_12 updated profile successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796510452427008, "severity": "INFO", "message": "Coupon SAVE28 applied: 17% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796511560320256, "severity": "DEBUG", "message": "Login attempt for user_53", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796511560467456, "severity": "INFO", "message": "User_53 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796513032035072, "severity": "INFO", "message": "Refund request submitted for user_42", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796513918853120, "severity": "INFO", "message": "User_33 updated profile successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796514650801920, "severity": "INFO", "message": "Order tracking info retrieved for user_50", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796515347221504, "severity": "INFO", "message": "User_61 updated profile successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

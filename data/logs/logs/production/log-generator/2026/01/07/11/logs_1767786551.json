@@ -1,0 +1,16 @@
+{"timestamp": 1767786541877590272, "severity": "DEBUG", "message": "Login attempt for user_22", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786541877679872, "severity": "WARNING", "message": "Invalid password for user_22", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786542886569728, "severity": "WARNING", "message": "Coupon SAVE28 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786543664321280, "severity": "INFO", "message": "User_51 added keyboard to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786544113003264, "severity": "DEBUG", "message": "Login attempt for user_69", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786544113227776, "severity": "CRITICAL", "message": "Authentication service unavailable for user_69", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786544463620352, "severity": "DEBUG", "message": "Searching for product: monitor", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786544463874816, "severity": "INFO", "message": "Found 10 results for monitor", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786545440502016, "severity": "INFO", "message": "User_48 viewed product: camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786546462900480, "severity": "INFO", "message": "User_70 viewed product: keyboard", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786547678237952, "severity": "DEBUG", "message": "Login attempt for user_37", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786547678340096, "severity": "ERROR", "message": "Account locked for user_37 due to multiple failed attempts", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786548779283968, "severity": "WARNING", "message": "Rate limit exceeded for user_96", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786549085923328, "severity": "INFO", "message": "User_21 viewed product: laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786550232020736, "severity": "INFO", "message": "User_35 added monitor to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767786551011262720, "severity": "INFO", "message": "User_51 viewed product: phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

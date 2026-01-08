@@ -1,0 +1,13 @@
+{"timestamp": 1767787359768441856, "severity": "INFO", "message": "User_68 viewed product: laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787360955157248, "severity": "INFO", "message": "User_62 added keyboard to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787361684446720, "severity": "DEBUG", "message": "Login attempt for user_51", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787361684845568, "severity": "INFO", "message": "User_51 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787362736763904, "severity": "INFO", "message": "User_67 viewed product: laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787363449963776, "severity": "DEBUG", "message": "Login attempt for user_76", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787363450119168, "severity": "INFO", "message": "User_76 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787364947538944, "severity": "INFO", "message": "Processing checkout for user_47, total: $1163", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787364947666432, "severity": "INFO", "message": "Order placed successfully for user_47", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787366207357952, "severity": "INFO", "message": "User_24 viewed product: phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787367624877824, "severity": "DEBUG", "message": "Login attempt for user_52", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787367624989696, "severity": "INFO", "message": "User_52 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787368968325632, "severity": "ERROR", "message": "Cache service unavailable, cart update failed", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

@@ -1,0 +1,16 @@
+{"timestamp": 1767789700527857920, "severity": "INFO", "message": "User_48 viewed product: keyboard", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789701874273280, "severity": "DEBUG", "message": "Login attempt for user_100", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789701874459904, "severity": "WARNING", "message": "Invalid password for user_100", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789702765498880, "severity": "DEBUG", "message": "Searching for product: laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789702765707776, "severity": "INFO", "message": "Found 17 results for laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789703396320768, "severity": "DEBUG", "message": "Login attempt for user_60", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789703396452864, "severity": "CRITICAL", "message": "Authentication service unavailable for user_60", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789704714772992, "severity": "INFO", "message": "User_65 added headphones to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789706020007680, "severity": "DEBUG", "message": "Login attempt for user_96", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789706020104960, "severity": "INFO", "message": "User_96 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789707367150848, "severity": "DEBUG", "message": "Searching for product: keyboard", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789707367359488, "severity": "INFO", "message": "Found 1 results for keyboard", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789708626210304, "severity": "DEBUG", "message": "Login attempt for user_82", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789708626309632, "severity": "INFO", "message": "User_82 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789709140356864, "severity": "INFO", "message": "User_3 added mouse to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789710342869760, "severity": "DEBUG", "message": "Login attempt for user_13", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

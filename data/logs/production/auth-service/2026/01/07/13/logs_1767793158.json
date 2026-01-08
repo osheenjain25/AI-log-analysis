@@ -1,0 +1,18 @@
+{"timestamp": 1767793147407988736, "severity": "CRITICAL", "message": "Payment gateway connection failed", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793148136077056, "severity": "INFO", "message": "Coupon SAVE19 applied: 10% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793149107796224, "severity": "INFO", "message": "User_91 viewed product: mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793150196586240, "severity": "DEBUG", "message": "Searching for product: mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793150196820224, "severity": "INFO", "message": "Found 27 results for mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793151368448256, "severity": "DEBUG", "message": "Login attempt for user_52", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793151368655616, "severity": "ERROR", "message": "Account locked for user_52 due to multiple failed attempts", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793152069074944, "severity": "INFO", "message": "Coupon SAVE16 applied: 25% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793152617520896, "severity": "WARNING", "message": "Coupon SAVE29 has expired", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793153630434816, "severity": "INFO", "message": "User_34 viewed product: phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793153996704512, "severity": "INFO", "message": "Coupon SAVE17 applied: 26% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793155236334080, "severity": "INFO", "message": "Processing checkout for user_33, total: $231", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793155236519680, "severity": "ERROR", "message": "Inventory check failed: Item out of stock", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793156141345024, "severity": "DEBUG", "message": "Login attempt for user_46", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793156141480448, "severity": "WARNING", "message": "Invalid password for user_46", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793157271146240, "severity": "INFO", "message": "Processing checkout for user_31, total: $1863", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793157271331584, "severity": "INFO", "message": "Order placed successfully for user_31", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793158368065024, "severity": "INFO", "message": "User_98 viewed product: phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

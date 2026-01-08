@@ -1,0 +1,26 @@
+{"timestamp": 1767795401132275712, "severity": "WARNING", "message": "Coupon SAVE42 has expired", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795401892467200, "severity": "INFO", "message": "Processing checkout for user_94, total: $452", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795401892641536, "severity": "CRITICAL", "message": "Payment gateway connection failed", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795402308515328, "severity": "DEBUG", "message": "Searching for product: monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795402308835584, "severity": "INFO", "message": "Found 5 results for monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795403072342784, "severity": "INFO", "message": "User_13 viewed product: mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795403820385024, "severity": "INFO", "message": "User_42 updated profile successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795404273871616, "severity": "WARNING", "message": "Coupon SAVE20 has expired", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795404798723584, "severity": "INFO", "message": "User_88 viewed product: monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795405499265024, "severity": "INFO", "message": "User_76 viewed product: keyboard", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795406216307456, "severity": "DEBUG", "message": "Login attempt for user_10", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795406216424704, "severity": "WARNING", "message": "Invalid password for user_10", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795406966261248, "severity": "INFO", "message": "Order tracking info retrieved for user_51", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795407084590592, "severity": "DEBUG", "message": "Searching for product: phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795407084694528, "severity": "INFO", "message": "Found 18 results for phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795407437766912, "severity": "INFO", "message": "Processing checkout for user_22, total: $158", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795407437871616, "severity": "INFO", "message": "Order placed successfully for user_22", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795407936292096, "severity": "ERROR", "message": "Invalid coupon code: SAVE42", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795408254242816, "severity": "INFO", "message": "Order tracking info retrieved for user_83", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795408456186112, "severity": "DEBUG", "message": "Searching for product: laptop", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795408456309504, "severity": "WARNING", "message": "Slow query detected for: laptop", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795409147051520, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795409147288320, "severity": "INFO", "message": "Found 4 results for camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795409624423680, "severity": "INFO", "message": "Refund request submitted for user_81", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795410092453632, "severity": "INFO", "message": "Order tracking info retrieved for user_54", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795411409963520, "severity": "INFO", "message": "Coupon SAVE20 applied: 9% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

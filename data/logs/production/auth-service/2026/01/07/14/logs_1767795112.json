@@ -1,0 +1,24 @@
+{"timestamp": 1767795102067945216, "severity": "CRITICAL", "message": "Authentication service unavailable for user_52", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795102586012928, "severity": "WARNING", "message": "Coupon SAVE41 has expired", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795103013649408, "severity": "DEBUG", "message": "Searching for product: monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795103013888000, "severity": "INFO", "message": "Found 34 results for monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795103710254592, "severity": "INFO", "message": "User_22 updated profile successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795103887600640, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795103888171776, "severity": "INFO", "message": "Found 12 results for camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795105092887040, "severity": "INFO", "message": "Order tracking info retrieved for user_64", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795105629073920, "severity": "INFO", "message": "User_7 viewed product: mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795106263622656, "severity": "INFO", "message": "Order tracking info retrieved for user_6", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795106964178432, "severity": "INFO", "message": "Refund request submitted for user_35", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795107256899584, "severity": "INFO", "message": "Refund request submitted for user_53", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795107402692608, "severity": "DEBUG", "message": "Login attempt for user_87", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795107402795264, "severity": "INFO", "message": "User_87 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795108835461888, "severity": "DEBUG", "message": "Searching for product: phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795108835771648, "severity": "ERROR", "message": "Search service timeout for query: phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795109059190272, "severity": "INFO", "message": "User_16 updated profile successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795109478863360, "severity": "INFO", "message": "Refund request submitted for user_56", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795109932205824, "severity": "INFO", "message": "Coupon SAVE38 applied: 14% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795110625711872, "severity": "INFO", "message": "User_55 viewed product: tablet", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795110917267200, "severity": "WARNING", "message": "Coupon SAVE41 has expired", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795111317822720, "severity": "INFO", "message": "User_79 added camera to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795111796430336, "severity": "INFO", "message": "User_47 updated profile successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767795112360088064, "severity": "DEBUG", "message": "Searching for product: monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

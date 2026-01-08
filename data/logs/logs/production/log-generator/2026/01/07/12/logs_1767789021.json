@@ -1,0 +1,16 @@
+{"timestamp": 1767789013124304640, "severity": "DEBUG", "message": "Login attempt for user_65", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789013124436224, "severity": "ERROR", "message": "Account locked for user_65 due to multiple failed attempts", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789014184250624, "severity": "INFO", "message": "User_53 viewed product: mouse", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789015649078272, "severity": "DEBUG", "message": "Searching for product: laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789015649277440, "severity": "ERROR", "message": "Search service timeout for query: laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789016237845248, "severity": "DEBUG", "message": "Searching for product: phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789016237954304, "severity": "INFO", "message": "Found 15 results for phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789017065661440, "severity": "INFO", "message": "User_14 added phone to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789018540346112, "severity": "INFO", "message": "User_25 added camera to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789019014786304, "severity": "WARNING", "message": "Coupon SAVE37 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789019771153920, "severity": "WARNING", "message": "Coupon SAVE50 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789020160927744, "severity": "DEBUG", "message": "Login attempt for user_49", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789020161119744, "severity": "WARNING", "message": "Invalid password for user_49", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789021173832192, "severity": "DEBUG", "message": "Searching for product: headphones", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789021173953536, "severity": "INFO", "message": "Found 35 results for headphones", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767789021828294656, "severity": "DEBUG", "message": "Login attempt for user_16", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

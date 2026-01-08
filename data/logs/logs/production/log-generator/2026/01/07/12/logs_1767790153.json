@@ -1,0 +1,14 @@
+{"timestamp": 1767790144513194752, "severity": "INFO", "message": "User_86 added monitor to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790145662501632, "severity": "DEBUG", "message": "Searching for product: headphones", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790145662659584, "severity": "INFO", "message": "Found 26 results for headphones", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790146544373504, "severity": "WARNING", "message": "Rate limit exceeded for user_22", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790147663052800, "severity": "WARNING", "message": "Coupon SAVE39 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790148874974464, "severity": "INFO", "message": "Processing checkout for user_91, total: $1838", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790148875148288, "severity": "INFO", "message": "Order placed successfully for user_91", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790149686860544, "severity": "INFO", "message": "Coupon SAVE20 applied: 18% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790150849619456, "severity": "INFO", "message": "User_29 added headphones to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790151686121216, "severity": "INFO", "message": "Processing checkout for user_85, total: $85", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790151686232576, "severity": "INFO", "message": "Order placed successfully for user_85", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790152523349504, "severity": "DEBUG", "message": "Searching for product: phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790152523555584, "severity": "INFO", "message": "Found 2 results for phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767790153338399232, "severity": "INFO", "message": "Processing checkout for user_20, total: $486", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

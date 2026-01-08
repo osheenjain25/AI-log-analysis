@@ -1,0 +1,15 @@
+{"timestamp": 1767792575514938880, "severity": "INFO", "message": "Order placed successfully for user_66", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792576012193792, "severity": "DEBUG", "message": "Searching for product: monitor", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792576012430848, "severity": "INFO", "message": "Found 18 results for monitor", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792577100417280, "severity": "INFO", "message": "User_54 viewed product: phone", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792578309772800, "severity": "INFO", "message": "User_19 added laptop to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792579053326336, "severity": "INFO", "message": "Processing checkout for user_74, total: $1022", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792579053507840, "severity": "INFO", "message": "Order placed successfully for user_74", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792580182824192, "severity": "INFO", "message": "Coupon SAVE37 applied: 17% discount", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792581520362496, "severity": "INFO", "message": "Coupon SAVE43 applied: 6% discount", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792582538214656, "severity": "INFO", "message": "User_3 added keyboard to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792582844719616, "severity": "INFO", "message": "User_12 added headphones to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792583325083392, "severity": "INFO", "message": "Coupon SAVE13 applied: 24% discount", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792584612130560, "severity": "INFO", "message": "Coupon SAVE15 applied: 20% discount", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792585242599936, "severity": "INFO", "message": "User_56 added headphones to cart", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}
+{"timestamp": 1767792585690000896, "severity": "INFO", "message": "Processing checkout for user_43, total: $1099", "logger": "frontend-webapp", "attributes": {"service_name": "frontend-webapp", "environment": "staging"}}

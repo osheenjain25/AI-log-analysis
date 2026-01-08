@@ -1,0 +1,17 @@
+{"timestamp": 1767793639093166848, "severity": "INFO", "message": "User_47 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793640384451840, "severity": "INFO", "message": "User_8 viewed product: laptop", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793641407024128, "severity": "DEBUG", "message": "Login attempt for user_84", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793641407206400, "severity": "INFO", "message": "User_84 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793642755735808, "severity": "DEBUG", "message": "Searching for product: phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793642755924992, "severity": "INFO", "message": "Found 42 results for phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793643579679232, "severity": "INFO", "message": "Processing checkout for user_18, total: $955", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793643579968512, "severity": "ERROR", "message": "Inventory check failed: Item out of stock", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793643890929408, "severity": "DEBUG", "message": "Searching for product: tablet", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793643891092736, "severity": "INFO", "message": "Found 4 results for tablet", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793644371241984, "severity": "INFO", "message": "Processing checkout for user_50, total: $1410", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793644371529216, "severity": "INFO", "message": "Order placed successfully for user_50", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793645375896576, "severity": "INFO", "message": "Processing checkout for user_21, total: $1590", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793645376081152, "severity": "ERROR", "message": "Payment validation failed: Invalid card details", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793646848352512, "severity": "INFO", "message": "User_65 viewed product: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793647955954688, "severity": "INFO", "message": "User_28 added phone to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793649379085312, "severity": "ERROR", "message": "Invalid coupon code: SAVE18", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

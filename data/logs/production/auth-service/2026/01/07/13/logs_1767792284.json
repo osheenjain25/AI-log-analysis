@@ -1,0 +1,16 @@
+{"timestamp": 1767792274675650048, "severity": "INFO", "message": "Found 21 results for phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792276040468224, "severity": "INFO", "message": "Coupon SAVE21 applied: 21% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792276554479104, "severity": "DEBUG", "message": "Login attempt for user_74", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792276554739456, "severity": "INFO", "message": "User_74 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792276867820032, "severity": "INFO", "message": "User_97 added monitor to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792278340344832, "severity": "INFO", "message": "Coupon SAVE36 applied: 20% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792278745712384, "severity": "WARNING", "message": "Coupon SAVE33 has expired", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792280195809280, "severity": "INFO", "message": "Processing checkout for user_64, total: $1132", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792280195971840, "severity": "INFO", "message": "Order placed successfully for user_64", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792281547840768, "severity": "DEBUG", "message": "Searching for product: tablet", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792281548040704, "severity": "INFO", "message": "Found 6 results for tablet", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792282598019072, "severity": "INFO", "message": "User_66 added keyboard to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792283051865856, "severity": "INFO", "message": "User_90 viewed product: phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792284463819520, "severity": "DEBUG", "message": "Searching for product: laptop", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792284464085760, "severity": "INFO", "message": "Found 15 results for laptop", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792284932955136, "severity": "INFO", "message": "Coupon SAVE26 applied: 13% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

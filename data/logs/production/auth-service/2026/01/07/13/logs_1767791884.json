@@ -1,0 +1,18 @@
+{"timestamp": 1767791873245161984, "severity": "INFO", "message": "User_13 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791873962632960, "severity": "INFO", "message": "User_38 viewed product: keyboard", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791875070082816, "severity": "INFO", "message": "User_20 added camera to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791875900328448, "severity": "WARNING", "message": "Coupon SAVE24 has expired", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791877000302848, "severity": "DEBUG", "message": "Login attempt for user_21", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791877000406784, "severity": "INFO", "message": "User_21 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791877887467776, "severity": "DEBUG", "message": "Searching for product: tablet", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791877887560448, "severity": "INFO", "message": "Found 44 results for tablet", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791878486937600, "severity": "INFO", "message": "User_10 added camera to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791879738550016, "severity": "DEBUG", "message": "Searching for product: tablet", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791879738669056, "severity": "INFO", "message": "Found 27 results for tablet", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791880157605888, "severity": "INFO", "message": "Coupon SAVE32 applied: 7% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791880926394880, "severity": "INFO", "message": "Coupon SAVE35 applied: 30% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791882136102656, "severity": "DEBUG", "message": "Login attempt for user_77", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791882136190464, "severity": "INFO", "message": "User_77 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791883129901568, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791883130031872, "severity": "INFO", "message": "Found 45 results for camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791884508297216, "severity": "DEBUG", "message": "Login attempt for user_87", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

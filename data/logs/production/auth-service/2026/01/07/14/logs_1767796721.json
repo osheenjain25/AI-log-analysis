@@ -1,0 +1,27 @@
+{"timestamp": 1767796711230661888, "severity": "INFO", "message": "Refund request submitted for user_7", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796711443095552, "severity": "DEBUG", "message": "Login attempt for user_47", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796711443267584, "severity": "INFO", "message": "User_47 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796712122655488, "severity": "DEBUG", "message": "Login attempt for user_71", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796712122767104, "severity": "INFO", "message": "User_71 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796712852331008, "severity": "INFO", "message": "Coupon SAVE39 applied: 25% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796713142287360, "severity": "INFO", "message": "Order tracking info retrieved for user_45", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796713801864704, "severity": "INFO", "message": "Refund request submitted for user_76", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796714460313344, "severity": "DEBUG", "message": "Searching for product: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796714460487680, "severity": "WARNING", "message": "No results found for query: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796714565741312, "severity": "DEBUG", "message": "Login attempt for user_53", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796714565897984, "severity": "WARNING", "message": "Invalid password for user_53", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796715078578176, "severity": "DEBUG", "message": "Login attempt for user_10", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796715079150592, "severity": "INFO", "message": "User_10 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796715862313984, "severity": "INFO", "message": "Order tracking info retrieved for user_45", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796716024526592, "severity": "DEBUG", "message": "Login attempt for user_82", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796716024812032, "severity": "ERROR", "message": "MFA verification timeout for user_82", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796716756412672, "severity": "INFO", "message": "User_55 updated profile successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796717484033024, "severity": "INFO", "message": "Refund request submitted for user_13", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796717822603008, "severity": "ERROR", "message": "Invalid coupon code: SAVE23", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796718550448384, "severity": "INFO", "message": "Order tracking info retrieved for user_51", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796718662715904, "severity": "DEBUG", "message": "Login attempt for user_90", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796718662869248, "severity": "INFO", "message": "User_90 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796719376321280, "severity": "INFO", "message": "Refund request submitted for user_11", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796720063873024, "severity": "INFO", "message": "User_20 updated profile successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796720626142464, "severity": "INFO", "message": "User_40 updated profile successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767796721316418048, "severity": "INFO", "message": "Refund request submitted for user_25", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

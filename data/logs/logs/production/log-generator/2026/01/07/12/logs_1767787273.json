@@ -1,0 +1,16 @@
+{"timestamp": 1767787265068302848, "severity": "INFO", "message": "User_99 added tablet to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787266075581952, "severity": "DEBUG", "message": "Searching for product: phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787266075767808, "severity": "INFO", "message": "Found 20 results for phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787266942996224, "severity": "INFO", "message": "User_44 viewed product: mouse", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787267347269632, "severity": "DEBUG", "message": "Login attempt for user_19", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787267347425024, "severity": "WARNING", "message": "Invalid password for user_19", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787267973085440, "severity": "WARNING", "message": "Coupon SAVE14 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787268757392896, "severity": "ERROR", "message": "Network timeout while loading product details", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787270138107136, "severity": "INFO", "message": "Processing checkout for user_100, total: $1458", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787270138306048, "severity": "ERROR", "message": "Inventory check failed: Item out of stock", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787270922573824, "severity": "DEBUG", "message": "Login attempt for user_85", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787270922701824, "severity": "CRITICAL", "message": "Authentication service unavailable for user_85", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787271646815744, "severity": "INFO", "message": "Processing checkout for user_63, total: $314", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787271646909440, "severity": "INFO", "message": "Order placed successfully for user_63", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787272746571520, "severity": "INFO", "message": "User_11 viewed product: headphones", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787273781753344, "severity": "INFO", "message": "Processing checkout for user_8, total: $1057", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

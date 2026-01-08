@@ -1,0 +1,17 @@
+{"timestamp": 1767792368787713792, "severity": "DEBUG", "message": "Login attempt for user_10", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792368787937024, "severity": "INFO", "message": "User_10 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792369835322368, "severity": "INFO", "message": "User_70 added headphones to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792371292677632, "severity": "WARNING", "message": "Coupon SAVE31 has expired", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792372307946752, "severity": "INFO", "message": "Processing checkout for user_80, total: $1213", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792372308136448, "severity": "INFO", "message": "Order placed successfully for user_80", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792372805836288, "severity": "DEBUG", "message": "Searching for product: keyboard", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792372806019072, "severity": "ERROR", "message": "Search service timeout for query: keyboard", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792373775857664, "severity": "DEBUG", "message": "Searching for product: monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792373776081920, "severity": "ERROR", "message": "Search service timeout for query: monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792374231975424, "severity": "INFO", "message": "Processing checkout for user_19, total: $1507", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792374232161792, "severity": "INFO", "message": "Order placed successfully for user_19", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792375731270144, "severity": "ERROR", "message": "Cache service unavailable, cart update failed", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792377136361984, "severity": "DEBUG", "message": "Searching for product: tablet", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792377136557312, "severity": "INFO", "message": "Found 13 results for tablet", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792378366655744, "severity": "WARNING", "message": "Coupon SAVE34 has expired", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767792379624370944, "severity": "INFO", "message": "User_45 viewed product: laptop", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

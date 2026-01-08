@@ -1,0 +1,16 @@
+{"timestamp": 1767792948680103424, "severity": "ERROR", "message": "Database connection lost during checkout", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792949744472832, "severity": "INFO", "message": "User_1 added phone to cart", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792950412554496, "severity": "INFO", "message": "User_66 added keyboard to cart", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792951542960384, "severity": "DEBUG", "message": "Searching for product: keyboard", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792951543172864, "severity": "INFO", "message": "Found 27 results for keyboard", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792952033912320, "severity": "INFO", "message": "User_59 added headphones to cart", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792953059139328, "severity": "INFO", "message": "Coupon SAVE42 applied: 15% discount", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792953529661184, "severity": "DEBUG", "message": "Login attempt for user_94", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792953529871360, "severity": "INFO", "message": "User_94 logged in successfully", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792954660398336, "severity": "INFO", "message": "Processing checkout for user_41, total: $766", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792954660741888, "severity": "INFO", "message": "Order placed successfully for user_41", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792955290729728, "severity": "INFO", "message": "User_4 viewed product: laptop", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792955969998336, "severity": "DEBUG", "message": "Searching for product: laptop", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792955970213888, "severity": "INFO", "message": "Found 41 results for laptop", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792957334010368, "severity": "INFO", "message": "User_29 added mouse to cart", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792958701400320, "severity": "WARNING", "message": "Coupon SAVE32 has expired", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}

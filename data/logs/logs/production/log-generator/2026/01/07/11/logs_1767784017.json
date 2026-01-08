@@ -1,0 +1,20 @@
+{"timestamp": 1767784007616728320, "severity": "INFO", "message": "Processing checkout for user_17, total: $978", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784007617322496, "severity": "INFO", "message": "Order placed successfully for user_17", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784008121299200, "severity": "ERROR", "message": "Cache service unavailable, cart update failed", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784009399608832, "severity": "DEBUG", "message": "Login attempt for user_36", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784009399703040, "severity": "INFO", "message": "User_36 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784010305463808, "severity": "DEBUG", "message": "Login attempt for user_6", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784010305671936, "severity": "INFO", "message": "User_6 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784011636358656, "severity": "DEBUG", "message": "Searching for product: laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784011636471552, "severity": "INFO", "message": "Found 41 results for laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784012664007936, "severity": "DEBUG", "message": "Login attempt for user_60", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784012664201472, "severity": "INFO", "message": "User_60 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784013015537920, "severity": "INFO", "message": "User_43 viewed product: camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784014310077696, "severity": "INFO", "message": "User_81 added mouse to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784014699041536, "severity": "DEBUG", "message": "Login attempt for user_28", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784014699391232, "severity": "WARNING", "message": "Invalid password for user_28", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784015069481216, "severity": "INFO", "message": "Processing checkout for user_90, total: $1422", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784015069592576, "severity": "INFO", "message": "Order placed successfully for user_90", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784016170544896, "severity": "INFO", "message": "User_34 added monitor to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784016479635712, "severity": "INFO", "message": "User_60 viewed product: camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767784017792320256, "severity": "INFO", "message": "Coupon SAVE33 applied: 26% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

@@ -1,0 +1,19 @@
+{"timestamp": 1767791539369626880, "severity": "WARNING", "message": "Coupon SAVE42 has expired", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791540157124352, "severity": "INFO", "message": "Processing checkout for user_43, total: $1084", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791540157221632, "severity": "ERROR", "message": "Database connection lost during checkout", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791541158134272, "severity": "DEBUG", "message": "Login attempt for user_95", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791541158260480, "severity": "WARNING", "message": "Invalid password for user_95", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791542324282880, "severity": "INFO", "message": "User_79 viewed product: phone", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791543568308992, "severity": "INFO", "message": "User_5 viewed product: camera", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791544265999104, "severity": "DEBUG", "message": "Login attempt for user_81", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791544266174208, "severity": "WARNING", "message": "Invalid password for user_81", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791544964316928, "severity": "INFO", "message": "User_29 viewed product: mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791545810044928, "severity": "INFO", "message": "User_60 added headphones to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791546237501696, "severity": "INFO", "message": "Processing checkout for user_63, total: $1472", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791546237637632, "severity": "ERROR", "message": "Database connection lost during checkout", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791546893120512, "severity": "INFO", "message": "User_43 added camera to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791547212548096, "severity": "INFO", "message": "User_96 viewed product: keyboard", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791547747610880, "severity": "WARNING", "message": "Rate limit exceeded for user_93", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791548457464576, "severity": "DEBUG", "message": "Searching for product: mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791548457625600, "severity": "INFO", "message": "Found 36 results for mouse", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767791549516401408, "severity": "INFO", "message": "Processing checkout for user_38, total: $835", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}

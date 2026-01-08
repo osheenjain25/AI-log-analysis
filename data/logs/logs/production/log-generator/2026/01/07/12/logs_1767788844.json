@@ -1,0 +1,18 @@
+{"timestamp": 1767788835390928128, "severity": "DEBUG", "message": "Login attempt for user_10", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788835391112192, "severity": "INFO", "message": "User_10 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788836159587584, "severity": "INFO", "message": "Processing checkout for user_13, total: $1044", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788836159788032, "severity": "ERROR", "message": "Payment validation failed: Invalid card details", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788837178471424, "severity": "DEBUG", "message": "Searching for product: phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788837178583552, "severity": "WARNING", "message": "No results found for query: phone", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788837561147904, "severity": "ERROR", "message": "Invalid coupon code: SAVE16", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788838744306944, "severity": "WARNING", "message": "Coupon SAVE16 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788839702818048, "severity": "INFO", "message": "User_12 viewed product: camera", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788841080026112, "severity": "WARNING", "message": "Coupon SAVE10 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788841997292800, "severity": "INFO", "message": "User_39 viewed product: headphones", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788842392328448, "severity": "INFO", "message": "User_16 viewed product: headphones", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788842906784000, "severity": "DEBUG", "message": "Login attempt for user_51", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788842907046144, "severity": "INFO", "message": "User_51 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788843775279360, "severity": "DEBUG", "message": "Login attempt for user_98", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788843775395072, "severity": "INFO", "message": "User_98 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788844264059904, "severity": "INFO", "message": "Coupon SAVE42 applied: 25% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767788844850133504, "severity": "INFO", "message": "Processing checkout for user_19, total: $1833", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

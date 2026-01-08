@@ -1,0 +1,13 @@
+{"timestamp": 1767792959870753280, "severity": "INFO", "message": "User_70 viewed product: phone", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792960650788096, "severity": "DEBUG", "message": "Login attempt for user_92", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792960650893056, "severity": "INFO", "message": "User_92 logged in successfully", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792961698171136, "severity": "INFO", "message": "User_25 viewed product: keyboard", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792962371984640, "severity": "INFO", "message": "Processing checkout for user_24, total: $1132", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792962372136960, "severity": "INFO", "message": "Order placed successfully for user_24", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792963840341504, "severity": "DEBUG", "message": "Login attempt for user_44", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792963840504064, "severity": "INFO", "message": "User_44 logged in successfully", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792964896319488, "severity": "INFO", "message": "User_59 added tablet to cart", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792965767539968, "severity": "ERROR", "message": "Network timeout while loading product details", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792967230026752, "severity": "INFO", "message": "User_26 viewed product: monitor", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792967767910912, "severity": "WARNING", "message": "Rate limit exceeded for user_16", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}
+{"timestamp": 1767792969266509312, "severity": "DEBUG", "message": "Searching for product: keyboard", "logger": "payment-service", "attributes": {"service_name": "payment-service", "environment": "production"}}

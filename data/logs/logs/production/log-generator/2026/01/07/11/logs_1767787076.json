@@ -1,0 +1,15 @@
+{"timestamp": 1767787066777806336, "severity": "DEBUG", "message": "Login attempt for user_20", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787066777974016, "severity": "INFO", "message": "User_20 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787067442283776, "severity": "INFO", "message": "User_79 viewed product: laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787068405376768, "severity": "DEBUG", "message": "Searching for product: laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787068405513984, "severity": "INFO", "message": "Found 33 results for laptop", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787069371893760, "severity": "INFO", "message": "User_16 added monitor to cart", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787070570381568, "severity": "WARNING", "message": "Coupon SAVE21 has expired", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787071385665792, "severity": "DEBUG", "message": "Login attempt for user_16", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787071385847552, "severity": "INFO", "message": "User_16 logged in successfully", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787072850735360, "severity": "INFO", "message": "User_6 viewed product: mouse", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787073229712896, "severity": "INFO", "message": "Coupon SAVE35 applied: 19% discount", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787073676332800, "severity": "INFO", "message": "User_61 viewed product: headphones", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787075123755264, "severity": "DEBUG", "message": "Login attempt for user_17", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787075123870976, "severity": "CRITICAL", "message": "Authentication service unavailable for user_17", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}
+{"timestamp": 1767787076508608512, "severity": "INFO", "message": "Processing checkout for user_51, total: $1471", "logger": "log-generator", "attributes": {"service_name": "log-generator", "environment": "production"}}

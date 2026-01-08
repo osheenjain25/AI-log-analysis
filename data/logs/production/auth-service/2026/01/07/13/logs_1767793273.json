@@ -1,0 +1,17 @@
+{"timestamp": 1767793262270782208, "severity": "INFO", "message": "Order placed successfully for user_49", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793263232465152, "severity": "DEBUG", "message": "Searching for product: monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793263232650752, "severity": "WARNING", "message": "No results found for query: monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793264427182848, "severity": "ERROR", "message": "Invalid coupon code: SAVE11", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793264946397184, "severity": "INFO", "message": "Processing checkout for user_52, total: $450", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793264946585856, "severity": "INFO", "message": "Order placed successfully for user_52", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793265681106432, "severity": "INFO", "message": "Processing checkout for user_49, total: $1543", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793265681199360, "severity": "INFO", "message": "Order placed successfully for user_49", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793266730746624, "severity": "INFO", "message": "Processing checkout for user_32, total: $278", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793266730927616, "severity": "INFO", "message": "Order placed successfully for user_32", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793268082885888, "severity": "ERROR", "message": "Cache service unavailable, cart update failed", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793269564330752, "severity": "DEBUG", "message": "Login attempt for user_86", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793269564500992, "severity": "INFO", "message": "User_86 logged in successfully", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793269902886144, "severity": "WARNING", "message": "Coupon SAVE11 has expired", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793270979804416, "severity": "INFO", "message": "Coupon SAVE10 applied: 5% discount", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793272112376320, "severity": "INFO", "message": "User_43 added headphones to cart", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
+{"timestamp": 1767793273202994688, "severity": "DEBUG", "message": "Searching for product: monitor", "logger": "auth-service", "attributes": {"service_name": "auth-service", "environment": "production"}}
