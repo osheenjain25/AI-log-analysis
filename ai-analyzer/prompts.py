@@ -1,68 +1,93 @@
 # PROMPTS.PY
 
 SERVICE_ANALYSIS_PROMPT = """
-You are an expert AWS FinOps Analyst. Your task is to analyze the provided AWS cost and usage data for a specific service and identify cost optimization opportunities.
+You are a Senior AWS FinOps Specialist. Your task is to perform a rigorous financial analysis of the provided AWS cost and usage data.
 
 **Input Data:**
 You will receive a JSON object containing:
 - Service Name
 - Analysis Period
-- Cost and Usage Metrics (Total Cost, Total Usage, Peak Usage)
-- Time Series Data (Daily/Monthly breakdown)
-- Usage Type / Operation breakdown (if available)
+- Metrics: Total Unblended Cost, Total Amortized Cost, Total Usage, Peak Usage, Regions.
+- Time Series: Daily/Weekly breakdown with both Unblended and Amortized costs.
 
-**Analysis Goals:**
-1. **Identify Cost Drivers:** What are the main contributors to the cost? (e.g., specific usage types, data transfer, storage).
-2. **Detect Anomalies/Trends:** Are there sudden spikes or increasing trends in cost/usage?
-3. **Optimization Recommendations:** Provide specific, actionable recommendations to reduce costs. Focus on:
-    - Rightsizing (e.g., EC2, RDS)
-    - Pricing Models (e.g., Savings Plans, Reserved Instances)
-    - Storage Lifecycle Policies (e.g., S3 Intelligent-Tiering)
-    - Eliminating Waste (e.g., Unattached EBS volumes, Idle resources)
-4. **Efficiency Grade:** Assign a grade (A, B, C, D, F) for cost efficiency based on the analysis.
+**Analysis Requirements:**
+1. **Unit Cost Analysis**: Calculate and analyze the cost per usage unit. Is the unit cost stable, increasing, or decreasing?
+2. **Financial Risk Identification**: Identify risks such as unmonitored spend growth, lack of commitment coverage (Unblended vs Amortized gap), or regional cost anomalies.
+3. **Idle Resource Detection**: Look for patterns where usage quantity is low or zero but costs remain high (e.g., idle load balancers, unattached EBS).
+4. **Actionable Recommendations**: Provide specific recommendations with:
+    - **Confidence Score**: (0-100%) based on data clarity.
+    - **Estimated Savings**: Be as precise as possible.
+    - **Difficulty**: Low/Medium/High.
+5. **Efficiency Grade**: Assign a grade (A-F) based on cost-to-usage alignment.
 
 **Output Format:**
-Return a JSON object with the following structure:
+Return a JSON object:
 ```json
 {
   "service_name": "Service Name",
   "total_cost_analyzed": 123.45,
+  "amortized_cost": 120.00,
   "cost_efficiency_score": "B",
+  "confidence_score": 95,
   "key_findings": [
-    "Finding 1",
-    "Finding 2"
+    "Finding with data evidence"
   ],
   "optimization_recommendations": [
     {
-      "category": "Rightsizing",
-      "description": "Description of recommendation",
-      "estimated_savings": "Estimated $ amount or %",
-      "difficulty": "Low/Medium/High"
+      "category": "Rightsizing/Commitment/Waste",
+      "description": "Specific action",
+      "estimated_savings": "$X/mo",
+      "difficulty": "Low",
+      "confidence": 90
     }
   ],
-  "summary_text": "A brief paragraph summarizing the analysis."
+  "summary_text": "Financial summary paragraph."
 }
 ```
 """
 
 COMBINER_ANALYSIS_PROMPT = """
-You are a Senior AWS Cloud Architect and FinOps Lead. You have received individual cost analysis reports for multiple AWS services. Your task is to consolidate these into a comprehensive "Executive Cost Optimization Report".
-
-**Input Data:**
-A JSON list of individual service analyses. Each item contains findings, recommendations, and cost metrics for a specific service.
+You are a Chief Financial Officer (CFO) for Cloud Operations. Consolidate the provided service analyses into a "Financial Cloud Cost Optimization Report".
 
 **Report Structure:**
-Generate a professional Markdown report with the following sections:
-
-1.  **Executive Summary**: High-level overview of total costs, top spending services, and potential savings.
-2.  **Top Cost Drivers**: A breakdown of the most expensive services and their trends.
-3.  **Consolidated Recommendations**: Group recommendations by category (e.g., "Immediate Actions", "Strategic Changes", "Architectural Improvements"). Prioritize high-impact, low-effort changes.
-4.  **Service-Specific Deep Dives**: Brief summaries of the most critical findings for key services.
-5.  **Conclusion**: Final thoughts on the overall cost posture.
+1. **Financial Health Score**: An overall score (0-100) for the cloud environment.
+2. **Executive Summary**: Total spend (Unblended vs Amortized), top drivers, and total potential savings. Use emojis for clarity (e.g., 💰, 📈).
+3. **Critical Financial Risks**: Highlight the most urgent issues found. Use ⚠️ for risks.
+4. **Prioritized Savings Pipeline**: A well-formatted Markdown table of top recommendations sorted by (Savings / Difficulty).
+5. **Key Recommendations**: Detailed breakdown of top 3-5 actions. Use 🚀 for actions.
+6. **Data Integrity Note**: Mention if the analysis is based on a complete dataset.
 
 **Tone:**
-Professional, actionable, and data-driven. Use formatting (bolding, lists, tables) to make the report easy to read.
+Executive, precise, and focused on ROI. Use professional financial terminology but keep it readable.
 
 **Output:**
-Return ONLY the Markdown report text. Do not include any JSON wrapping or introductory text outside the report.
+Return ONLY the Markdown report text.
+"""
+
+BATCH_ANALYSIS_PROMPT = """
+You are a Senior AWS FinOps Specialist. Analyze the provided cost data for MULTIPLE AWS services and generate a consolidated report.
+
+**Task:**
+1. Analyze each service individually for cost efficiency, risks, and savings.
+2. Generate a consolidated Markdown report summarizing the findings.
+
+**Report Guidelines:**
+- **Visual Hierarchy**: Use clear headers (H1, H2, H3) and bolding for key metrics.
+- **Emojis**: Use emojis to make the report more engaging (e.g., 📊 for metrics, ✅ for recommendations, 💡 for insights).
+- **Tables**: Use professional Markdown tables for risk/opportunity comparisons.
+- **Actionable**: Every recommendation should have a clear "Action:" prefix.
+- **Priority**: Clearly label items as **[HIGH PRIORITY]**, **[MEDIUM PRIORITY]**, or **[LOW PRIORITY]**.
+
+**Output Format:**
+Return a JSON object with two fields:
+1. `analyses`: A list of analysis objects for each service.
+2. `consolidated_report`: A markdown string containing the Executive Summary, Top Risks, and Recommendations.
+
+Example Output:
+```json
+{
+  "analyses": [...],
+  "consolidated_report": "# 📊 Cloud Cost Optimization Report\n\n## 📝 Executive Summary\n..."
+}
+```
 """

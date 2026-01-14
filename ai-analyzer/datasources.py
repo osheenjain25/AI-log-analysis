@@ -52,10 +52,39 @@ class LokiDataSource(DataSource):
             
             if 'data' in data and 'result' in data['data']:
                 for stream in data['data']['result']:
+                    labels = stream.get('stream', {})
                     for value in stream['values']:
                         timestamp = int(value[0])
                         if timestamp > start_time:
-                            logs.append(value)
+                            try:
+                                log_data = json.loads(value[1])
+                                # Normalize to a consistent format
+                                log_entry = {
+                                    "timestamp": timestamp,
+                                    "body": log_data.get("body") or log_data.get("message") or value[1],
+                                    "severity": log_data.get("severity") or log_data.get("level") or "INFO",
+                                    "attributes": {
+                                        **log_data.get("attributes", {}),
+                                        "service_name": labels.get("job", "unknown"),
+                                        "exporter": labels.get("exporter", "unknown")
+                                    }
+                                }
+                                # Special case for Otel format where body might be a dict
+                                if isinstance(log_entry["body"], dict) and "body" in log_entry["body"]:
+                                     log_entry["body"] = log_entry["body"]["body"]
+                                     
+                                logs.append(log_entry)
+                            except json.JSONDecodeError:
+                                logs.append({
+                                    "timestamp": timestamp,
+                                    "body": value[1],
+                                    "severity": "INFO",
+                                    "attributes": {
+                                        "service_name": labels.get("job", "unknown"),
+                                        "exporter": labels.get("exporter", "unknown")
+                                    }
+                                })
+                                
                             if timestamp > max_timestamp:
                                 max_timestamp = timestamp
                                 

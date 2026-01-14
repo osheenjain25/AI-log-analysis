@@ -8,12 +8,14 @@ import threading
 import boto3
 from collections import Counter, deque
 from datetime import datetime
+import uuid
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from botocore.exceptions import ClientError
 from abc import ABC, abstractmethod
 import glob
 from datasources import LokiDataSource, S3DataSource, OTLPDataSource, AzureBlobDataSource, GCSDataSource
+import google.generativeai as genai
 # AI API Configuration (Generic)
 DEFAULT_AI_API_URL = "https://api.openai.com/v1/chat/completions"
 DEFAULT_AI_MODEL = "google/gemini-2.0-flash-exp:free"
@@ -29,7 +31,7 @@ config = {
     "loki_url": LOKI_URL,
     "otel_url": OTEL_ENDPOINT,
     "auth_token": None,
-    "ai_api_key": os.getenv("AI_API_KEY") or os.getenv("OPENROUTER_API_KEY"),
+    "ai_api_key": os.getenv("AI_API_KEY") or os.getenv("GEMINI_API_KEY") or os.getenv("OPENROUTER_API_KEY"),
     "ai_api_url": os.getenv("AI_API_URL") or ("https://openrouter.ai/api/v1/chat/completions" if os.getenv("OPENROUTER_API_KEY") else DEFAULT_AI_API_URL),
     "ai_model": os.getenv("AI_MODEL") or ("allenai/olmo-3.1-32b-think:free" if os.getenv("OPENROUTER_API_KEY") else DEFAULT_AI_MODEL),
     "aws_region": "us-east-1",
@@ -432,76 +434,148 @@ class InsightManager:
 storage_backend = get_storage_backend()
 insight_manager = InsightManager(storage_backend)
 ticket_manager = TicketManager()
-class GChatNotifier:
+class NotificationManager:
     def __init__(self):
-        self.webhook_url = os.getenv("GCHAT_WEBHOOK_URL")
+        self.gchat_url = os.getenv("GCHAT_WEBHOOK_URL")
+        self.slack_url = os.getenv("SLACK_WEBHOOK_URL")
+        self.gchat_cost_url = os.getenv("GCHAT_COST_URL") or self.gchat_url
+        self.slack_cost_url = os.getenv("SLACK_COST_URL") or self.slack_url
+        
         self.last_notified = {} # {unique_key: timestamp}
         self.cooldown = 3600 # 1 hour cooldown
-        if not self.webhook_url:
-            print("WARNING: GCHAT_WEBHOOK_URL not set. Notifications disabled.", flush=True)
-    def send_alert(self, message, severity, insight_text, unique_key, is_anomaly=False):
-        if not self.webhook_url:
+        
+        if not self.gchat_url and not self.slack_url:
+            print("WARNING: No notification webhooks set. Notifications disabled.", flush=True)
+
+    def _send_to_gchat(self, url, payload):
+        if not url:
             return
+        try:
+            response = requests.post(url, json=payload, timeout=5)
+            if response.status_code == 200:
+                return True
+            print(f"ERROR: Failed to send GChat alert. Status: {response.status_code}, Response: {response.text}", flush=True)
+        except Exception as e:
+            print(f"ERROR: Exception sending GChat alert: {e}", flush=True)
+        return False
+
+    def _send_to_slack(self, url, text, blocks=None):
+        if not url:
+            return
+        try:
+            payload = {"text": text}
+            if blocks:
+                payload["blocks"] = blocks
+            response = requests.post(url, json=payload, timeout=5)
+            if response.status_code == 200:
+                return True
+            print(f"ERROR: Failed to send Slack alert. Status: {response.status_code}, Response: {response.text}", flush=True)
+        except Exception as e:
+            print(f"ERROR: Exception sending Slack alert: {e}", flush=True)
+        return False
+
+    def send_alert(self, message, severity, insight_text, unique_key, is_anomaly=False):
         # Deduplication logic
         now = time.time()
         if unique_key in self.last_notified:
             if now - self.last_notified[unique_key] < self.cooldown:
-                print(f"DEBUG: Skipping GChat alert for {unique_key} (cooldown active)", flush=True)
+                print(f"DEBUG: Skipping alert for {unique_key} (cooldown active)", flush=True)
                 return
-        try:
-            # Determine card color/style based on severity
-            header_subtitle = "Critical Alert" if severity == "CRITICAL" else "Anomaly Detected"
-            if is_anomaly:
-                header_subtitle = "Statistical Anomaly Detected"
-            
-            # Construct card message
-            card = {
-                "cards": [
-                    {
-                        "header": {
-                            "title": "AI Log Analyzer Alert",
-                            "subtitle": header_subtitle,
-                            "imageUrl": "https://www.gstatic.com/images/icons/material/system/2x/warning_amber_48dp.png",
-                            "imageStyle": "IMAGE"
-                        },
-                        "sections": [
-                            {
-                                "widgets": [
-                                    {
-                                        "keyValue": {
-                                            "topLabel": "Severity",
-                                            "content": severity,
-                                            "contentMultiline": "false"
-                                        }
-                                    },
-                                    {
-                                        "keyValue": {
-                                            "topLabel": "Log Message",
-                                            "content": message[:200] + ("..." if len(message) > 200 else ""),
-                                            "contentMultiline": "true"
-                                        }
-                                    },
-                                    {
-                                        "keyValue": {
-                                            "topLabel": "AI Insight",
-                                            "content": insight_text[:500] + ("..." if len(insight_text) > 500 else ""),
-                                            "contentMultiline": "true"
-                                        }
-                                    }
-                                ]
-                            }
-                        ]
-                    }
+
+        header_subtitle = "Critical Alert" if severity == "CRITICAL" else "Anomaly Detected"
+        if is_anomaly:
+            header_subtitle = "Statistical Anomaly Detected"
+
+        # GChat Card
+        gchat_card = {
+            "cards": [{
+                "header": {
+                    "title": "AI Log Analyzer Alert",
+                    "subtitle": header_subtitle,
+                    "imageUrl": "https://www.gstatic.com/images/icons/material/system/2x/warning_amber_48dp.png",
+                    "imageStyle": "IMAGE"
+                },
+                "sections": [{
+                    "widgets": [
+                        {"keyValue": {"topLabel": "Severity", "content": severity}},
+                        {"keyValue": {"topLabel": "Log Message", "content": message[:200] + ("..." if len(message) > 200 else ""), "contentMultiline": "true"}},
+                        {"keyValue": {"topLabel": "AI Insight", "content": insight_text[:500] + ("..." if len(insight_text) > 500 else ""), "contentMultiline": "true"}}
+                    ]
+                }]
+            }]
+        }
+        
+        # Slack Blocks
+        slack_text = f"*AI Log Analyzer Alert: {header_subtitle}*\n*Severity:* {severity}\n*Message:* {message[:200]}\n*Insight:* {insight_text[:500]}"
+        slack_blocks = [
+            {
+                "type": "section",
+                "text": {"type": "mrkdwn", "text": f"*🚨 AI Log Analyzer Alert: {header_subtitle}*"}
+            },
+            {
+                "type": "section",
+                "fields": [
+                    {"type": "mrkdwn", "text": f"*Severity:*\n{severity}"},
+                    {"type": "mrkdwn", "text": f"*Key:*\n{unique_key}"}
+                ]
+            },
+            {
+                "type": "section",
+                "text": {"type": "mrkdwn", "text": f"*Log Message:*\n{message[:500]}"}
+            },
+            {
+                "type": "section",
+                "text": {"type": "mrkdwn", "text": f"*AI Insight:*\n{insight_text[:1000]}"}
+            }
+        ]
+
+        g_success = self._send_to_gchat(self.gchat_url, gchat_card)
+        s_success = self._send_to_slack(self.slack_url, slack_text, slack_blocks)
+
+        if g_success or s_success:
+            self.last_notified[unique_key] = now
+
+    def send_cost_alert(self, service, yesterday_cost, today_cost, increase, percent_increase):
+        # GChat Card
+        gchat_card = {
+            "cards": [{
+                "header": {
+                    "title": "💰 AWS Cost Alert",
+                    "subtitle": f"Cost Increase Detected for {service}",
+                    "imageUrl": "https://www.gstatic.com/images/icons/material/system/2x/trending_up_48dp.png",
+                    "imageStyle": "IMAGE"
+                },
+                "sections": [{
+                    "widgets": [
+                        {"keyValue": {"topLabel": "Service", "content": service}},
+                        {"keyValue": {"topLabel": "Yesterday's Cost", "content": f"${yesterday_cost:.2f}"}},
+                        {"keyValue": {"topLabel": "Today's Cost", "content": f"${today_cost:.2f}"}},
+                        {"keyValue": {"topLabel": "Increase", "content": f"${increase:.2f} (+{percent_increase:.1f}%)"}}
+                    ]
+                }]
+            }]
+        }
+
+        # Slack Blocks
+        slack_text = f"💰 *AWS Cost Alert: {service}*\nIncrease: ${increase:.2f} (+{percent_increase:.1f}%)\nYesterday: ${yesterday_cost:.2f} | Today: ${today_cost:.2f}"
+        slack_blocks = [
+            {
+                "type": "section",
+                "text": {"type": "mrkdwn", "text": f"💰 *AWS Cost Alert: {service}*"}
+            },
+            {
+                "type": "section",
+                "fields": [
+                    {"type": "mrkdwn", "text": f"*Yesterday:*\n${yesterday_cost:.2f}"},
+                    {"type": "mrkdwn", "text": f"*Today:*\n${today_cost:.2f}"},
+                    {"type": "mrkdwn", "text": f"*Increase:*\n${increase:.2f}"},
+                    {"type": "mrkdwn", "text": f"*Percentage:*\n{percent_increase:.1f}%"}
                 ]
             }
-            response = requests.post(self.webhook_url, json=card, timeout=5)
-            if response.status_code == 200:
-                print(f"DEBUG: GChat alert sent successfully for {unique_key}.", flush=True)
-                self.last_notified[unique_key] = now # Update last notified time
-            else:
-                print(f"ERROR: Failed to send GChat alert. Status: {response.status_code}, Response: {response.text}", flush=True)
-        except Exception as e:
-            print(f"ERROR: Exception sending GChat alert: {e}", flush=True)
+        ]
+
+        self._send_to_gchat(self.gchat_cost_url, gchat_card)
+        self._send_to_slack(self.slack_cost_url, slack_text, slack_blocks)
 class MLLogAnalyzer:
     def __init__(self):
         print("Initializing AI Analyzer with Generic AI API...", flush=True)
@@ -512,7 +586,7 @@ class MLLogAnalyzer:
         self.baseline_error_rate = 0.15  # Expected 15% error rate
         self.ai_cache = {} # Cache for AI results: {masked_message: insight}
         self.cache_lock = threading.Lock()
-        self.notifier = GChatNotifier()
+        self.notifier = NotificationManager()
         
     def mask_pii(self, text):
         """Sanitize sensitive information before sending to AI"""
@@ -746,6 +820,61 @@ class MLLogAnalyzer:
             self.notifier.send_alert(message, severity, alert_insight, unique_key, is_anomaly)
             
         return final_insight, unique_key
+
+# --- Cost Optimization Endpoint ---
+from cost_analyzer import analyze_cost_pipeline
+
+@app.route('/analyze-cost', methods=['POST'])
+def analyze_cost():
+    try:
+        data = request.json
+        aws_access_key = data.get('aws_access_key')
+        aws_secret_key = data.get('aws_secret_key')
+        aws_session_token = data.get('aws_session_token')
+        days = int(data.get('days', 30))
+        target_services = data.get('target_services') # List of strings, e.g. ["S3", "EC2"]
+        
+        # Use the same AI configuration as the main analyzer
+        api_key = config.get("ai_api_key")
+        api_url = config.get("ai_api_url", DEFAULT_AI_API_URL)
+        model = config.get("ai_model", DEFAULT_AI_MODEL)
+        
+        # Fallback to server environment variables if not provided
+        if not aws_access_key:
+            aws_access_key = os.getenv('AWS_ACCESS_KEY_ID')
+        if not aws_secret_key:
+            aws_secret_key = os.getenv('AWS_SECRET_ACCESS_KEY')
+        if not aws_session_token:
+            aws_session_token = os.getenv('AWS_SESSION_TOKEN')
+            
+        if not aws_access_key or not aws_secret_key:
+            return jsonify({"error": "Missing AWS credentials (not provided and not found in server env)"}), 400
+            
+        if not api_key:
+            return jsonify({"error": "Server missing OPENROUTER_API_KEY configuration"}), 500
+
+        # Run the pipeline
+        start_date = data.get('start_date')
+        end_date = data.get('end_date')
+        granularity = data.get('granularity', 'DAILY').upper()
+        
+        report, chart_data, total_account_cost, metadata = analyze_cost_pipeline(
+            aws_access_key, aws_secret_key, api_key, api_url, model, 
+            days, target_services, aws_session_token,
+            start_date=start_date, end_date=end_date,
+            granularity=granularity
+        )
+        
+        return jsonify({
+            "report": report,
+            "chart_data": chart_data,
+            "total_account_cost": total_account_cost,
+            "metadata": metadata
+        })
+        
+    except Exception as e:
+        print(f"Error in /analyze-cost: {e}")
+        return jsonify({"error": str(e)}), 500
 def mask_pii(message):
     """Redact PII from log messages"""
     # Email masking
@@ -810,34 +939,28 @@ def generalize_message(message):
         
     return generalized, details
 def analyze_log(log_entry, ml_analyzer):
-    # Handle both Loki format (list) and S3 format (dict)
-    if isinstance(log_entry, list):
-        try:
-            log_data = json.loads(log_entry[1])
-            message = log_data.get("body", "")
-            severity = log_data.get("severity", "")
-            attributes = log_data.get("attributes", {})
-        except json.JSONDecodeError:
-            message = log_entry[1]
-            severity = ""
-            attributes = {}
-    elif isinstance(log_entry, dict):
+    # Handle normalized dict format (from S3 or normalized Loki)
+    if isinstance(log_entry, dict):
         message = log_entry.get("message", "") or log_entry.get("body", "")
         severity = log_entry.get("severity") or log_entry.get("level", "INFO")
         attributes = log_entry.get("attributes", {})
     else:
-        return None, None
+        # Fallback for plain text or other formats
+        message = str(log_entry)
+        severity = "INFO"
+        attributes = {}
+    
+    # Normalize severity
+    severity = str(severity).upper()
     
     # Only analyze ERROR and CRITICAL logs
-    if severity not in ["ERROR", "CRITICAL"]:
-        # print(f"DEBUG: Skipping log with severity {severity}", flush=True)
+    if severity not in ["ERROR", "CRITICAL", "FATAL"]:
         return None, None
     
     # Mask PII before analysis
     masked_message = mask_pii(message)
     
     # Generate comprehensive insight using LLM
-    print(f"DEBUG: Analyzing log with severity {severity}: {masked_message[:50]}...", flush=True)
     # Mark as background to allow prioritization
     attributes["is_background"] = True
     return ml_analyzer.generate_insight(masked_message, severity, attributes)
@@ -861,9 +984,22 @@ def analysis_loop():
             print(f"DEBUG: Discovering logs for hours: {hour_path}, {prev_hour_path}", flush=True)
             
             log_files = []
+            loki_logs = []
+            
             try:
-                # 1. Discover all environments and services to poll specific prefixes
-                if hasattr(storage_backend, 's3'):
+                if config["datasource_type"] == "loki":
+                    # Loki Discovery
+                    loki_url = config.get("loki_url", "http://loki:3100")
+                    # We use a generic query to catch OTLP logs, or specific job if known
+                    # For now, let's try to fetch all OTLP logs
+                    loki_ds = LokiDataSource(loki_url, "unified-service") 
+                    # Override query to be broader if needed, but LokiDataSource enforces job.
+                    # Let's assume 'unified-service' is correct as per log-generator.
+                    fetched_logs, _ = loki_ds.fetch_logs()
+                    loki_logs.extend(fetched_logs)
+                    print(f"DEBUG: Fetched {len(loki_logs)} logs from Loki", flush=True)
+                    
+                elif hasattr(storage_backend, 's3'):
                     # Get environments (production, staging, etc.)
                     resp = storage_backend.s3.list_objects_v2(Bucket=storage_backend.bucket, Prefix="logs/", Delimiter="/")
                     envs = [p['Prefix'] for p in resp.get('CommonPrefixes', [])]
@@ -897,6 +1033,13 @@ def analysis_loop():
             # Sort to process newest first (reverse chronological)
             log_files.sort(reverse=True)
             
+            # Collect all logs from files
+            all_logs_to_process = []
+            
+            # Add Loki logs
+            for l in loki_logs:
+                all_logs_to_process.append(l)
+
             for log_file in log_files:
                 print(f"DEBUG: Processing file: {log_file}", flush=True)
                 # Skip if already processed
@@ -910,131 +1053,140 @@ def analysis_loop():
                     continue
                     
                 # Parse logs (handle JSON array or NDJSON)
-                logs = []
                 try:
                     # Try as standard JSON array
                     data = json.loads(content)
-                    logs = data if isinstance(data, list) else [data]
+                    file_logs = data if isinstance(data, list) else [data]
                 except json.JSONDecodeError:
                     # Try as NDJSON
+                    file_logs = []
                     for line in content.splitlines():
                         if not line.strip(): continue
                         try:
-                            logs.append(json.loads(line))
+                            file_logs.append(json.loads(line))
                         except json.JSONDecodeError:
                             # Fallback to plain text
-                            logs.append({"message": line, "severity": "INFO"})
-                for log in logs:
-                    # Extract fields for consistent processing and ticket creation
-                    if isinstance(log, dict):
-                        message = log.get("message", "") or log.get("body", "") or str(log)
-                        attributes = log.get("attributes", {})
-                    else:
-                        message = str(log)
-                        attributes = {}
-                        
-                    # Use the standard analyze_log function to ensure consistent processing
-                    # (PII masking, anomaly detection, and GChat notifications)
-                    insight_text, unique_key = analyze_log(log, ml_analyzer)
-                    if insight_text and unique_key:
-                        print(f"DEBUG: AI Result: {insight_text[:100]}...", flush=True)
-                        
-                        # Parse insight text to structured data
-                        parts = [p.strip() for p in insight_text.split(" | ")]
-                        
-                        # Robust category/summary extraction
-                        valid_categories = ["APPLICATION ERRORS", "INFRASTRUCTURE", "DISTRIBUTED SYSTEMS", "CI/CD", "DATA PIPELINES", "SECURITY", "PERFORMANCE", "USER IMPACT"]
-                        
-                        category = "UNKNOWN"
-                        summary = ""
-                        
-                        for part in parts:
-                            # Clean up prefixes
-                            clean_part = part.replace("🤖 AI Insight:", "").replace("🚨 ANOMALY DETECTED:", "").strip()
-                            # Handle potential double prefixes or extra spaces
-                            clean_part = clean_part.split(":", 1)[-1].strip() if ":" in clean_part and clean_part.split(":", 1)[0].strip().upper() not in valid_categories else clean_part
-                            if clean_part.upper() in valid_categories:
-                                category = clean_part.upper()
-                                # If the next part doesn't look like a key-value pair, it's likely the summary
-                                idx = parts.index(part)
-                                if idx + 1 < len(parts) and ": " not in parts[idx+1]:
-                                    summary = parts[idx+1]
+                            file_logs.append({"message": line, "severity": "INFO"})
+                
+                all_logs_to_process.extend(file_logs)
+                
+                # Mark file as processed
+                processed_files.add(log_file)
+
+            for log in all_logs_to_process:
+                # Extract fields for consistent processing and ticket creation
+                if isinstance(log, dict):
+                    message = log.get("message", "") or log.get("body", "") or str(log)
+                    attributes = log.get("attributes", {})
+                else:
+                    message = str(log)
+                    attributes = {}
+                
+                # Use the standard analyze_log function to ensure consistent processing
+                # (PII masking, anomaly detection, and GChat notifications)
+                insight_text, unique_key = analyze_log(log, ml_analyzer)
+                if insight_text and unique_key:
+                    print(f"DEBUG: AI Result: {insight_text[:100]}...", flush=True)
+                    
+                    # Parse insight text to structured data
+                    parts = [p.strip() for p in insight_text.split(" | ")]
+                    
+                    # Robust category/summary extraction
+                    valid_categories = ["APPLICATION ERRORS", "INFRASTRUCTURE", "DISTRIBUTED SYSTEMS", "CI/CD", "DATA PIPELINES", "SECURITY", "PERFORMANCE", "USER IMPACT"]
+                    
+                    category = "UNKNOWN"
+                    summary = ""
+                    
+                    for part in parts:
+                        # Clean up prefixes
+                        clean_part = part.replace("🤖 AI Insight:", "").replace("🚨 ANOMALY DETECTED:", "").strip()
+                        # Handle potential double prefixes or extra spaces
+                        clean_part = clean_part.split(":", 1)[-1].strip() if ":" in clean_part and clean_part.split(":", 1)[0].strip().upper() not in valid_categories else clean_part
+                        if clean_part.upper() in valid_categories:
+                            category = clean_part.upper()
+                            # If the next part doesn't look like a key-value pair, it's likely the summary
+                            idx = parts.index(part)
+                            if idx + 1 < len(parts) and ": " not in parts[idx+1]:
+                                summary = parts[idx+1]
+                            break
+                    
+                    # If still UNKNOWN, try the first part if it's not a key-value pair
+                    if category == "UNKNOWN" and parts:
+                        # Try to extract from the first part if it contains the category
+                        first_part = parts[0].replace("🤖 AI Insight:", "").replace("🚨 ANOMALY DETECTED:", "").strip()
+                        for valid_cat in valid_categories:
+                            if valid_cat in first_part.upper():
+                                category = valid_cat
+                                # Try to get summary from the rest of the string
+                                remaining = first_part[len(valid_cat):].strip()
+                                if remaining.startswith("|") or remaining.startswith(":"):
+                                    summary = remaining[1:].strip()
                                 break
                         
-                        # If still UNKNOWN, try the first part if it's not a key-value pair
-                        if category == "UNKNOWN" and parts:
-                            # Try to extract from the first part if it contains the category
-                            first_part = parts[0].replace("🤖 AI Insight:", "").replace("🚨 ANOMALY DETECTED:", "").strip()
-                            for valid_cat in valid_categories:
-                                if valid_cat in first_part.upper():
-                                    category = valid_cat
-                                    # Try to get summary from the rest of the string
-                                    remaining = first_part[len(valid_cat):].strip()
-                                    if remaining.startswith("|") or remaining.startswith(":"):
-                                        summary = remaining[1:].strip()
-                                    break
-                            
-                            if category == "UNKNOWN" and ": " not in parts[0]:
-                                category = parts[0].replace("🚨 ANOMALY DETECTED: High Error Rate", "").strip()
-                                if len(parts) > 1 and ": " not in parts[1]:
-                                    summary = parts[1]
-                        # Generalize the message to extract details and create a clean summary fallback
-                        generalized_message, extracted_details = generalize_message(message)
-                        
-                        # If summary is still empty or just the masked message, use the generalized message
-                        if not summary or summary == mask_pii(message)[:100]:
-                            summary = generalized_message[:100]
-                        # Ensure summary is generalized even if it came from AI (double check)
-                        # This handles cases where AI might repeat the specific variable
-                        summary, _ = generalize_message(summary)
-                        
-                        details = {}
-                        for part in parts:
-                            if ": " in part:
-                                k, v = part.split(": ", 1)
-                                details[k.lower().replace(" ", "_")] = v
-                        
-                        # Merge extracted details
-                        details.update(extracted_details)
-                        # Extract service metadata from attributes
-                        service_name = attributes.get("service_name", "unknown")
-                        environment = attributes.get("environment", "unknown")
-                        
-                        # Extract user ID from attributes or message (priority to extracted_details)
-                        user_id = attributes.get("user_id") or details.get("user_id")
-                        if not user_id:
-                            # Try to extract from message (e.g., "user_123" or "for user 123")
-                            user_match = re.search(r'user[_\s]+(\d+)', message, re.IGNORECASE)
-                            if user_match:
-                                user_id = f"user_{user_match.group(1)}"
-                        
-                        # Mention service in the summary for better visibility
-                        display_summary = f"[{service_name}] {summary}"
-                        # Use the unique_key from generate_insight
-                        # unique_key = f"{service_name}:{category}:{summary_key}"
-                        insight_data = {
-                            "key": unique_key,
-                            "last_seen": int(time.time() * 1000000000),
-                            "raw_text": insight_text,
-                            "summary": display_summary,
-                            "category": category,
-                            "severity": log.get("severity", "ERROR"),
-                            "service": service_name,
-                            "environment": environment,
-                            "details": details,
-                            "user_id": user_id  # Add user_id for tracking
-                        }
-                        
-                        # 4. Store Insight
-                        stored_key = insight_manager.save_insight(insight_data)
-                        print(f"DEBUG: Insight stored with key: {stored_key}", flush=True)
-                        
-                        # 5. Create/Update Ticket
-                        ticket_manager.create_or_update_ticket(unique_key, category, display_summary, insight_text, user_id)
+                        if category == "UNKNOWN" and ": " not in parts[0]:
+                            category = parts[0].replace("🚨 ANOMALY DETECTED: High Error Rate", "").strip()
+                            if len(parts) > 1 and ": " not in parts[1]:
+                                summary = parts[1]
+                    # Generalize the message to extract details and create a clean summary fallback
+                    generalized_message, extracted_details = generalize_message(message)
+                    
+                    # If summary is still empty or just the masked message, use the generalized message
+                    if not summary or summary == mask_pii(message)[:100]:
+                        summary = generalized_message[:100]
+                    # Ensure summary is generalized even if it came from AI (double check)
+                    # This handles cases where AI might repeat the specific variable
+                    summary, _ = generalize_message(summary)
+                    
+                    details = {}
+                    for part in parts:
+                        if ": " in part:
+                            k, v = part.split(": ", 1)
+                            details[k.lower().replace(" ", "_")] = v
+                    
+                    # Merge extracted details
+                    details.update(extracted_details)
+                    # Extract service metadata from attributes
+                    service_name = attributes.get("service_name", "unknown")
+                    environment = attributes.get("environment", "unknown")
+                    
+                    # Extract user ID from attributes or message (priority to extracted_details)
+                    user_id = attributes.get("user_id") or details.get("user_id")
+                    if not user_id:
+                        # Try to extract from message (e.g., "user_123" or "for user 123")
+                        user_match = re.search(r'user[_\s]+(\d+)', message, re.IGNORECASE)
+                        if user_match:
+                            user_id = f"user_{user_match.group(1)}"
+                    
+                    # Mention service in the summary for better visibility
+                    display_summary = f"[{service_name}] {summary}"
+                    # Use the unique_key from generate_insight
+                    # unique_key = f"{service_name}:{category}:{summary_key}"
+                    insight_data = {
+                        "key": unique_key,
+                        "last_seen": int(time.time() * 1000000000),
+                        "raw_text": insight_text,
+                        "summary": display_summary,
+                        "category": category,
+                        "severity": log.get("severity", "ERROR") if isinstance(log, dict) else "ERROR",
+                        "service": service_name,
+                        "environment": environment,
+                        "details": details,
+                        "user_id": user_id  # Add user_id for tracking
+                    }
+                    
+                    # 4. Store Insight
+                    stored_key = insight_manager.save_insight(insight_data)
+                    
+                    # 5. Create/Update Ticket
+                    ticket_manager.create_or_update_ticket(unique_key, category, display_summary, insight_text, user_id)
                 
-                # Mark as processed
-                processed_files.add(log_file)
-                print(f"Finished processing {log_file}", flush=True)
+                # Mark as processed (Only for files)
+                # processed_files.add(log_file) # Moved to file loop
+                # print(f"Finished processing {log_file}", flush=True)
+                
+                # Throttle background processing to respect API rate limits
+                # Gemini Free Tier is ~15 RPM (1 req / 4s). Setting to 10s to be safe and allow burst for cost analysis.
+                time.sleep(10)
             
             time.sleep(10)  # Poll every 10 seconds
         except Exception as e:
@@ -1231,6 +1383,37 @@ def query_ai():
         - Use code blocks for technical logs or commands.
         """
         try:
+            # Detect if we should use direct Gemini SDK
+            is_direct_gemini = api_key.startswith("AIza")
+            
+            if is_direct_gemini:
+                print(f"DEBUG: Using direct Gemini SDK for model {model}", flush=True)
+                genai.configure(api_key=api_key)
+                # Use a compatible model name for the SDK
+                sdk_model_name = model
+                if "/" in sdk_model_name:
+                    sdk_model_name = sdk_model_name.split("/")[-1]
+                if ":" in sdk_model_name:
+                    sdk_model_name = sdk_model_name.split(":")[0]
+                
+                print(f"DEBUG: SDK Model Name: {sdk_model_name}", flush=True)
+                gemini_model = genai.GenerativeModel(sdk_model_name)
+                
+                # Prepare the prompt for the SDK
+                sdk_prompt = f"System: You are a technical SRE assistant.\n\nUser: {prompt}"
+                
+                try:
+                    response = gemini_model.generate_content(sdk_prompt)
+                    answer = response.text.strip()
+                    print("DEBUG: Direct Gemini Response received", flush=True)
+                    return jsonify({"answer": answer})
+                except Exception as sdk_err:
+                    if "429" in str(sdk_err):
+                        print(f"DEBUG: Gemini SDK Rate Limit: {sdk_err}", flush=True)
+                        return jsonify({"answer": "⚠️ **Rate Limit Exceeded**: I'm currently receiving too many requests. Since I'm using a free AI model, please wait a moment before asking another question."}), 200
+                    raise sdk_err
+            
+            # Fallback to OpenAI-compatible API (e.g. OpenRouter)
             payload = {
                 "model": model,
                 "messages": [
@@ -1261,10 +1444,17 @@ def query_ai():
                 )
                 
                 if response.status_code == 200:
-                    result = response.json()
-                    answer = result['choices'][0]['message']['content'].strip()
-                    print("DEBUG: AI Response received", flush=True)
-                    return jsonify({"answer": answer})
+                    try:
+                        result = response.json()
+                        answer = result['choices'][0]['message']['content'].strip()
+                        print("DEBUG: AI Response received", flush=True)
+                        return jsonify({"answer": answer})
+                    except Exception as json_err:
+                        print(f"DEBUG: JSON Parse Error: {json_err}. Response text: {response.text[:500]}", flush=True)
+                        if attempt < max_retries - 1:
+                            time.sleep(retry_delay)
+                            continue
+                        raise json_err
                 
                 print(f"DEBUG: AI API Error: {response.status_code} {response.text}", flush=True)
                 if response.status_code == 429:
@@ -1284,7 +1474,381 @@ def query_ai():
         print(f"ERROR in /query endpoint: {e}", flush=True)
         import traceback
         traceback.print_exc()
+        traceback.print_exc()
         return jsonify({"error": f"Internal server error: {str(e)}"}), 500
+
+# Cost Alert Settings Endpoints
+COST_SETTINGS_FILE = 'cost_settings.json'
+
+def load_cost_settings():
+    """Load cost alert settings from file."""
+    try:
+        if os.path.exists(COST_SETTINGS_FILE):
+            with open(COST_SETTINGS_FILE, 'r') as f:
+                return json.load(f)
+        # Default settings
+        return {
+            "threshold_type": "percentage",
+            "threshold_value": 10,
+            "enabled": True
+        }
+    except Exception as e:
+        print(f"Error loading cost settings: {e}", flush=True)
+        return {
+            "threshold_type": "percentage",
+            "threshold_value": 10,
+            "enabled": True
+        }
+
+def save_cost_settings(settings):
+    """Save cost alert settings to file."""
+    try:
+        with open(COST_SETTINGS_FILE, 'w') as f:
+            json.dump(settings, f, indent=2)
+        return True
+    except Exception as e:
+        print(f"Error saving cost settings: {e}", flush=True)
+        return False
+
+@app.route('/cost-alert-settings', methods=['GET'])
+def get_cost_alert_settings():
+    """Get current cost alert threshold settings."""
+    try:
+        settings = load_cost_settings()
+        return jsonify(settings)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+@app.route('/cost-alert-settings', methods=['POST'])
+def update_cost_alert_settings():
+    """Update cost alert threshold settings."""
+    try:
+        data = request.get_json()
+        
+        # Validate input
+        threshold_type = data.get('threshold_type', 'percentage')
+        threshold_value = data.get('threshold_value', 10)
+        enabled = data.get('enabled', True)
+        
+        if threshold_type not in ['percentage', 'amount']:
+            return jsonify({"error": "Invalid threshold_type. Must be 'percentage' or 'amount'."}), 400
+        
+        try:
+            threshold_value = float(threshold_value)
+            if threshold_value < 0:
+                return jsonify({"error": "threshold_value must be non-negative."}), 400
+        except (ValueError, TypeError):
+            return jsonify({"error": "threshold_value must be a number."}), 400
+        
+        settings = {
+            "threshold_type": threshold_type,
+            "threshold_value": threshold_value,
+            "enabled": bool(enabled)
+        }
+        
+        if save_cost_settings(settings):
+            return jsonify({"success": True, "settings": settings})
+        else:
+            return jsonify({"error": "Failed to save settings."}), 500
+            
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+def get_analysis_filename(account_id):
+    if not account_id or account_id == "default":
+        return 'last_cost_analysis.json'
+    return f'last_cost_analysis_{account_id}.json'
+
+@app.route('/get-last-cost-analysis', methods=['GET'])
+def get_last_cost_analysis():
+    granularity = request.args.get('granularity', 'daily').lower()
+    account_id = request.args.get('account_id', 'default')
+    filename = get_analysis_filename(account_id)
+    
+    try:
+        if os.path.exists(filename):
+            with open(filename, 'r') as f:
+                data = json.load(f)
+                if granularity in data:
+                    result = data[granularity]
+                    result["last_updated"] = data.get("last_updated")
+                    return jsonify(result)
+                # Fallback to old format or daily
+                if "report" in data and granularity == 'daily':
+                    return jsonify(data)
+                return jsonify(data.get("daily", {}))
+        return jsonify({"error": f"No analysis data available for account {account_id} yet."}), 404
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+@app.route('/trigger-full-analysis', methods=['POST'])
+def trigger_full_analysis():
+    """Trigger a fresh full cost analysis in the background."""
+    account_id = request.args.get('account_id', 'default')
+    try:
+        # Find account config
+        accounts = load_aws_accounts()
+        account_config = next((acc for acc in accounts if acc['id'] == account_id), None)
+        
+        if account_id != "default" and not account_config:
+            return jsonify({"error": "Account not found"}), 404
+            
+        threading.Thread(target=global_run_full_analysis, args=(account_config,), daemon=True).start()
+        return jsonify({"success": True, "message": f"Full analysis triggered for {account_id} in background."})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+def global_run_full_analysis(account_config=None):
+    """Global version of run_full_analysis that can be called from endpoints."""
+    from cost_analyzer import analyze_cost_pipeline
+    
+    if account_config:
+        aws_ak = account_config.get('access_key_id')
+        aws_sk = account_config.get('secret_access_key')
+        aws_st = account_config.get('session_token')
+        account_id = account_config.get('id')
+        account_name = account_config.get('name')
+    else:
+        aws_ak = os.getenv('AWS_ACCESS_KEY_ID')
+        aws_sk = os.getenv('AWS_SECRET_ACCESS_KEY')
+        aws_st = os.getenv('AWS_SESSION_TOKEN')
+        account_id = "default"
+        account_name = "Default"
+
+    print(f"Running global full cost analysis for {account_name}...", flush=True)
+    gemini_key = os.getenv('GEMINI_API_KEY')
+    openrouter_key = os.getenv('OPENROUTER_API_KEY')
+    
+    # Smart API selection
+    if gemini_key and gemini_key.startswith("AIza"):
+        api_url = "DIRECT_GEMINI"
+        api_key = gemini_key
+        model = "gemini-flash-latest" 
+    else:
+        api_url = os.getenv('AI_API_URL', 'https://openrouter.ai/api/v1')
+        if "openrouter.ai" in api_url and not api_url.endswith("/chat/completions"):
+            api_url = f"{api_url}/chat/completions"
+        api_key = openrouter_key or gemini_key or os.getenv('AI_API_KEY')
+        model = os.getenv('AI_MODEL', 'google/gemini-2.0-flash-exp:free')
+    
+    if aws_ak and aws_sk and api_key:
+        try:
+            # Daily
+            report_d, chart_d, total_d, meta_d = analyze_cost_pipeline(
+                aws_ak, aws_sk, api_key, api_url, model, days=31, granularity='DAILY', aws_session_token=aws_st, account_id=account_id
+            )
+            # Weekly
+            report_w, chart_w, total_w, meta_w = analyze_cost_pipeline(
+                aws_ak, aws_sk, api_key, api_url, model, days=377, granularity='WEEKLY', aws_session_token=aws_st, account_id=account_id
+            )
+            # Monthly
+            report_m, chart_m, total_m, meta_m = analyze_cost_pipeline(
+                aws_ak, aws_sk, api_key, api_url, model, days=377, granularity='MONTHLY', aws_session_token=aws_st, account_id=account_id
+            )
+            
+            analysis_result = {
+                "daily": {"report": report_d, "chart_data": chart_d, "total_account_cost": total_d, "metadata": meta_d},
+                "weekly": {"report": report_w, "chart_data": chart_w, "total_account_cost": total_w, "metadata": meta_w},
+                "monthly": {"report": report_m, "chart_data": chart_m, "total_account_cost": total_m, "metadata": meta_m},
+                "last_updated": datetime.now().isoformat()
+            }
+            
+            filename = get_analysis_filename(account_id)
+            with open(filename, 'w') as f:
+                json.dump(analysis_result, f)
+            print(f"Global full cost analysis for {account_name} saved to {filename}", flush=True)
+        except Exception as e:
+            print(f"Error during global full cost analysis for {account_name}: {e}", flush=True)
+    else:
+        print(f"Skipping global full cost analysis for {account_name}: Credentials missing.", flush=True)
+        print("Skipping global full cost analysis: Credentials or API key missing.", flush=True)
+
+
+
+    # Start Daily Cost Check
+from cost_analyzer import AWSCostDataExtractor, analyze_cost_pipeline
+
+ACCOUNTS_FILE = "data/aws_accounts.json"
+
+def load_aws_accounts():
+    # Priority 1: Environment variable JSON config
+    accounts_config = os.getenv('AWS_ACCOUNTS_CONFIG')
+    if accounts_config:
+        try:
+            return json.loads(accounts_config)
+        except Exception as e:
+            print(f"Error parsing AWS_ACCOUNTS_CONFIG: {e}", flush=True)
+
+    # Priority 2: Standard environment variables as "Default Account"
+    aws_ak = os.getenv('AWS_ACCESS_KEY_ID')
+    aws_sk = os.getenv('AWS_SECRET_ACCESS_KEY')
+    if aws_ak and aws_sk:
+        default_account = {
+            "id": "default",
+            "name": "Default Account",
+            "access_key_id": aws_ak,
+            "secret_access_key": aws_sk,
+            "session_token": os.getenv('AWS_SESSION_TOKEN', ''),
+            "region": os.getenv('AWS_REGION', 'us-east-1')
+        }
+        return [default_account]
+    return []
+
+def save_aws_accounts(accounts):
+    # Dynamic saving disabled as per user request (creds in env only)
+    print("Dynamic account saving is disabled. Update AWS_ACCOUNTS_CONFIG env var instead.", flush=True)
+    return False
+
+@app.route('/aws-accounts', methods=['GET'])
+def get_aws_accounts():
+    accounts = load_aws_accounts()
+    # Strip sensitive info for listing
+    safe_accounts = []
+    for acc in accounts:
+        safe_accounts.append({
+            "id": acc.get("id", "unknown"),
+            "name": acc.get("name", "Unnamed Account"),
+            "region": acc.get("region", "us-east-1"),
+            "has_keys": bool(acc.get("access_key_id") and acc.get("secret_access_key"))
+        })
+    return jsonify(safe_accounts)
+
+@app.route('/aws-accounts', methods=['POST'])
+def add_aws_account():
+    return jsonify({"error": "Dynamic account management is disabled. Please update the environment configuration."}), 403
+
+@app.route('/aws-accounts/<account_id>', methods=['DELETE'])
+def delete_aws_account(account_id):
+    return jsonify({"error": "Dynamic account management is disabled. Please update the environment configuration."}), 403
+
+def daily_cost_check():
+    print("Starting Daily Cost Check Task...", flush=True)
+    notifier = NotificationManager()
+    
+    def run_full_analysis(account_config=None):
+        print(f"Running full cost analysis for account: {account_config.get('name') if account_config else 'Default'}...", flush=True)
+        
+        if account_config:
+            aws_ak = account_config.get('access_key_id')
+            aws_sk = account_config.get('secret_access_key')
+            aws_st = account_config.get('session_token')
+            account_id = account_config.get('id')
+        else:
+            aws_ak = os.getenv('AWS_ACCESS_KEY_ID')
+            aws_sk = os.getenv('AWS_SECRET_ACCESS_KEY')
+            aws_st = os.getenv('AWS_SESSION_TOKEN')
+            account_id = "default"
+
+        api_key = os.getenv('GEMINI_API_KEY') or os.getenv('OPENROUTER_API_KEY') or os.getenv('AI_API_KEY')
+        api_url = os.getenv('AI_API_URL', 'https://openrouter.ai/api/v1')
+        model = os.getenv('AI_MODEL', 'google/gemini-2.0-flash-exp:free')
+        
+        if aws_ak and aws_sk and api_key:
+            try:
+                # Daily
+                report_d, chart_d, total_d, meta_d = analyze_cost_pipeline(
+                    aws_ak, aws_sk, api_key, api_url, model, days=31, granularity='DAILY', aws_session_token=aws_st, account_id=account_id
+                )
+                # Weekly
+                report_w, chart_w, total_w, meta_w = analyze_cost_pipeline(
+                    aws_ak, aws_sk, api_key, api_url, model, days=377, granularity='WEEKLY', aws_session_token=aws_st, account_id=account_id
+                )
+                # Monthly
+                report_m, chart_m, total_m, meta_m = analyze_cost_pipeline(
+                    aws_ak, aws_sk, api_key, api_url, model, days=377, granularity='MONTHLY', aws_session_token=aws_st, account_id=account_id
+                )
+                
+                analysis_result = {
+                    "daily": {"report": report_d, "chart_data": chart_d, "total_account_cost": total_d, "metadata": meta_d},
+                    "weekly": {"report": report_w, "chart_data": chart_w, "total_account_cost": total_w, "metadata": meta_w},
+                    "monthly": {"report": report_m, "chart_data": chart_m, "total_account_cost": total_m, "metadata": meta_m},
+                    "last_updated": datetime.now().isoformat()
+                }
+                filename = get_analysis_filename(account_id)
+                with open(filename, 'w') as f:
+                    json.dump(analysis_result, f)
+                print(f"Full multi-granularity cost analysis for {account_config.get('name') if account_config else 'Default'} saved to {filename}", flush=True)
+            except Exception as e:
+                print(f"Error during full cost analysis for {account_config.get('name') if account_config else 'Default'}: {e}", flush=True)
+        else:
+            print(f"Skipping full cost analysis for {account_config.get('name') if account_config else 'Default'}: Credentials or API key missing.", flush=True)
+
+    # Run once on startup if file doesn't exist
+    if not os.path.exists('last_cost_analysis.json'):
+        threading.Thread(target=run_full_analysis, daemon=True).start()
+
+    # Track which alerts we've sent today to avoid duplicates
+    sent_alerts_today = set()
+    last_check_date = None
+
+    while True:
+        try:
+            now = datetime.now()
+            current_date = now.date()
+            
+            # Reset sent alerts at midnight
+            if last_check_date != current_date:
+                sent_alerts_today = set()
+                last_check_date = current_date
+                print(f"Reset alert tracking for new day: {current_date}", flush=True)
+            
+            # Run daily cost check and analysis at 07:45 UTC (1:15 PM IST) for testing
+            if now.hour == 7 and now.minute == 45:
+                print(f"Running daily cost check and analysis at {now.strftime('%H:%M')}...", flush=True)
+                
+                accounts = load_aws_accounts()
+                if not accounts:
+                    print("No AWS accounts configured for daily check.", flush=True)
+                
+                for account in accounts:
+                    print(f"Processing account: {account['name']} ({account['id']})", flush=True)
+                    aws_ak = account.get('access_key_id')
+                    aws_sk = account.get('secret_access_key')
+                    aws_st = account.get('session_token')
+                    
+                    if aws_ak and aws_sk:
+                        extractor = AWSCostDataExtractor(aws_ak, aws_sk, aws_session_token=aws_st)
+                        
+                        # Load threshold settings
+                        threshold_settings = load_cost_settings()
+                        print(f"Using cost alert threshold settings: {threshold_settings}", flush=True)
+                        
+                        # Check for cost increases
+                        alerts = extractor.check_cost_increases(threshold_settings)
+                        
+                        # Send alerts for services we haven't alerted about today
+                        for alert in alerts:
+                            alert_key = f"{current_date}:{account['id']}:{alert['service']}"
+                            if alert_key not in sent_alerts_today:
+                                print(f"Sending cost alert for {account['name']} - {alert['service']}: ${alert['increase']:.2f} increase ({alert['percent_increase']:.1f}%)", flush=True)
+                                notifier.send_cost_alert(
+                                    f"{account['name']} - {alert['service']}", 
+                                    alert['yesterday_cost'], 
+                                    alert['today_cost'], 
+                                    alert['increase'], 
+                                    alert['percent_increase']
+                                )
+                                sent_alerts_today.add(alert_key)
+                            else:
+                                print(f"Skipping duplicate alert for {account['name']} - {alert['service']} (already sent today)", flush=True)
+                        
+                        # Run full analysis
+                        print(f"Running daily full cost analysis for {account['name']}...", flush=True)
+                        run_full_analysis(account)
+                    else:
+                        print(f"Skipping account {account['name']}: Credentials missing.", flush=True)
+                
+                # Sleep for an hour to avoid multiple triggers in the same minute
+                time.sleep(3600)
+
+
+            else:
+                # Check every minute
+                time.sleep(60)
+        except Exception as e:
+            print(f"Error in daily cost check: {e}", flush=True)
+            time.sleep(60)
+
 if __name__ == "__main__":
     # Test generalize_message
     print("DEBUG: Testing generalize_message...", flush=True)
@@ -1298,6 +1862,9 @@ if __name__ == "__main__":
     # Start analysis loop in background thread
     thread = threading.Thread(target=analysis_loop, daemon=True)
     thread.start()
+
+    cost_thread = threading.Thread(target=daily_cost_check, daemon=True)
+    cost_thread.start()
     
     # Start Flask API
     app.run(host="0.0.0.0", port=5000)

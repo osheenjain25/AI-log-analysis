@@ -15,7 +15,7 @@ from datetime import datetime
 import threading
 
 # Setup OpenTelemetry Logging
-resource = Resource.create({"service.name": "log-generator"})
+resource = Resource.create({"service.name": os.getenv("SERVICE_NAME", "log-generator")})
 logger_provider = LoggerProvider(resource=resource)
 set_logger_provider(logger_provider)
 
@@ -166,8 +166,8 @@ elif s3_bucket:
 else:
     print("Archiving disabled (Neither S3 bucket nor Local datasource set)", flush=True)
 
-# handler = LoggingHandler(level=logging.NOTSET, logger_provider=logger_provider)
-# logging.getLogger().addHandler(handler)
+handler = LoggingHandler(level=logging.NOTSET, logger_provider=logger_provider)
+logging.getLogger().addHandler(handler)
 # StreamHandler is already added by basicConfig
 
 class EcommerceService:

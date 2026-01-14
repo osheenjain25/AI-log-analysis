@@ -42,10 +42,13 @@ services:
       - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
       - ALLOWED_LOKI_JOBS=${ALLOWED_LOKI_JOBS}
       - ALLOWED_S3_BUCKETS=${ALLOWED_S3_BUCKETS}
-      - AWS_S3_LOGS_BUCKET=${AWS_S3_LOGS_BUCKET}
+      - DATASOURCE_TYPE=loki
       - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
       - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_SESSION_TOKEN=${AWS_SESSION_TOKEN}
       - GCHAT_WEBHOOK_URL=${GCHAT_WEBHOOK_URL}
+      - AI_API_URL=https://openrouter.ai/api/v1
+      - AI_MODEL=google/gemini-2.0-flash-exp:free
     ports:
       - "5000:5000"
     depends_on:
@@ -57,11 +60,12 @@ services:
   ai-dashboard:
     build: ./ai-dashboard
     ports:
-      - "8080:8080"
+      - "3000:8080"
     env_file: .env
     environment:
-      - LOKI_URL=${LOKI_URL}
-      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+      - AI_API_URL=https://openrouter.ai/api/v1
+      - AI_MODEL=google/gemini-2.0-flash-thinking-exp:free
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
       - ANALYZER_URL=${ANALYZER_URL}
     depends_on:
       - loki

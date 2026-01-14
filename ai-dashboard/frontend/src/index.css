@@ -78,6 +78,11 @@ h3 {
   grid-template-rows: 80px 1fr;
   height: 100vh;
   background: var(--bg-color);
+  transition: grid-template-columns 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.app-layout.hide-chat {
+  grid-template-columns: 280px 1fr 0px;
 }
 
 /* Header */

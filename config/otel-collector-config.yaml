@@ -19,7 +19,7 @@ exporters:
     default_labels_enabled:
       exporter: true
       job: true
-
+  
 service:
   pipelines:
     metrics:

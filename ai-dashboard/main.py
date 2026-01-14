@@ -105,6 +105,99 @@ async def get_analytics(current_user: User = Depends(get_current_user)):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+@app.post("/query")
+async def query_ai(query_data: dict, current_user: User = Depends(get_current_user)):
+    try:
+        resp = requests.post(f"{ANALYZER_URL}/query", json=query_data, timeout=70)
+        resp.raise_for_status()
+        return resp.json()
+    except requests.exceptions.JSONDecodeError as e:
+        raise HTTPException(status_code=500, detail=f"Invalid JSON response from AI analyzer: {str(e)}")
+    except requests.exceptions.RequestException as e:
+        raise HTTPException(status_code=500, detail=f"Failed to connect to AI analyzer: {str(e)}")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/analyze-cost")
+async def analyze_cost(data: dict, current_user: User = Depends(get_current_user)):
+    try:
+        resp = requests.post(f"{ANALYZER_URL}/analyze-cost", json=data, timeout=120)
+        resp.raise_for_status()
+        return resp.json()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/get-last-cost-analysis")
+async def get_last_cost_analysis(granularity: str = "daily", account_id: str = "default"):
+    try:
+        response = requests.get(f"{ANALYZER_URL}/get-last-cost-analysis", params={"granularity": granularity, "account_id": account_id}, timeout=10)
+        return response.json()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/cost-alert-settings")
+async def get_cost_alert_settings():
+    try:
+        response = requests.get(f"{ANALYZER_URL}/cost-alert-settings", timeout=10)
+        return response.json()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/cost-alert-settings")
+async def update_cost_alert_settings(settings_data: dict):
+    try:
+        response = requests.post(f"{ANALYZER_URL}/cost-alert-settings", json=settings_data, timeout=10)
+        response.raise_for_status()
+        return response.json()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+
+@app.post("/trigger-full-analysis")
+async def trigger_full_analysis(account_id: str = "default"):
+    try:
+        response = requests.post(f"{ANALYZER_URL}/trigger-full-analysis", params={"account_id": account_id}, timeout=10)
+        return response.json()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/aws-accounts")
+async def get_aws_accounts(current_user: User = Depends(get_current_user)):
+    try:
+        response = requests.get(f"{ANALYZER_URL}/aws-accounts", timeout=10)
+        return response.json()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/aws-accounts")
+async def add_aws_account(account_data: dict, current_user: User = Depends(get_current_user)):
+    try:
+        response = requests.post(f"{ANALYZER_URL}/aws-accounts", json=account_data, timeout=10)
+        response.raise_for_status()
+        return response.json()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.delete("/aws-accounts/{account_id}")
+async def delete_aws_account(account_id: str, current_user: User = Depends(get_current_user)):
+    try:
+        response = requests.delete(f"{ANALYZER_URL}/aws-accounts/{account_id}", timeout=10)
+        response.raise_for_status()
+        return response.json()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/update-config")
+async def update_config(config_data: dict, current_user: User = Depends(get_current_user)):
+    try:
+        resp = requests.post(f"{ANALYZER_URL}/config", json=config_data, timeout=10)
+        resp.raise_for_status()
+        return resp.json()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
 @app.get("/tickets")
 async def get_tickets(current_user: User = Depends(get_current_user)):
     if os.path.exists(TICKETS_FILE):
@@ -126,22 +219,11 @@ async def update_ticket_status(ticket_id: str, update: TicketStatusUpdate, curre
             return {"status": "success"}
     raise HTTPException(status_code=404, detail="Ticket not found")
 
-@app.post("/query")
-async def query_ai(query_data: dict, current_user: User = Depends(get_current_user)):
-    try:
-        resp = requests.post(f"{ANALYZER_URL}/query", json=query_data, timeout=70)
-        resp.raise_for_status()
-        return resp.json()
-    except requests.exceptions.JSONDecodeError as e:
-        raise HTTPException(status_code=500, detail=f"Invalid JSON response from AI analyzer: {str(e)}")
-    except requests.exceptions.RequestException as e:
-        raise HTTPException(status_code=500, detail=f"Failed to connect to AI analyzer: {str(e)}")
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
 
 # Serve Frontend
 if os.path.exists("static"):
     app.mount("/", StaticFiles(directory="static", html=True), name="static")
+
 
 if __name__ == "__main__":
     import uvicorn
