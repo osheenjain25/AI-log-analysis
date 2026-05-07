@@ -11,24 +11,11 @@ import pandas as pd
 from prompts import SERVICE_ANALYSIS_PROMPT, COMBINER_ANALYSIS_PROMPT, BATCH_ANALYSIS_PROMPT
 import google.generativeai as genai
 import requests
+import random
 
-class AWSCostDataExtractor:
-    """ 
-    Connects to AWS Cost Explorer, fetches cost and usage data,
-    processes it, and partitions it by service for further analysis.
-    """
-    def __init__(self, aws_access_key_id: str, aws_secret_access_key: str, aws_session_token: str = None, region_name: str = 'us-east-1'):
-        # Handle empty string session token from environment
-        if aws_session_token == "":
-            aws_session_token = None
-            
-        self.ce_client = boto3.client(
-            'ce',
-            aws_access_key_id=aws_access_key_id,
-            aws_secret_access_key=aws_secret_access_key,
-            aws_session_token=aws_session_token,
-            region_name=region_name
-        )
+class CostDataSource:
+    """Abstract base class for cost data sources."""
+    def __init__(self):
         self.granularity = 'DAILY'
         self.start_date = None
         self.end_date = None
@@ -39,7 +26,6 @@ class AWSCostDataExtractor:
         if start_date and end_date:
             self.start_date = start_date
             self.end_date = end_date
-            # Calculate approximate days for metadata
             try:
                 d1 = datetime.strptime(start_date, '%Y-%m-%d')
                 d2 = datetime.strptime(end_date, '%Y-%m-%d')
@@ -54,12 +40,296 @@ class AWSCostDataExtractor:
             self.end_date = end_dt.strftime('%Y-%m-%d')
 
     def extract_cost_data_by_service_and_usage(self, granularity: str = None) -> Dict:
+        raise NotImplementedError
+
+    def _aggregate_to_weekly(self, processed_data: Dict) -> Dict:
+        """Aggregates daily data into weekly buckets."""
+        if not processed_data.get('results_by_time'):
+            return processed_data
+            
+        weekly_results = {} # week_start -> { service_usage -> {cost, usage} }
+        
+        for result in processed_data['results_by_time']:
+            start_date = result['start_date']
+            dt = datetime.strptime(start_date, '%Y-%m-%d')
+            # Get the start of the week (Monday)
+            week_start = (dt - timedelta(days=dt.weekday())).strftime('%Y-%m-%d')
+            
+            if week_start not in weekly_results:
+                weekly_results[week_start] = {}
+                
+            for group in result['groups']:
+                key = (group['service'], group.get('region', 'Unknown'))
+                if key not in weekly_results[week_start]:
+                    weekly_results[week_start][key] = {
+                        'unblended_cost': 0.0,
+                        'amortized_cost': 0.0,
+                        'usage_quantity': 0.0,
+                        'usage_unit': group.get('usage_unit', 'N/A')
+                    }
+                
+                weekly_results[week_start][key]['unblended_cost'] += group['unblended_cost']
+                weekly_results[week_start][key]['amortized_cost'] += group.get('amortized_cost', 0.0)
+                weekly_results[week_start][key]['usage_quantity'] += group['usage_quantity']
+                
+        # Reconstruct results_by_time
+        new_results = []
+        for week_start in sorted(weekly_results.keys()):
+            groups = []
+            for (service, region), metrics in weekly_results[week_start].items():
+                groups.append({
+                    'service': service,
+                    'secondary_dimension': region,
+                    'region': region,
+                    'unblended_cost': metrics['unblended_cost'],
+                    'amortized_cost': metrics['amortized_cost'],
+                    'usage_quantity': metrics['usage_quantity'],
+                    'usage_unit': metrics['usage_unit']
+                })
+            
+            new_results.append({
+                'start_date': week_start,
+                'end_date': (datetime.strptime(week_start, '%Y-%m-%d') + timedelta(days=7)).strftime('%Y-%m-%d'),
+                'groups': groups
+            })
+            
+        processed_data['results_by_time'] = new_results
+        processed_data['analysis_config']['granularity'] = 'WEEKLY'
+        return processed_data
+
+    def _aggregate_to_monthly(self, processed_data: Dict) -> Dict:
+        """Aggregates daily data into monthly buckets."""
+        if not processed_data.get('results_by_time'):
+            return processed_data
+            
+        monthly_results = {} # month_start -> { service_usage -> {cost, usage} }
+        
+        for result in processed_data['results_by_time']:
+            start_date = result['start_date']
+            dt = datetime.strptime(start_date, '%Y-%m-%d')
+            # Get the first day of the month
+            month_start = dt.replace(day=1).strftime('%Y-%m-%d')
+            
+            if month_start not in monthly_results:
+                monthly_results[month_start] = {}
+                
+            for group in result['groups']:
+                key = (group['service'], group.get('region', 'Unknown'))
+                if key not in monthly_results[month_start]:
+                    monthly_results[month_start][key] = {
+                        'unblended_cost': 0.0,
+                        'amortized_cost': 0.0,
+                        'usage_quantity': 0.0,
+                        'usage_unit': group.get('usage_unit', 'N/A')
+                    }
+                
+                monthly_results[month_start][key]['unblended_cost'] += group['unblended_cost']
+                monthly_results[month_start][key]['amortized_cost'] += group.get('amortized_cost', 0.0)
+                monthly_results[month_start][key]['usage_quantity'] += group['usage_quantity']
+                
+        # Reconstruct results_by_time
+        new_results = []
+        for month_start in sorted(monthly_results.keys()):
+            groups = []
+            for (service, region), metrics in monthly_results[month_start].items():
+                groups.append({
+                    'service': service,
+                    'secondary_dimension': region,
+                    'region': region,
+                    'unblended_cost': metrics['unblended_cost'],
+                    'amortized_cost': metrics['amortized_cost'],
+                    'usage_quantity': metrics['usage_quantity'],
+                    'usage_unit': metrics['usage_unit']
+                })
+            
+            # Calculate end of month
+            dt = datetime.strptime(month_start, '%Y-%m-%d')
+            if dt.month == 12:
+                next_month = dt.replace(year=dt.year + 1, month=1)
+            else:
+                next_month = dt.replace(month=dt.month + 1)
+            
+            new_results.append({
+                'start_date': month_start,
+                'end_date': next_month.strftime('%Y-%m-%d'),
+                'groups': groups
+            })
+            
+        processed_data['results_by_time'] = new_results
+        processed_data['analysis_config']['granularity'] = 'MONTHLY'
+        return processed_data
+
+class SimulatedAWSCostDataSource(CostDataSource):
+    """Simulates AWS cost data for testing and demo purposes."""
+    def __init__(self):
+        super().__init__()
+        self.services = ['AmazonEC2', 'AmazonRDS', 'AmazonS3', 'AWSLambda', 'AmazonCloudFront', 'AmazonDynamoDB']
+        self.regions = ['us-east-1', 'us-west-2', 'eu-central-1']
+
+    def extract_cost_data_by_service_and_usage(self, granularity: str = None) -> Dict:
+        if granularity:
+            self.granularity = granularity
+            
+        results = []
+        current_date = datetime.strptime(self.start_date, '%Y-%m-%d')
+        end_date = datetime.strptime(self.end_date, '%Y-%m-%d')
+        
+        while current_date <= end_date:
+            date_str = current_date.strftime('%Y-%m-%d')
+            groups = []
+            
+            for service in self.services:
+                # Generate random cost data
+                base_cost = random.uniform(10.0, 100.0)
+                if service == 'AmazonEC2':
+                    base_cost *= 5
+                elif service == 'AmazonRDS':
+                    base_cost *= 3
+                
+                # Add some variance
+                cost = base_cost * random.uniform(0.8, 1.2)
+                amortized_cost = cost * 1.1
+                usage = random.uniform(100, 1000)
+                
+                groups.append({
+                    'service': service,
+                    'region': random.choice(self.regions),
+                    'secondary_dimension': 'RunInstances' if service == 'AmazonEC2' else 'Storage',
+                    'unblended_cost': cost,
+                    'amortized_cost': amortized_cost,
+                    'usage_quantity': usage,
+                    'usage_unit': 'Hrs' if service == 'AmazonEC2' else 'GB'
+                })
+            
+            results.append({
+                'start_date': date_str,
+                'groups': groups
+            })
+            
+            if self.granularity == 'DAILY':
+                current_date += timedelta(days=1)
+            elif self.granularity == 'WEEKLY':
+                current_date += timedelta(weeks=1)
+            elif self.granularity == 'MONTHLY':
+                # Move to next month
+                if current_date.month == 12:
+                    current_date = current_date.replace(year=current_date.year + 1, month=1)
+                else:
+                    current_date = current_date.replace(month=current_date.month + 1)
+        
+        total_cost = sum(g['unblended_cost'] for r in results for g in r['groups'])
+        total_amortized = sum(g['amortized_cost'] for r in results for g in r['groups'])
+        
+        return {
+            'results_by_time': results,
+            'summary': {
+                'total_cost': total_cost,
+                'total_amortized_cost': total_amortized,
+                'currency': 'USD',
+                'is_complete': True,
+                'regions': self.regions
+            },
+            'data_type': 'simulated_cost'
+        }
+
+    def partition_data_by_service(self, data: Dict) -> Dict:
+        """Partition data by service for individual LLM analysis."""
+        if not data:
+            return {}
+        
+        partitioned_data = {}
+        
+        for time_result in data.get('results_by_time', []):
+            for group in time_result.get('groups', []):
+                service = group['service']
+                
+                if service not in partitioned_data:
+                    partitioned_data[service] = {
+                        'service_name': service,
+                        'data_type': data['data_type'],
+                        'analysis_period': f'{self.analysis_period_days}_days',
+                        'time_series': [],
+                        'metrics_summary': {
+                            'total_cost': 0, 
+                            'total_amortized_cost': 0,
+                            'total_usage': 0, 
+                            'peak_usage': 0,
+                            'regions': set()
+                        }
+                    }
+                
+                partitioned_data[service]['time_series'].append({
+                    'date': time_result['start_date'],
+                    'secondary_dimension': group['secondary_dimension'],
+                    'region': group.get('region', 'Unknown'),
+                    'unblended_cost': group['unblended_cost'],
+                    'amortized_cost': group.get('amortized_cost', 0.0),
+                    'usage_quantity': group['usage_quantity'],
+                    'usage_unit': group['usage_unit']
+                })
+                
+                partitioned_data[service]['metrics_summary']['total_cost'] += group['unblended_cost']
+                partitioned_data[service]['metrics_summary']['total_amortized_cost'] += group.get('amortized_cost', 0.0)
+                partitioned_data[service]['metrics_summary']['total_usage'] += group['usage_quantity']
+                partitioned_data[service]['metrics_summary']['regions'].add(group.get('region', 'Unknown'))
+                partitioned_data[service]['metrics_summary']['peak_usage'] = max(
+                    partitioned_data[service]['metrics_summary']['peak_usage'], group['usage_quantity']
+                )
+        
+        # Convert sets to lists for JSON serialization
+        for service in partitioned_data:
+            partitioned_data[service]['metrics_summary']['regions'] = list(partitioned_data[service]['metrics_summary']['regions'])
+            
+        return partitioned_data
+
+    def check_cost_increases(self, threshold_settings: Dict = None) -> List[Dict]:
+        """Default implementation returns empty list."""
+        return []
+
+    def verify_data_completeness(self, processed_data: Dict) -> bool:
+        """
+        Verifies if the fetched data is complete for the requested period.
+        """
+        results = processed_data.get('results_by_time', [])
+        if not results:
+            return False
+            
+        expected_points = self.analysis_period_days
+        if self.granularity == 'WEEKLY':
+            expected_points = self.analysis_period_days // 7
+        elif self.granularity == 'MONTHLY':
+            expected_points = self.analysis_period_days // 30
+            
+        actual_points = len(results)
+        completeness_ratio = actual_points / expected_points if expected_points > 0 else 0
+        
+        return completeness_ratio >= 0.8
+
+
+class AWSCostDataExtractor(CostDataSource):
+    """ 
+    Connects to AWS Cost Explorer, fetches cost and usage data.
+    """
+    def __init__(self, aws_access_key_id: str, aws_secret_access_key: str, aws_session_token: str = None, region_name: str = 'us-east-1'):
+        super().__init__()
+        # Handle empty string session token from environment
+        if aws_session_token == "":
+            aws_session_token = None
+            
+        self.ce_client = boto3.client(
+            'ce',
+            aws_access_key_id=aws_access_key_id,
+            aws_secret_access_key=aws_secret_access_key,
+            aws_session_token=aws_session_token,
+            region_name=region_name
+        )
+
+    def extract_cost_data_by_service_and_usage(self, granularity: str = None) -> Dict:
         """Extract cost data grouped by SERVICE and USAGE_TYPE"""
         if granularity:
             self.granularity = granularity
             
         # AWS doesn't support WEEKLY granularity, so we fetch DAILY and aggregate
-        # We also fetch DAILY for MONTHLY to ensure consistency and handle partial months
         fetch_granularity = self.granularity
         if self.granularity in ['WEEKLY', 'MONTHLY']:
             fetch_granularity = 'DAILY'
@@ -217,7 +487,77 @@ class AWSCostDataExtractor:
             
         processed_data['results_by_time'] = new_results
         processed_data['analysis_config']['granularity'] = 'MONTHLY'
+        processed_data['analysis_config']['granularity'] = 'MONTHLY'
         return processed_data
+
+    def check_cost_increases(self, threshold_settings: Dict = None) -> List[Dict]:
+        """
+        Compares costs between the last two available days.
+        """
+        # Default threshold settings if not provided
+        if threshold_settings is None:
+            threshold_settings = {
+                "threshold_type": "percentage",
+                "threshold_value": 10,
+                "enabled": True
+            }
+        
+        # If alerts are disabled, return empty list
+        if not threshold_settings.get("enabled", True):
+            return []
+            
+        # Fetch last 2 days of data
+        end_dt = datetime.now().date()
+        start_dt = end_dt - timedelta(days=2)
+        
+        try:
+            response = self.ce_client.get_cost_and_usage(
+                TimePeriod={'Start': start_dt.strftime('%Y-%m-%d'), 'End': end_dt.strftime('%Y-%m-%d')},
+                Granularity='DAILY',
+                Metrics=['UnblendedCost'],
+                GroupBy=[{'Type': 'DIMENSION', 'Key': 'SERVICE'}]
+            )
+            
+            results = response.get('ResultsByTime', [])
+            if len(results) < 2:
+                return []
+            
+            yesterday_data = results[0].get('Groups', [])
+            today_data = results[1].get('Groups', [])
+            
+            yesterday_costs = {g['Keys'][0]: float(g['Metrics']['UnblendedCost']['Amount']) for g in yesterday_data}
+            today_costs = {g['Keys'][0]: float(g['Metrics']['UnblendedCost']['Amount']) for g in today_data}
+            
+            threshold_type = threshold_settings.get("threshold_type", "percentage")
+            threshold_value = float(threshold_settings.get("threshold_value", 10))
+            
+            alerts = []
+            for service, today_cost in today_costs.items():
+                yesterday_cost = yesterday_costs.get(service, 0)
+                if today_cost > yesterday_cost:
+                    increase = today_cost - yesterday_cost
+                    percent_increase = ((today_cost - yesterday_cost) / yesterday_cost * 100) if yesterday_cost > 0 else 100
+                    
+                    # Apply threshold filter
+                    should_alert = False
+                    if threshold_type == "percentage":
+                        should_alert = percent_increase >= threshold_value
+                    elif threshold_type == "amount":
+                        should_alert = increase >= threshold_value
+                    
+                    if should_alert:
+                        alerts.append({
+                            'service': service,
+                            'yesterday_cost': yesterday_cost,
+                            'today_cost': today_cost,
+                            'increase': increase,
+                            'percent_increase': percent_increase
+                        })
+            
+            return alerts
+        except Exception as e:
+            print(f"Error checking cost increases: {e}")
+            return []
 
     def _process_response(self, response: Dict, data_type: str) -> Dict:
         """Process API response into a structured format."""
@@ -280,28 +620,126 @@ class AWSCostDataExtractor:
         
         return processed_data
 
-    def verify_data_completeness(self, processed_data: Dict) -> bool:
+    def check_cost_increases(self, threshold_settings: Dict = None) -> List[Dict]:
         """
-        Verifies if the fetched data is complete for the requested period.
-        Checks if there are data points for most days/weeks.
+        Compares costs between the last two available days (Simulated).
         """
-        results = processed_data.get('results_by_time', [])
-        if not results:
-            return False
-            
-        # For daily, we expect roughly analysis_period_days
-        # For weekly, we expect analysis_period_days / 7
-        expected_points = self.analysis_period_days
-        if self.granularity == 'WEEKLY':
-            expected_points = self.analysis_period_days // 7
-        elif self.granularity == 'MONTHLY':
-            expected_points = self.analysis_period_days // 30
-            
-        # Allow some margin (e.g. 80% completeness)
-        actual_points = len(results)
-        completeness_ratio = actual_points / expected_points if expected_points > 0 else 0
+        # Default threshold settings if not provided
+        if threshold_settings is None:
+            threshold_settings = {
+                "threshold_type": "percentage",
+                "threshold_value": 10,
+                "enabled": True
+            }
         
-        return completeness_ratio >= 0.8
+        # If alerts are disabled, return empty list
+        if not threshold_settings.get("enabled", True):
+            return []
+            
+        # Simulate data for last 2 days
+        yesterday_costs = {}
+        today_costs = {}
+        
+        for service in self.services:
+            base = 50.0 if service == 'AmazonEC2' else 10.0
+            yesterday_costs[service] = base * random.uniform(0.9, 1.1)
+            # Simulate a spike for one service
+            if service == 'AmazonRDS' and random.random() > 0.5:
+                today_costs[service] = yesterday_costs[service] * 1.5 # 50% spike
+            else:
+                today_costs[service] = base * random.uniform(0.9, 1.1)
+        
+        threshold_type = threshold_settings.get("threshold_type", "percentage")
+        threshold_value = float(threshold_settings.get("threshold_value", 10))
+        
+        alerts = []
+        for service, today_cost in today_costs.items():
+            yesterday_cost = yesterday_costs.get(service, 0)
+            if today_cost > yesterday_cost:
+                increase = today_cost - yesterday_cost
+                percent_increase = ((today_cost - yesterday_cost) / yesterday_cost * 100) if yesterday_cost > 0 else 100
+                
+                # Apply threshold filter
+                should_alert = False
+                if threshold_type == "percentage":
+                    should_alert = percent_increase >= threshold_value
+                elif threshold_type == "amount":
+                    should_alert = increase >= threshold_value
+                
+                if should_alert:
+                    alerts.append({
+                        'service': service,
+                        'yesterday_cost': yesterday_cost,
+                        'today_cost': today_cost,
+                        'increase': increase,
+                        'percent_increase': percent_increase
+                    })
+        
+        return alerts
+
+class GCPCostDataSource(CostDataSource):
+    """
+    Simulated GCP Cost Data Source.
+    """
+    def extract_cost_data_by_service_and_usage(self, granularity: str = None) -> Dict:
+        if granularity:
+            self.granularity = granularity
+            
+        # Simulated Data Generation
+        services = ['Compute Engine', 'Cloud Storage', 'BigQuery', 'Cloud SQL', 'Cloud Run']
+        regions = ['us-central1', 'europe-west1', 'asia-east1']
+        
+        results = []
+        current_date = datetime.strptime(self.start_date, '%Y-%m-%d')
+        end_date = datetime.strptime(self.end_date, '%Y-%m-%d')
+        
+        import random
+        random.seed(42) # Consistent simulation
+        
+        while current_date < end_date:
+            next_date = current_date + timedelta(days=1)
+            groups = []
+            
+            for service in services:
+                cost = random.uniform(10, 100)
+                if service == 'BigQuery': cost *= 2
+                
+                groups.append({
+                    'service': service,
+                    'secondary_dimension': random.choice(regions),
+                    'region': random.choice(regions),
+                    'unblended_cost': cost,
+                    'amortized_cost': cost,
+                    'usage_quantity': random.uniform(100, 1000),
+                    'usage_unit': 'Units'
+                })
+            
+            results.append({
+                'start_date': current_date.strftime('%Y-%m-%d'),
+                'end_date': next_date.strftime('%Y-%m-%d'),
+                'groups': groups
+            })
+            current_date = next_date
+            
+        processed_data = {
+            'data_type': 'service_usage',
+            'analysis_config': {
+                'granularity': self.granularity,
+                'period_days': self.analysis_period_days,
+                'start_date': self.start_date,
+                'end_date': self.end_date
+            },
+            'results_by_time': results,
+            'summary': {
+                'total_cost': sum(g['unblended_cost'] for r in results for g in r['groups']),
+                'total_amortized_cost': sum(g['amortized_cost'] for r in results for g in r['groups']),
+                'total_usage': sum(g['usage_quantity'] for r in results for g in r['groups']),
+                'services': services,
+                'regions': [self.region],
+                'is_complete': True
+            }
+        }
+        return processed_data
 
     def partition_data_by_service(self, data: Dict) -> Dict:
         """Partition data by service for individual LLM analysis."""
@@ -353,84 +791,284 @@ class AWSCostDataExtractor:
             
         return partitioned_data
 
-    def check_cost_increases(self, threshold_settings: Dict = None) -> List[Dict]:
-        """
-        Compares costs between the last two available days.
-        Returns a list of alerts for services with cost increases that exceed the threshold.
+
+from huaweicloudsdkcore.auth.credentials import GlobalCredentials, BasicCredentials
+from huaweicloudsdkcore.exceptions import exceptions
+from huaweicloudsdkbss.v2 import BssClient, ListCustomerselfResourceRecordDetailsRequest, QueryResRecordsDetailReq
+from huaweicloudsdkbss.v2.region.bss_region import BssRegion
+
+class HuaweiCostDataSource(CostDataSource):
+    """
+    Huawei Cloud Cost Data Source using BSS API.
+    """
+    def __init__(self, ak: str, sk: str, region: str = 'cn-north-1'):
+        super().__init__()
+        self.ak = ak
+        self.sk = sk
+        self.region = region
+        self.client = self._create_client()
+
+    def _create_client(self):
+        print(f"DEBUG: Creating Huawei BSS client for region {self.region}", flush=True)
+        # BSS SDK requires GlobalCredentials
+        credentials = GlobalCredentials(self.ak, self.sk)
+            
+        builder = BssClient.new_builder().with_credentials(credentials)
         
-        Args:
-            threshold_settings: Dict with 'threshold_type' ('percentage' or 'amount'),
-                              'threshold_value' (float), and 'enabled' (bool)
-        """
-        # Default threshold settings if not provided
-        if threshold_settings is None:
-            threshold_settings = {
-                "threshold_type": "percentage",
-                "threshold_value": 10,
-                "enabled": True
-            }
+        if self.region == 'cn-north-1':
+            builder.with_region(BssRegion.value_of(self.region))
+        else:
+            # For all other regions, use the International endpoint
+            endpoint = "https://bss-intl.myhuaweicloud.com"
+            print(f"DEBUG: Using international endpoint {endpoint}", flush=True)
+            builder.with_endpoint(endpoint)
+            
+        return builder.build()
+
+    def extract_cost_data_by_service_and_usage(self, granularity: str = None) -> Dict:
+        if granularity:
+            self.granularity = granularity
+            
+        # Huawei BSS API typically works with monthly data for detailed records
+        # For this implementation, we will fetch data for the requested period
         
-        # If alerts are disabled, return empty list
-        if not threshold_settings.get("enabled", True):
-            return []
-        # Fetch last 2 days of data
-        end_dt = datetime.now().date()
-        start_dt = end_dt - timedelta(days=2)
+        # Convert start/end date to format required by Huawei API (e.g., YYYY-MM) if needed
+        # But ListCustomerselfResourceRecordDetailsRequest uses cycle (YYYY-MM)
         
-        try:
-            response = self.ce_client.get_cost_and_usage(
-                TimePeriod={'Start': start_dt.strftime('%Y-%m-%d'), 'End': end_dt.strftime('%Y-%m-%d')},
-                Granularity='DAILY',
-                Metrics=['UnblendedCost'],
-                GroupBy=[{'Type': 'DIMENSION', 'Key': 'SERVICE'}]
+        # We'll iterate through months in the range
+        start_dt = datetime.strptime(self.start_date, '%Y-%m-%d')
+        end_dt = datetime.strptime(self.end_date, '%Y-%m-%d')
+        
+        all_records = []
+        
+        current_month = start_dt.replace(day=1)
+        while current_month <= end_dt:
+            cycle = current_month.strftime('%Y-%m')
+            try:
+                self._fetch_month_data(cycle, all_records)
+            except Exception as e:
+                print(f"Error fetching Huawei cost data for cycle {cycle}: {e}")
+            
+            # Move to next month
+            if current_month.month == 12:
+                current_month = current_month.replace(year=current_month.year + 1, month=1)
+            else:
+                current_month = current_month.replace(month=current_month.month + 1)
+                
+        processed_data = self._process_records(all_records)
+        
+        if self.granularity == 'WEEKLY':
+            processed_data = self._aggregate_to_weekly(processed_data)
+        elif self.granularity == 'MONTHLY':
+            processed_data = self._aggregate_to_monthly(processed_data)
+            
+        return processed_data
+
+    def _fetch_month_data(self, cycle, all_records):
+        limit = 100
+        offset = 0
+        while True:
+            # Create the body request object
+            query_req = QueryResRecordsDetailReq(
+                cycle=cycle,
+                limit=limit,
+                offset=offset
             )
             
-            results = response.get('ResultsByTime', [])
-            if len(results) < 2:
-                return []
+            # Create the main request object and set the body
+            request = ListCustomerselfResourceRecordDetailsRequest()
+            request.body = query_req
             
-            # results[0] is yesterday, results[1] is today (or most recent)
-            # Actually Start is inclusive, End is exclusive.
-            # So if today is 12 Jan, Start=10 Jan, End=12 Jan gives 10 Jan and 11 Jan.
-            # If I want 11 Jan vs 12 Jan, I need Start=11 Jan, End=13 Jan?
-            # AWS CE data is usually delayed. Let's get last 3 days to be safe and pick the last two with data.
+            try:
+                print(f"DEBUG: Calling Huawei BSS API for cycle {cycle}, offset {offset}", flush=True)
+                response = self.client.list_customerself_resource_record_details(request)
+            except Exception as e:
+                print(f"Error fetching Huawei cost data for cycle {cycle}: {e}", flush=True)
+                break
             
-            yesterday_data = results[0].get('Groups', [])
-            today_data = results[1].get('Groups', [])
+            if not response or not response.monthly_records:
+                break
+                
+            print(f"DEBUG: Fetched {len(response.monthly_records)} records", flush=True)
+            all_records.extend(response.monthly_records)
             
-            yesterday_costs = {g['Keys'][0]: float(g['Metrics']['UnblendedCost']['Amount']) for g in yesterday_data}
-            today_costs = {g['Keys'][0]: float(g['Metrics']['UnblendedCost']['Amount']) for g in today_data}
+            if len(response.monthly_records) < limit:
+                break
+            offset += limit
+
+    def _process_records(self, records) -> Dict:
+        # Aggregate by service and region
+        # Huawei records have 'cloud_service_type_name', 'region_name', 'official_amount', 'measure_id' (unit)
+        
+        # We need to map to our daily/weekly structure
+        # Note: BSS records might be monthly aggregated or transaction based. 
+        # Resource records usually have 'effective_time' or 'bill_date'
+        
+        results_by_date = {} # date -> { (service, region) -> metrics }
+        
+        services = set()
+        regions = set()
+        total_cost = 0.0
+        total_usage = 0.0
+        
+        for record in records:
+            # Use bill_date or effective_time. Let's assume bill_date exists or we use cycle start
+            # The SDK object structure:
+            # record.cloud_service_type_name
+            # record.region_name
+            # record.official_amount (cost)
+            # record.usage_amount
+            # record.measure_id (unit)
+            # record.bill_date (if available, else use cycle)
             
-            threshold_type = threshold_settings.get("threshold_type", "percentage")
-            threshold_value = float(threshold_settings.get("threshold_value", 10))
+            service = record.cloud_service_type_name or "Unknown"
+            region = record.region_name or "Global"
+            # Use consume_amount for exact cost (actual billed amount)
+            cost = float(record.consume_amount or record.official_amount or 0.0)
+            # usage_amount is not available in MonthlyBillRes, defaulting to 0
+            usage = 0.0 
+            unit = str(record.measure_id or "Units")
             
-            alerts = []
-            for service, today_cost in today_costs.items():
-                yesterday_cost = yesterday_costs.get(service, 0)
-                if today_cost > yesterday_cost:
-                    increase = today_cost - yesterday_cost
-                    percent_increase = ((today_cost - yesterday_cost) / yesterday_cost * 100) if yesterday_cost > 0 else 100
-                    
-                    # Apply threshold filter
-                    should_alert = False
-                    if threshold_type == "percentage":
-                        should_alert = percent_increase >= threshold_value
-                    elif threshold_type == "amount":
-                        should_alert = increase >= threshold_value
-                    
-                    if should_alert:
-                        alerts.append({
-                            'service': service,
-                            'yesterday_cost': yesterday_cost,
-                            'today_cost': today_cost,
-                            'increase': increase,
-                            'percent_increase': percent_increase
-                        })
+            # Try to get date
+            date_str = getattr(record, 'bill_date', None)
+            if not date_str:
+                date_str = getattr(record, 'effective_time', None)
+            if not date_str:
+                date_str = getattr(record, 'consume_time', None)
             
-            return alerts
-        except Exception as e:
-            print(f"Error checking cost increases: {e}")
-            return []
+            # Fallback to trade_id parsing (CSYYMMDD...)
+            if not date_str and hasattr(record, 'trade_id') and record.trade_id and record.trade_id.startswith('CS'):
+                try:
+                    # Extract YYMMDD from CSYYMMDD
+                    yymmdd = record.trade_id[2:8]
+                    year = 2000 + int(yymmdd[0:2])
+                    month = int(yymmdd[2:4])
+                    day = int(yymmdd[4:6])
+                    date_str = f"{year:04d}-{month:02d}-{day:02d}"
+                except:
+                    pass
+            
+            if not date_str:
+                date_str = self.start_date
+                
+            date_str = date_str[:10]
+            
+            # Filter by date range
+            if date_str < self.start_date or date_str > self.end_date:
+                continue
+                
+            services.add(service)
+            regions.add(region)
+            total_cost += cost
+            total_usage += usage
+            
+            if date_str not in results_by_date:
+                results_by_date[date_str] = {}
+                
+            key = (service, region)
+            if key not in results_by_date[date_str]:
+                results_by_date[date_str][key] = {
+                    'unblended_cost': 0.0,
+                    'amortized_cost': 0.0,
+                    'usage_quantity': 0.0,
+                    'usage_unit': unit
+                }
+            
+            results_by_date[date_str][key]['unblended_cost'] += cost
+            results_by_date[date_str][key]['amortized_cost'] += cost # Assuming same for now
+            results_by_date[date_str][key]['usage_quantity'] += usage
+
+        # Convert to list format
+        results_by_time = []
+        for date_str in sorted(results_by_date.keys()):
+            groups = []
+            for (service, region), metrics in results_by_date[date_str].items():
+                groups.append({
+                    'service': service,
+                    'secondary_dimension': region,
+                    'region': region,
+                    'unblended_cost': metrics['unblended_cost'],
+                    'amortized_cost': metrics['amortized_cost'],
+                    'usage_quantity': metrics['usage_quantity'],
+                    'usage_unit': metrics['usage_unit']
+                })
+            
+            results_by_time.append({
+                'start_date': date_str,
+                'end_date': date_str, # Daily
+                'groups': groups
+            })
+
+        processed_data = {
+            'data_type': 'service_usage',
+            'analysis_config': {
+                'granularity': self.granularity,
+                'period_days': self.analysis_period_days,
+                'start_date': self.start_date,
+                'end_date': self.end_date
+            },
+            'results_by_time': results_by_time,
+            'summary': {
+                'total_cost': total_cost,
+                'total_amortized_cost': total_cost,
+                'total_usage': total_usage,
+                'services': list(services),
+                'regions': list(regions),
+                'is_complete': True
+            }
+        }
+        return processed_data
+
+    def partition_data_by_service(self, data: Dict) -> Dict:
+        """Partition data by service for individual LLM analysis."""
+        if not data:
+            return {}
+        
+        partitioned_data = {}
+        
+        for time_result in data.get('results_by_time', []):
+            for group in time_result.get('groups', []):
+                service = group['service']
+                
+                if service not in partitioned_data:
+                    partitioned_data[service] = {
+                        'service_name': service,
+                        'data_type': data['data_type'],
+                        'analysis_period': f'{self.analysis_period_days}_days',
+                        'time_series': [],
+                        'metrics_summary': {
+                            'total_cost': 0, 
+                            'total_amortized_cost': 0,
+                            'total_usage': 0, 
+                            'peak_usage': 0,
+                            'regions': set()
+                        }
+                    }
+                
+                partitioned_data[service]['time_series'].append({
+                    'date': time_result['start_date'],
+                    'secondary_dimension': group['secondary_dimension'],
+                    'region': group.get('region', 'Unknown'),
+                    'unblended_cost': group['unblended_cost'],
+                    'amortized_cost': group.get('amortized_cost', 0.0),
+                    'usage_quantity': group['usage_quantity'],
+                    'usage_unit': group['usage_unit']
+                })
+                
+                partitioned_data[service]['metrics_summary']['total_cost'] += group['unblended_cost']
+                partitioned_data[service]['metrics_summary']['total_amortized_cost'] += group.get('amortized_cost', 0.0)
+                partitioned_data[service]['metrics_summary']['total_usage'] += group['usage_quantity']
+                partitioned_data[service]['metrics_summary']['regions'].add(group.get('region', 'Unknown'))
+                partitioned_data[service]['metrics_summary']['peak_usage'] = max(
+                    partitioned_data[service]['metrics_summary']['peak_usage'], group['usage_quantity']
+                )
+        
+        # Convert sets to lists for JSON serialization
+        for service in partitioned_data:
+            partitioned_data[service]['metrics_summary']['regions'] = list(partitioned_data[service]['metrics_summary']['regions'])
+            
+        return partitioned_data
+
 
 import requests
 
@@ -458,8 +1096,8 @@ class AWSCostLLMAnalyzer:
         headers = {
             "Authorization": f"Bearer {self.api_key}",
             "Content-Type": "application/json",
-            "HTTP-Referer": "https://antigravity.ai",
-            "X-Title": "Antigravity AI"
+            "HTTP-Referer": "https://aethercost.ai",
+            "X-Title": "AetherCost AI"
         }
         
         base_wait_time = 5
@@ -750,14 +1388,24 @@ def prepare_chart_data(partitioned_data: Dict) -> Dict:
         "top_trends": trends[:10]
     }
 
-def analyze_cost_pipeline(aws_access_key: str, aws_secret_key: str, api_key: str, api_url: str, model: str, days: int = 30, target_services: List[str] = None, aws_session_token: str = None, start_date: str = None, end_date: str = None, granularity: str = 'DAILY', account_id: str = None) -> Tuple[str, Dict, float, Dict]:
+def analyze_cost_pipeline(aws_access_key: str, aws_secret_key: str, api_key: str, api_url: str, model: str, days: int = 30, target_services: List[str] = None, aws_session_token: str = None, start_date: str = None, end_date: str = None, granularity: str = 'DAILY', account_id: str = None, provider: str = 'aws', region: str = None) -> Tuple[str, Dict, float, Dict]:
     """
     Orchestrates the cost analysis pipeline.
     """
-    print(f"Starting Cost Analysis Pipeline ({granularity})...", flush=True)
+    print(f"Starting Cost Analysis Pipeline ({granularity}) for {provider}...", flush=True)
     
     # 1. Extract Data
-    extractor = AWSCostDataExtractor(aws_access_key, aws_secret_key, aws_session_token)
+    extractor = None
+    if provider.lower() == 'gcp':
+        extractor = GCPCostDataSource()
+    elif provider.lower() == 'huawei':
+        extractor = HuaweiCostDataSource(aws_access_key, aws_secret_key, region=region or 'cn-north-1')
+    else:
+        if os.environ.get('SIMULATE_AWS', 'false').lower() == 'true':
+            print("Using Simulated AWS Data Source", flush=True)
+            extractor = SimulatedAWSCostDataSource()
+        else:
+            extractor = AWSCostDataExtractor(aws_access_key, aws_secret_key, aws_session_token, region_name=region or 'us-east-1')
     
     # Set time period for extractor
     if start_date and end_date:
@@ -767,7 +1415,7 @@ def analyze_cost_pipeline(aws_access_key: str, aws_secret_key: str, api_key: str
     
     raw_data = extractor.extract_cost_data_by_service_and_usage(granularity=granularity)
     if not raw_data:
-        return "Failed to fetch AWS cost data. Please check your credentials.", {}, 0.0, {"is_complete": False}
+        return f"Failed to fetch {provider.upper()} cost data. Please check your credentials.", {}, 0.0, {"is_complete": False}
     
     total_account_cost = raw_data.get('summary', {}).get('total_cost', 0.0)
     is_complete = raw_data.get('summary', {}).get('is_complete', False)

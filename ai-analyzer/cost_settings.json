@@ -1,5 +1,5 @@
 {
-  "threshold_type": "percentage",
-  "threshold_value": 1.0,
+  "threshold_type": "amount",
+  "threshold_value": 50.0,
   "enabled": true
 }

@@ -39,6 +39,31 @@ config = {
     "insights_bucket": os.getenv("AWS_S3_INSIGHTS_BUCKET") or os.getenv("AWS_S3_LOGS_BUCKET"),
     "logs_bucket": os.getenv("AWS_S3_LOGS_BUCKET")
 }
+
+class LogFilter:
+    def __init__(self, rules_file="log_drop_rules.json"):
+        self.rules_file = rules_file
+        self.rules = self._load_rules()
+        self.dropped_count = 0
+
+    def _load_rules(self):
+        try:
+            if os.path.exists(self.rules_file):
+                with open(self.rules_file, 'r') as f:
+                    return json.load(f)
+            return []
+        except Exception as e:
+            print(f"Error loading log drop rules: {e}", flush=True)
+            return []
+
+    def should_drop(self, message):
+        for rule in self.rules:
+            if re.search(rule['pattern'], message, re.IGNORECASE):
+                self.dropped_count += 1
+                if self.dropped_count % 100 == 0:
+                     print(f"DEBUG: LogFilter dropped {self.dropped_count} logs so far.", flush=True)
+                return True
+        return False
 class StorageInterface(ABC):
     @abstractmethod
     def list_files(self, prefix):
@@ -704,11 +729,12 @@ class MLLogAnalyzer:
            - GOOD: "Check RDS CPU utilization and connection pool limits."
         5. **CONTEXTUAL ANALYSIS**: In `ANOMALY_CONTEXT`, mention if this appears to be a recurring pattern or an isolated incident based on the provided attributes (e.g., "High frequency in production").
         6. **CLASSIFY AS EXPECTED**: If the error is a standard functional result (e.g., invalid input, out of stock, expired coupon) and NOT a system failure, mark IS_EXPECTED: true. Otherwise, false.
+        7. **REFERENCES**: Provide 1-2 URLs to official documentation or StackOverflow threads that discuss this specific error. If none are highly relevant, return "N/A".
         FORMAT:
-        <CATEGORY> | <SUMMARY> | ROOT_CAUSE: <text> | BLAST_RADIUS: <text> | ACTIONABLE_FIX: <text> | ANOMALY_CONTEXT: <text> | IS_EXPECTED: <true/false>
+        <CATEGORY> | <SUMMARY> | ROOT_CAUSE: <text> | BLAST_RADIUS: <text> | ACTIONABLE_FIX: <text> | ANOMALY_CONTEXT: <text> | IS_EXPECTED: <true/false> | REFERENCES: <text>
         
         Example:
-        APPLICATION ERRORS | Inventory check failed: item out of stock. | ROOT_CAUSE: ...
+        APPLICATION ERRORS | Inventory check failed: item out of stock. | ROOT_CAUSE: ... | ... | REFERENCES: https://stackoverflow.com/questions/12345/inventory-error
         
         LOG: {message}
         SEVERITY: {severity}
@@ -839,30 +865,51 @@ def analyze_cost():
         api_url = config.get("ai_api_url", DEFAULT_AI_API_URL)
         model = config.get("ai_model", DEFAULT_AI_MODEL)
         
-        # Fallback to server environment variables if not provided
-        if not aws_access_key:
-            aws_access_key = os.getenv('AWS_ACCESS_KEY_ID')
-        if not aws_secret_key:
-            aws_secret_key = os.getenv('AWS_SECRET_ACCESS_KEY')
-        if not aws_session_token:
-            aws_session_token = os.getenv('AWS_SESSION_TOKEN')
+        account_id = data.get('account_id', 'default')
+        provider = data.get('provider', 'aws').lower()
+        
+        # Load account config from env
+        accounts = load_provider_accounts(provider)
+        account_config = next((acc for acc in accounts if acc.get('id') == account_id), None)
+        
+        if not account_config and account_id == 'default' and accounts:
+            account_config = accounts[0]
             
-        if not aws_access_key or not aws_secret_key:
-            return jsonify({"error": "Missing AWS credentials (not provided and not found in server env)"}), 400
+        if account_config:
+            aws_access_key = account_config.get('access_key_id')
+            aws_secret_key = account_config.get('secret_access_key')
+            aws_session_token = account_config.get('session_token')
+        else:
+            # Fallback to server environment variables if not provided
+            if not aws_access_key:
+                aws_access_key = os.getenv('AWS_ACCESS_KEY_ID')
+            if not aws_secret_key:
+                aws_secret_key = os.getenv('AWS_SECRET_ACCESS_KEY')
+            if not aws_session_token:
+                aws_session_token = os.getenv('AWS_SESSION_TOKEN')
+            
+        if provider == 'aws' and (not aws_access_key or not aws_secret_key):
+            return jsonify({"error": f"Missing credentials for {provider.upper()} account {account_id}"}), 400
             
         if not api_key:
-            return jsonify({"error": "Server missing OPENROUTER_API_KEY configuration"}), 500
+            return jsonify({"error": "Server missing AI API key configuration"}), 500
 
         # Run the pipeline
         start_date = data.get('start_date')
         end_date = data.get('end_date')
         granularity = data.get('granularity', 'DAILY').upper()
+        region = data.get('region')
+        if not region and account_config:
+            region = account_config.get('region')
         
         report, chart_data, total_account_cost, metadata = analyze_cost_pipeline(
             aws_access_key, aws_secret_key, api_key, api_url, model, 
             days, target_services, aws_session_token,
             start_date=start_date, end_date=end_date,
-            granularity=granularity
+            granularity=granularity,
+            account_id=account_id,
+            provider=provider,
+            region=region
         )
         
         return jsonify({
@@ -969,6 +1016,7 @@ def analysis_loop():
     
     # Initialize ML analyzer
     ml_analyzer = MLLogAnalyzer()
+    log_filter = LogFilter()
     processed_files = set()
     
     while True:
@@ -1248,6 +1296,8 @@ def update_config():
     
     print(f"Config updated: Datasource set to {config['datasource']} ({config['datasource_type']})", flush=True)
     return jsonify({"status": "success", "config": {k:v for k,v in config.items() if not any(s in k.lower() for s in ["secret", "key", "token"])}})
+
+
 @app.route('/health', methods=['GET'])
 def health():
     return jsonify({"status": "healthy", "config": {k:v for k,v in config.items() if not any(s in k.lower() for s in ["secret", "key", "token"])}})
@@ -1510,8 +1560,8 @@ def save_cost_settings(settings):
         print(f"Error saving cost settings: {e}", flush=True)
         return False
 
-@app.route('/cost-alert-settings', methods=['GET'])
-def get_cost_alert_settings():
+@app.route('/cost-settings', methods=['GET'])
+def get_cost_settings():
     """Get current cost alert threshold settings."""
     try:
         settings = load_cost_settings()
@@ -1519,8 +1569,8 @@ def get_cost_alert_settings():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-@app.route('/cost-alert-settings', methods=['POST'])
-def update_cost_alert_settings():
+@app.route('/cost-settings', methods=['POST'])
+def update_cost_settings():
     """Update cost alert threshold settings."""
     try:
         data = request.get_json()
@@ -1554,16 +1604,17 @@ def update_cost_alert_settings():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-def get_analysis_filename(account_id):
+def get_analysis_filename(account_id, provider="aws"):
     if not account_id or account_id == "default":
-        return 'last_cost_analysis.json'
-    return f'last_cost_analysis_{account_id}.json'
+        return f'last_cost_analysis_{provider}.json'
+    return f'last_cost_analysis_{provider}_{account_id}.json'
 
 @app.route('/get-last-cost-analysis', methods=['GET'])
 def get_last_cost_analysis():
     granularity = request.args.get('granularity', 'daily').lower()
     account_id = request.args.get('account_id', 'default')
-    filename = get_analysis_filename(account_id)
+    provider = request.args.get('provider', 'aws').lower()
+    filename = get_analysis_filename(account_id, provider)
     
     try:
         if os.path.exists(filename):
@@ -1585,37 +1636,62 @@ def get_last_cost_analysis():
 def trigger_full_analysis():
     """Trigger a fresh full cost analysis in the background."""
     account_id = request.args.get('account_id', 'default')
+    provider = request.args.get('provider', 'aws').lower()
     try:
         # Find account config
-        accounts = load_aws_accounts()
-        account_config = next((acc for acc in accounts if acc['id'] == account_id), None)
+        accounts = load_provider_accounts(provider)
+        account_config = next((acc for acc in accounts if acc.get('id') == account_id), None)
         
-        if account_id != "default" and not account_config:
-            return jsonify({"error": "Account not found"}), 404
+        if not account_config and account_id == "default":
+             account_config = {"id": "default", "name": f"Default {provider.upper()} Account"}
+
+        if not account_config:
+            return jsonify({"error": f"Account {account_id} not found for provider {provider}"}), 404
             
-        threading.Thread(target=global_run_full_analysis, args=(account_config,), daemon=True).start()
-        return jsonify({"success": True, "message": f"Full analysis triggered for {account_id} in background."})
+        print(f"Triggering analysis for {provider} account {account_id}. Config found: {bool(account_config)}", flush=True)
+        threading.Thread(target=global_run_full_analysis, args=(account_config, provider), daemon=True).start()
+        return jsonify({"success": True, "message": f"Full analysis triggered for {provider} account {account_id} in background."})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-def global_run_full_analysis(account_config=None):
+def global_run_full_analysis(account_config=None, provider='aws'):
     """Global version of run_full_analysis that can be called from endpoints."""
     from cost_analyzer import analyze_cost_pipeline
     
-    if account_config:
+    print(f"DEBUG: global_run_full_analysis called for provider={provider}, account_id={account_config.get('id') if account_config else 'None'}", flush=True)
+    
+    if account_config and (account_config.get('access_key_id') or account_config.get('service_account_key')):
         aws_ak = account_config.get('access_key_id')
         aws_sk = account_config.get('secret_access_key')
         aws_st = account_config.get('session_token')
         account_id = account_config.get('id')
         account_name = account_config.get('name')
+        region = account_config.get('region')
     else:
         aws_ak = os.getenv('AWS_ACCESS_KEY_ID')
         aws_sk = os.getenv('AWS_SECRET_ACCESS_KEY')
         aws_st = os.getenv('AWS_SESSION_TOKEN')
-        account_id = "default"
-        account_name = "Default"
+        account_id = account_config.get('id', 'default') if account_config else "default"
+        account_name = account_config.get('name', 'Default') if account_config else "Default"
+        region = account_config.get('region') if account_config else None
+        
+        # For GCP/Huawei, we might have specific env vars
+        if provider == 'gcp':
+            gcp_key = os.getenv('GCP_SERVICE_ACCOUNT_KEY')
+            account_name = account_config.get('name', "Default GCP") if account_config else "Default GCP"
+        elif provider == 'huawei':
+            hw_ak = os.getenv('HUAWEI_ACCESS_KEY')
+            hw_sk = os.getenv('HUAWEI_SECRET_ACCESS_KEY')
+            hw_region = os.getenv('HUAWEI_REGION', 'ap-southeast-1')
+            account_name = account_config.get('name', "Default Huawei") if account_config else "Default Huawei"
+            # Map to generic variables for pipeline
+            aws_ak = hw_ak
+            aws_sk = hw_sk
+            if not region:
+                region = hw_region
 
-    print(f"Running global full cost analysis for {account_name}...", flush=True)
+    print(f"Running global full cost analysis for {account_name} (Provider: {provider}, Region: {region})...", flush=True)
+    print(f"DEBUG: Using AK: {aws_ak[:5]}...{aws_ak[-5:] if aws_ak else ''}", flush=True)
     gemini_key = os.getenv('GEMINI_API_KEY')
     openrouter_key = os.getenv('OPENROUTER_API_KEY')
     
@@ -1631,19 +1707,22 @@ def global_run_full_analysis(account_config=None):
         api_key = openrouter_key or gemini_key or os.getenv('AI_API_KEY')
         model = os.getenv('AI_MODEL', 'google/gemini-2.0-flash-exp:free')
     
-    if aws_ak and aws_sk and api_key:
+    # For non-AWS providers, we don't strictly require AWS credentials
+    has_credentials = (aws_ak and aws_sk) or provider != 'aws'
+    
+    if has_credentials and api_key:
         try:
             # Daily
             report_d, chart_d, total_d, meta_d = analyze_cost_pipeline(
-                aws_ak, aws_sk, api_key, api_url, model, days=31, granularity='DAILY', aws_session_token=aws_st, account_id=account_id
+                aws_ak, aws_sk, api_key, api_url, model, days=31, granularity='DAILY', aws_session_token=aws_st, account_id=account_id, provider=provider, region=region
             )
             # Weekly
             report_w, chart_w, total_w, meta_w = analyze_cost_pipeline(
-                aws_ak, aws_sk, api_key, api_url, model, days=377, granularity='WEEKLY', aws_session_token=aws_st, account_id=account_id
+                aws_ak, aws_sk, api_key, api_url, model, days=377, granularity='WEEKLY', aws_session_token=aws_st, account_id=account_id, provider=provider, region=region
             )
             # Monthly
             report_m, chart_m, total_m, meta_m = analyze_cost_pipeline(
-                aws_ak, aws_sk, api_key, api_url, model, days=377, granularity='MONTHLY', aws_session_token=aws_st, account_id=account_id
+                aws_ak, aws_sk, api_key, api_url, model, days=377, granularity='MONTHLY', aws_session_token=aws_st, account_id=account_id, provider=provider, region=region
             )
             
             analysis_result = {
@@ -1653,7 +1732,9 @@ def global_run_full_analysis(account_config=None):
                 "last_updated": datetime.now().isoformat()
             }
             
-            filename = get_analysis_filename(account_id)
+            # Use the actual account_id from the config or the one passed in
+            target_account_id = account_config.get('id', account_id) if account_config else account_id
+            filename = get_analysis_filename(target_account_id, provider)
             with open(filename, 'w') as f:
                 json.dump(analysis_result, f)
             print(f"Global full cost analysis for {account_name} saved to {filename}", flush=True)
@@ -1670,29 +1751,55 @@ from cost_analyzer import AWSCostDataExtractor, analyze_cost_pipeline
 
 ACCOUNTS_FILE = "data/aws_accounts.json"
 
-def load_aws_accounts():
-    # Priority 1: Environment variable JSON config
-    accounts_config = os.getenv('AWS_ACCOUNTS_CONFIG')
+def load_provider_accounts(provider):
+    provider = provider.lower()
+    env_var = f"{provider.upper()}_ACCOUNTS_CONFIG"
+    accounts_config = os.getenv(env_var)
+    
     if accounts_config:
         try:
             return json.loads(accounts_config)
         except Exception as e:
-            print(f"Error parsing AWS_ACCOUNTS_CONFIG: {e}", flush=True)
+            print(f"Error parsing {env_var}: {e}", flush=True)
 
-    # Priority 2: Standard environment variables as "Default Account"
-    aws_ak = os.getenv('AWS_ACCESS_KEY_ID')
-    aws_sk = os.getenv('AWS_SECRET_ACCESS_KEY')
-    if aws_ak and aws_sk:
-        default_account = {
-            "id": "default",
-            "name": "Default Account",
-            "access_key_id": aws_ak,
-            "secret_access_key": aws_sk,
-            "session_token": os.getenv('AWS_SESSION_TOKEN', ''),
-            "region": os.getenv('AWS_REGION', 'us-east-1')
-        }
-        return [default_account]
+    # Fallback to standard env vars
+    if provider == 'aws':
+        aws_ak = os.getenv('AWS_ACCESS_KEY_ID')
+        aws_sk = os.getenv('AWS_SECRET_ACCESS_KEY')
+        if aws_ak and aws_sk:
+            return [{
+                "id": "default",
+                "name": "Default AWS Account",
+                "access_key_id": aws_ak,
+                "secret_access_key": aws_sk,
+                "session_token": os.getenv('AWS_SESSION_TOKEN', ''),
+                "region": os.getenv('AWS_REGION', 'us-east-1')
+            }]
+    elif provider == 'gcp':
+        gcp_key = os.getenv('GCP_SERVICE_ACCOUNT_KEY')
+        if gcp_key:
+            return [{
+                "id": "default",
+                "name": "Default GCP Account",
+                "region": "global",
+                "service_account_key": gcp_key
+            }]
+    elif provider == 'huawei':
+        hw_ak = os.getenv('HUAWEI_ACCESS_KEY')
+        hw_sk = os.getenv('HUAWEI_SECRET_ACCESS_KEY')
+        if hw_ak and hw_sk:
+            return [{
+                "id": "default",
+                "name": "Default Huawei Account",
+                "region": os.getenv('HUAWEI_REGION', 'global'),
+                "access_key_id": hw_ak,
+                "secret_access_key": hw_sk
+            }]
+    
     return []
+
+def load_aws_accounts():
+    return load_provider_accounts('aws')
 
 def save_aws_accounts(accounts):
     # Dynamic saving disabled as per user request (creds in env only)
@@ -1721,41 +1828,63 @@ def add_aws_account():
 def delete_aws_account(account_id):
     return jsonify({"error": "Dynamic account management is disabled. Please update the environment configuration."}), 403
 
+@app.route('/accounts', methods=['GET'])
+def get_accounts():
+    provider = request.args.get('provider', 'aws').lower()
+    
+    accounts = load_provider_accounts(provider)
+    # Strip sensitive info for listing
+    safe_accounts = []
+    for acc in accounts:
+        safe_accounts.append({
+            "id": acc.get("id", "unknown"),
+            "name": acc.get("name", f"Unnamed {provider.upper()} Account"),
+            "region": acc.get("region", "global"),
+            "has_keys": True # Since they are in env, we assume they have keys if they are loaded
+        })
+    return jsonify(safe_accounts)
+
 def daily_cost_check():
     print("Starting Daily Cost Check Task...", flush=True)
     notifier = NotificationManager()
     
-    def run_full_analysis(account_config=None):
-        print(f"Running full cost analysis for account: {account_config.get('name') if account_config else 'Default'}...", flush=True)
+    def run_full_analysis_for_provider(provider):
+        print(f"Running full cost analysis for provider: {provider.upper()}...", flush=True)
+        accounts = load_provider_accounts(provider)
         
-        if account_config:
-            aws_ak = account_config.get('access_key_id')
-            aws_sk = account_config.get('secret_access_key')
-            aws_st = account_config.get('session_token')
-            account_id = account_config.get('id')
-        else:
-            aws_ak = os.getenv('AWS_ACCESS_KEY_ID')
-            aws_sk = os.getenv('AWS_SECRET_ACCESS_KEY')
-            aws_st = os.getenv('AWS_SESSION_TOKEN')
-            account_id = "default"
+        if not accounts:
+            print(f"No accounts configured for provider: {provider.upper()}", flush=True)
+            return
 
         api_key = os.getenv('GEMINI_API_KEY') or os.getenv('OPENROUTER_API_KEY') or os.getenv('AI_API_KEY')
         api_url = os.getenv('AI_API_URL', 'https://openrouter.ai/api/v1')
         model = os.getenv('AI_MODEL', 'google/gemini-2.0-flash-exp:free')
-        
-        if aws_ak and aws_sk and api_key:
+
+        if not api_key:
+            print("Skipping full cost analysis: AI API key missing.", flush=True)
+            return
+
+        for account_config in accounts:
+            account_id = account_config.get('id', 'default')
+            account_name = account_config.get('name', 'Default')
+            print(f"Analyzing account: {account_name} ({provider.upper()})...", flush=True)
+            
+            aws_ak = account_config.get('access_key_id', '')
+            aws_sk = account_config.get('secret_access_key', '')
+            aws_st = account_config.get('session_token', '')
+            
             try:
                 # Daily
                 report_d, chart_d, total_d, meta_d = analyze_cost_pipeline(
-                    aws_ak, aws_sk, api_key, api_url, model, days=31, granularity='DAILY', aws_session_token=aws_st, account_id=account_id
+                    aws_ak, aws_sk, api_key, api_url, model, days=31, granularity='DAILY', aws_session_token=aws_st, account_id=account_id, provider=provider
                 )
                 # Weekly
                 report_w, chart_w, total_w, meta_w = analyze_cost_pipeline(
-                    aws_ak, aws_sk, api_key, api_url, model, days=377, granularity='WEEKLY', aws_session_token=aws_st, account_id=account_id
+                    aws_ak, aws_sk, api_key, api_url, model, days=377, granularity='WEEKLY', aws_session_token=aws_st, account_id=account_id, provider=provider
                 )
                 # Monthly
                 report_m, chart_m, total_m, meta_m = analyze_cost_pipeline(
-                    aws_ak, aws_sk, api_key, api_url, model, days=377, granularity='MONTHLY', aws_session_token=aws_st, account_id=account_id
+                    aws_ak, aws_sk, api_key, api_url, model, days=377, granularity='MONTHLY', aws_session_token=aws_st, account_id=account_id, provider=provider
                 )
                 
                 analysis_result = {
@@ -1764,18 +1893,20 @@ def daily_cost_check():
                     "monthly": {"report": report_m, "chart_data": chart_m, "total_account_cost": total_m, "metadata": meta_m},
                     "last_updated": datetime.now().isoformat()
                 }
-                filename = get_analysis_filename(account_id)
+                filename = get_analysis_filename(account_id, provider)
                 with open(filename, 'w') as f:
                     json.dump(analysis_result, f)
-                print(f"Full multi-granularity cost analysis for {account_config.get('name') if account_config else 'Default'} saved to {filename}", flush=True)
+                print(f"Full multi-granularity cost analysis for {account_name} ({provider.upper()}) saved to {filename}", flush=True)
             except Exception as e:
-                print(f"Error during full cost analysis for {account_config.get('name') if account_config else 'Default'}: {e}", flush=True)
-        else:
-            print(f"Skipping full cost analysis for {account_config.get('name') if account_config else 'Default'}: Credentials or API key missing.", flush=True)
+                print(f"Error during full cost analysis for {account_name} ({provider.upper()}): {e}", flush=True)
 
-    # Run once on startup if file doesn't exist
-    if not os.path.exists('last_cost_analysis.json'):
-        threading.Thread(target=run_full_analysis, daemon=True).start()
+    def run_all_analyses():
+        for provider in ['aws', 'gcp', 'huawei']:
+            run_full_analysis_for_provider(provider)
+
+    # Run once on startup if no analysis files exist
+    if not any(f.startswith('last_cost_analysis_') for f in os.listdir('.') if f.endswith('.json')):
+        threading.Thread(target=run_all_analyses, daemon=True).start()
 
     # Track which alerts we've sent today to avoid duplicates
     sent_alerts_today = set()

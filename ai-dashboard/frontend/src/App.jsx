@@ -5,7 +5,7 @@ import {
   Send, Sparkles, Activity, Terminal, BarChart3,
   ChevronRight, Search, Filter, Shield, Cpu,
   Layers, Zap, AlertCircle, Clock, CheckCircle2,
-  LayoutDashboard, Settings, Bell, Ticket, MoreHorizontal, ChevronDown
+  LayoutDashboard, Bell, Ticket, MoreHorizontal, ChevronDown
 } from 'lucide-react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recharts';
 import ReactMarkdown from 'react-markdown';
@@ -34,13 +34,6 @@ const SUGGESTED_QUESTIONS = [
   "Explain the blast radius of the last timeout",
   "Are there any performance trends?"
 ];
-const DATASOURCE_OPTIONS = [
-  { value: 'loki', label: 'Grafana Loki' },
-  { value: 'otel', label: 'OpenTelemetry (OTLP)' },
-  { value: 's3', label: 'AWS S3' },
-  { value: 'azure', label: 'Azure Blob Storage' },
-  { value: 'gcs', label: 'Google Cloud Storage' },
-];
 function App() {
   const { user, token, logout, loading } = useAuth();
   const [insights, setInsights] = useState([]);
@@ -59,20 +52,9 @@ function App() {
   const [ticketSort, setTicketSort] = useState('newest'); // newest, oldest, frequent, status
   const [ticketStatusFilter, setTicketStatusFilter] = useState('all'); // all, OPEN, IN_PROGRESS, RESOLVED
   const chatEndRef = useRef(null);
-  const [showSettings, setShowSettings] = useState(false);
+
   const [activeView, setActiveView] = useState('dashboard'); // 'dashboard', 'cost-optimization'
   const [showChat, setShowChat] = useState(true);
-  const [config, setConfig] = useState({
-    datasourceType: 'loki', // 'loki', 's3', 'otel', 'azure', 'gcs'
-    datasource: 'mobile-app-client',
-    lokiUrl: 'http://loki:3100',
-    otelUrl: 'http://otel-collector:4317',
-    authToken: '',
-    aiApiUrl: 'https://api.openai.com/v1/chat/completions',
-    aiModel: 'gpt-3.5-turbo',
-    awsRegion: 'us-east-1',
-    insightsBucket: ''
-  });
   useEffect(() => {
     if (token) {
       axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
@@ -134,28 +116,6 @@ function App() {
       setMessages(prev => [...prev, { role: 'ai', content: 'Sorry, I encountered an error while processing your request.' }]);
     } finally {
       setIsTyping(false);
-    }
-  };
-  const handleSaveSettings = async (newConfig) => {
-    try {
-      // Call AI Analyzer API to update config
-      await axios.post('/update-config', {
-        datasource_type: newConfig.datasourceType,
-        datasource: newConfig.datasource,
-        loki_url: newConfig.lokiUrl,
-        otel_url: newConfig.otelUrl,
-        auth_token: newConfig.authToken,
-        ai_api_url: newConfig.aiApiUrl,
-        ai_model: newConfig.aiModel,
-        aws_region: newConfig.awsRegion,
-        insights_bucket: newConfig.insightsBucket
-      });
-      setConfig(newConfig);
-      setShowSettings(false);
-      alert('Configuration updated successfully!');
-    } catch (err) {
-      console.error('Error updating config:', err);
-      alert('Failed to update configuration. Check console for details.');
     }
   };
   const handleTicketStatusUpdate = async (ticketId, newStatus) => {
@@ -273,139 +233,6 @@ function App() {
 
   return (
     <div className={`app-layout ${!showChat ? 'hide-chat' : ''}`}>
-      {/* Settings Modal */}
-      <AnimatePresence>
-        {showSettings && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="modal-overlay"
-            style={{
-              position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
-              background: 'rgba(0,0,0,0.8)', zIndex: 1000, display: 'flex',
-              alignItems: 'center', justifyContent: 'center', backdropFilter: 'blur(10px)'
-            }}
-          >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0, y: 20 }}
-              animate={{ scale: 1, opacity: 1, y: 0 }}
-              exit={{ scale: 0.9, opacity: 0, y: 20 }}
-              className="modal-content"
-              style={{
-                background: 'var(--panel-bg)', padding: '40px', borderRadius: '28px',
-                width: '540px', border: '1px solid var(--border-glass)',
-                maxHeight: '85vh', overflowY: 'auto', boxShadow: 'var(--shadow-premium)'
-              }}
-            >
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '32px' }}>
-                <h2 style={{ margin: 0, fontSize: '1.8rem' }}>Configuration</h2>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '6px 14px', background: 'rgba(0, 242, 255, 0.1)', borderRadius: '20px', border: '1px solid rgba(0, 242, 255, 0.2)' }}>
-                  <Shield size={14} color="var(--accent-primary)" />
-                  <span style={{ fontSize: '0.75rem', color: 'var(--accent-primary)', fontWeight: '800', letterSpacing: '0.05em' }}>SECURE MODE</span>
-                </div>
-              </div>
-              <div style={{ padding: '16px', background: 'rgba(59, 130, 246, 0.05)', borderRadius: '16px', border: '1px solid rgba(59, 130, 246, 0.15)', marginBottom: '32px', fontSize: '0.9rem', color: 'var(--text-muted)', lineHeight: '1.6' }}>
-                <div style={{ display: 'flex', gap: '10px', marginBottom: '6px' }}>
-                  <AlertCircle size={18} color="#3b82f6" />
-                  <strong style={{ color: '#fff' }}>Security Notice</strong>
-                </div>
-                Sensitive keys are managed via environment variables. They are never transmitted or stored in the UI for maximum security.
-              </div>
-              <div style={{ marginBottom: '20px' }}>
-                <label style={{ display: 'block', marginBottom: '10px', color: 'var(--text-muted)', fontSize: '0.85rem', fontWeight: '600' }}>Datasource Type</label>
-                <div className="custom-dropdown" style={{ width: '100%' }}>
-                  <div
-                    className="dropdown-trigger"
-                    onClick={() => setActiveDropdownId(activeDropdownId === 'settings-datasource' ? null : 'settings-datasource')}
-                    style={{ width: '100%', justifyContent: 'space-between' }}
-                  >
-                    <span>{DATASOURCE_OPTIONS.find(opt => opt.value === config.datasourceType)?.label || 'Select Datasource'}</span>
-                    <ChevronDown size={16} style={{ transform: activeDropdownId === 'settings-datasource' ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.3s ease' }} />
-                  </div>
-                  <AnimatePresence>
-                    {activeDropdownId === 'settings-datasource' && (
-                      <motion.div
-                        initial={{ opacity: 0, y: -10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -10 }}
-                        className="dropdown-options"
-                        style={{ width: '100%', zIndex: 1100 }}
-                      >
-                        {DATASOURCE_OPTIONS.map(opt => (
-                          <div
-                            key={opt.value}
-                            className={`dropdown-option ${config.datasourceType === opt.value ? 'active' : ''}`}
-                            onClick={() => {
-                              setConfig({ ...config, datasourceType: opt.value });
-                              setActiveDropdownId(null);
-                            }}
-                          >
-                            {opt.label}
-                          </div>
-                        ))}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              </div>
-              {/* Dynamic URL Fields */}
-              {config.datasourceType === 'loki' && (
-                <div style={{ marginBottom: '20px' }}>
-                  <label style={{ display: 'block', marginBottom: '10px', color: 'var(--text-muted)', fontSize: '0.85rem', fontWeight: '600' }}>Loki URL</label>
-                  <input
-                    type="text"
-                    value={config.lokiUrl}
-                    onChange={(e) => setConfig({ ...config, lokiUrl: e.target.value })}
-                    placeholder="http://loki:3100"
-                    style={{ width: '100%', padding: '14px', background: 'rgba(255,255,255,0.03)', border: '1px solid var(--border-glass)', borderRadius: '12px', color: '#fff', outline: 'none' }}
-                  />
-                </div>
-              )}
-              {config.datasourceType === 'otel' && (
-                <div style={{ marginBottom: '20px' }}>
-                  <label style={{ display: 'block', marginBottom: '10px', color: 'var(--text-muted)', fontSize: '0.85rem', fontWeight: '600' }}>OTLP Endpoint</label>
-                  <input
-                    type="text"
-                    value={config.otelUrl}
-                    onChange={(e) => setConfig({ ...config, otelUrl: e.target.value })}
-                    placeholder="http://otel-collector:4317"
-                    style={{ width: '100%', padding: '14px', background: 'rgba(255,255,255,0.03)', border: '1px solid var(--border-glass)', borderRadius: '12px', color: '#fff', outline: 'none' }}
-                  />
-                </div>
-              )}
-              <div style={{ marginBottom: '20px' }}>
-                <label style={{ display: 'block', marginBottom: '10px', color: 'var(--text-muted)', fontSize: '0.85rem', fontWeight: '600' }}>
-                  {config.datasourceType === 'loki' ? 'Job Name' :
-                    config.datasourceType === 'otel' ? 'Service Name' :
-                      config.datasourceType === 's3' ? 'S3 Bucket Name' :
-                        config.datasourceType === 'azure' ? 'Container Name' : 'Bucket Name'}
-                </label>
-                <input
-                  type="text"
-                  value={config.datasource}
-                  onChange={(e) => setConfig({ ...config, datasource: e.target.value })}
-                  style={{ width: '100%', padding: '14px', background: 'rgba(255,255,255,0.03)', border: '1px solid var(--border-glass)', borderRadius: '12px', color: '#fff', outline: 'none' }}
-                />
-              </div>
-              <div style={{ display: 'flex', gap: '16px', justifyContent: 'flex-end', marginTop: '40px' }}>
-                <button
-                  onClick={() => setShowSettings(false)}
-                  style={{ padding: '12px 24px', borderRadius: '14px', background: 'transparent', border: '1px solid var(--border-glass)', color: '#fff', cursor: 'pointer', fontWeight: '600' }}
-                >
-                  Cancel
-                </button>
-                <button
-                  onClick={() => handleSaveSettings(config)}
-                  style={{ padding: '12px 32px', borderRadius: '14px', background: 'var(--accent-primary)', border: 'none', color: '#000', fontWeight: '800', cursor: 'pointer', boxShadow: '0 10px 20px -5px hsla(185, 100%, 50%, 0.4)' }}
-                >
-                  Save Changes
-                </button>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
       {/* Header */}
       <header className="app-header">
         <div className="logo-section">
@@ -415,7 +242,7 @@ function App() {
           >
             <Zap color="var(--accent-primary)" fill="var(--accent-primary)" size={32} />
           </motion.div>
-          <h1 className="logo-text">ANTIGRAVITY AI</h1>
+          <h1 className="logo-text">AetherCost</h1>
         </div>
         <div className="header-metrics">
           <div className="metric-item">
@@ -549,17 +376,6 @@ function App() {
           </div>
         </div>
         <div className="sidebar-section" style={{ marginTop: 'auto' }}>
-          <motion.div
-            whileHover={{ x: 4 }}
-            className="filter-item"
-            onClick={() => setShowSettings(true)}
-            style={{ cursor: 'pointer' }}
-          >
-            <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-              <Settings size={20} />
-              <span>Settings</span>
-            </div>
-          </motion.div>
           <div className="filter-item" onClick={logout} style={{ cursor: 'pointer' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
               <LogOut size={20} color="#ef4444" />

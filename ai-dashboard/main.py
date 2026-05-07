@@ -2,6 +2,7 @@ import os
 import json
 import requests
 from fastapi import FastAPI, Depends, HTTPException, status, Form
+from fastapi.responses import JSONResponse
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
@@ -128,10 +129,10 @@ async def analyze_cost(data: dict, current_user: User = Depends(get_current_user
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.get("/get-last-cost-analysis")
-async def get_last_cost_analysis(granularity: str = "daily", account_id: str = "default"):
+async def get_last_cost_analysis(granularity: str = "daily", account_id: str = "default", provider: str = "aws"):
     try:
-        response = requests.get(f"{ANALYZER_URL}/get-last-cost-analysis", params={"granularity": granularity, "account_id": account_id}, timeout=10)
-        return response.json()
+        response = requests.get(f"{ANALYZER_URL}/get-last-cost-analysis", params={"granularity": granularity, "account_id": account_id, "provider": provider}, timeout=10)
+        return JSONResponse(status_code=response.status_code, content=response.json())
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
@@ -154,11 +155,19 @@ async def update_cost_alert_settings(settings_data: dict):
 
 
 
-@app.post("/trigger-full-analysis")
-async def trigger_full_analysis(account_id: str = "default"):
+@app.get("/accounts")
+async def get_accounts(provider: str = "aws", current_user: User = Depends(get_current_user)):
     try:
-        response = requests.post(f"{ANALYZER_URL}/trigger-full-analysis", params={"account_id": account_id}, timeout=10)
-        return response.json()
+        response = requests.get(f"{ANALYZER_URL}/accounts", params={"provider": provider}, timeout=10)
+        return JSONResponse(status_code=response.status_code, content=response.json())
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/trigger-full-analysis")
+async def trigger_full_analysis(account_id: str = "default", provider: str = "aws"):
+    try:
+        response = requests.post(f"{ANALYZER_URL}/trigger-full-analysis", params={"account_id": account_id, "provider": provider}, timeout=10)
+        return JSONResponse(status_code=response.status_code, content=response.json())
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 

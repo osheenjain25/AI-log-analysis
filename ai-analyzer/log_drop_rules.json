@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Health Checks",
+    "pattern": "HealthCheck OK|GET /health HTTP",
+    "description": "Routine health check logs"
+  },
+  {
+    "name": "Debug Loops",
+    "pattern": "DEBUG: Processing loop iteration",
+    "description": "Verbose debug logs from main loops"
+  },
+  {
+    "name": "K8s Probes",
+    "pattern": "kube-probe|Prometheus/2.0",
+    "description": "Kubernetes and Prometheus scraping logs"
+  }
+]
